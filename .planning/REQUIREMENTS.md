@@ -7,7 +7,7 @@
 
 ### Hero
 
-- [ ] **HERO-01**: Visitor sees a hero section with horse photography and a clear headline/tagline on page load
+- [x] **HERO-01**: Visitor sees a hero section with horse photography and a clear headline/tagline on page load
 
 ### Content
 
@@ -27,7 +27,7 @@
 
 ### Design
 
-- [ ] **DSGN-01**: Site uses an earthy, elegant visual design with earth tones, soft greens, browns, and gold/light blue accents throughout
+- [x] **DSGN-01**: Site uses an earthy, elegant visual design with earth tones, soft greens, browns, and gold/light blue accents throughout
 
 ## v2 Requirements
 
@@ -53,7 +53,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HERO-01 | Phase 1 | Pending |
+| HERO-01 | Phase 1 | Complete |
 | CONT-01 | Phase 1 | Pending |
 | CONT-02 | Phase 1 | Pending |
 | CONT-03 | Phase 1 | Pending |
@@ -61,7 +61,7 @@
 | CTCT-01 | Phase 1 | Pending |
 | CTCT-02 | Phase 1 | Pending |
 | I18N-01 | Phase 2 | Pending |
-| DSGN-01 | Phase 1 | Pending |
+| DSGN-01 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 9 total
