@@ -23,8 +23,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Requirements**: HERO-01, CONT-01, CONT-02, CONT-03, CTCT-01, CTCT-02, DSGN-01
 **Success Criteria** (what must be TRUE):
   1. Visitor sees a hero section with horse photography and a headline/tagline immediately on load
-  2. Visitor reads a dedicated Natural Horsemanship philosophy section and an About section explaining the school
-  3. Visitor sees a Services section with all 4 cards: Private Lessons, Group Lessons, Trail Rides, and Equine Therapy
+  2. Visitor reads a dedicated Doma Racional / emotional connection philosophy section and an About section with founder stories
+  3. Visitor sees a Services section with all 6 cards using official names (no "therapy" language)
   4. Visitor can find the school's phone number and Instagram handle in a Contact section
   5. Visitor can click a Booking CTA that opens the external booking platform, and the site uses the earthy/elegant color palette throughout
 **Plans**: TBD
