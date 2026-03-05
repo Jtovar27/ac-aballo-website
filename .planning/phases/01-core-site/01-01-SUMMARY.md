@@ -58,16 +58,12 @@ completed: 2026-03-05
 
 **Tailwind v4 @theme design system with 13 brand color tokens + full-viewport hero section, fixed bilingual nav, and JS translations scaffold — zero build step required**
 
-## Status
-
-CHECKPOINT PAUSED — awaiting human visual verification before proceeding to Plan 02.
-
 ## Performance
 
 - **Duration:** ~2 min
 - **Started:** 2026-03-05T16:25:37Z
-- **Completed (checkpoint):** 2026-03-05T16:27:28Z
-- **Tasks:** 2 of 3 complete (checkpoint at Task 3)
+- **Completed:** 2026-03-05T16:30:00Z
+- **Tasks:** 3 of 3 complete
 - **Files modified:** 6
 
 ## Accomplishments
@@ -83,7 +79,7 @@ Each task was committed atomically:
 
 1. **Task 1: Create project file structure and design system scaffold** - `185c28e` (chore)
 2. **Task 2: Build fixed navigation and hero section** - `40171f0` (feat)
-3. **Task 3: Checkpoint: Verify scaffold and hero visual rendering** - PENDING (human-verify)
+3. **Task 3: Checkpoint: Verify scaffold and hero visual rendering** - `f124e82` (docs) — user approved
 
 ## Files Created/Modified
 
@@ -131,6 +127,16 @@ None — no external service configuration required for this scaffold.
 - Hero image (images/hero/hero-placeholder.jpg or real photo) can be dropped into images/hero/ at any time
 - BOOKING_URL_PENDING must be replaced when client provides booking platform URL
 - lang-toggle button (#lang-toggle) is rendered but hidden — Phase 2 will unhide and wire it
+
+## Self-Check: PASSED
+
+- FOUND: index.html
+- FOUND: css/styles.css
+- FOUND: js/main.js
+- FOUND: 01-01-SUMMARY.md
+- FOUND: commit 185c28e (chore: file structure and design system scaffold)
+- FOUND: commit 40171f0 (feat: fixed navigation and hero section)
+- FOUND: commit f124e82 (docs: checkpoint — user approved visual verification)
 
 ---
 *Phase: 01-core-site*
