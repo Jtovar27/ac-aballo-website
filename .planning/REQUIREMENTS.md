@@ -11,9 +11,9 @@
 
 ### Content
 
-- [ ] **CONT-01**: Visitor reads a dedicated Natural Horsemanship philosophy section that communicates the school's core brand identity
+- [ ] **CONT-01**: Visitor reads a dedicated philosophy section communicating Doma Racional + emotional connection approach — horse as teacher, mirror, and guide — with founder context (Álvaro's 45+ years, Luisana's emotional guidance focus)
 - [ ] **CONT-02**: Visitor reads an About section explaining the school and its approach
-- [ ] **CONT-03**: Visitor sees a Services section with 4 cards: Private Lessons, Group Lessons, Trail Rides, and Equine Therapy
+- [ ] **CONT-03**: Visitor sees a Services section with 6 cards using official service names: Clases de Equitación, Horsemanship & Doma Racional, Interacciones con Caballos, Programas para Niños y Personas con Condición, Cabalgatas, and Eventos y Experiencias Especiales — never using the word "therapy/terapia"
 - [ ] **CONT-04**: Visitor browses a photo gallery showcasing the school and horses
 
 ### Contact & Conversion

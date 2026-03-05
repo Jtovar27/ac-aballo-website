@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A bilingual (English/Spanish) marketing website and landing page for AC.aballo Equestrian School, located in Florida. The site showcases the school's Natural Horsemanship philosophy, services (private lessons, group lessons, trail rides, and equine therapy), and drives visitors to book or contact the school. Target audience: families, children, adults, and beginners seeking a calm, therapeutic connection with horses.
+A bilingual (English/Spanish) marketing website for AC.aballo, an equestrian school and emotional connection center in Florida. Founded in 2020 by Álvaro Rodríguez Colmenares (45+ years experience, Doma Racional specialist) and Luisana Gallardo Flores, the site communicates the school's philosophy of human development through horses — not just riding — and drives visitors to book or contact the school. Audience: families, children from 11 months, adults, and people with special conditions seeking conscious connection with horses.
 
 ## Core Value
 
@@ -19,7 +19,7 @@ A prospective student or family visits the site and immediately understands the 
 - [ ] Hero section with horse photography and a clear headline/tagline
 - [ ] Natural Horsemanship philosophy section (core brand identity, own section)
 - [ ] About section explaining the school and its approach
-- [ ] Services section with 4 cards: Private Lessons, Group Lessons, Trail Rides, Equine Therapy
+- [ ] Services section with 6 cards: Clases de Equitación, Horsemanship & Doma Racional, Interacciones con Caballos, Programas para Niños y Personas con Condición, Cabalgatas, Eventos y Experiencias Especiales
 - [ ] Photo gallery showcasing the school and horses
 - [ ] Contact section with phone (689-339-6132) and Instagram (@ac.aballo)
 - [ ] Booking CTA linking to external booking platform
