@@ -53,5 +53,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Site | 2/2 | Complete   | 2026-03-05 |
+| 1. Core Site | 2/2 | Complete    | 2026-03-05 |
 | 2. Gallery + Bilingual | 0/2 | Not started | - |
