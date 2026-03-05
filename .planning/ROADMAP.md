@@ -27,11 +27,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Visitor sees a Services section with all 6 cards using official names (no "therapy" language)
   4. Visitor can find the school's phone number and Instagram handle in a Contact section
   5. Visitor can click a Booking CTA that opens the external booking platform, and the site uses the earthy/elegant color palette throughout
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Project scaffold — HTML structure, Tailwind config, color palette, base layout
-- [ ] 01-02: Content sections — Hero, Philosophy, About, Services, Contact, Booking CTA
+- [ ] 01-01-PLAN.md — Project scaffold: Tailwind v4 @theme design system, fixed nav, full-viewport hero section, bilingual translations scaffold
+- [ ] 01-02-PLAN.md — Content sections: Philosophy, About, 6 Services cards, Contact with phone/Instagram/booking CTA, Footer
 
 ### Phase 2: Gallery + Bilingual
 **Goal**: A visitor can browse real photos of the school and switch the entire site between English and Spanish
