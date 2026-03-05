@@ -12,7 +12,7 @@ This roadmap delivers a bilingual static marketing website for AC.aballo Equestr
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Core Site** - Scaffold and deploy the site with all primary content sections and design system
+- [x] **Phase 1: Core Site** - Scaffold and deploy the site with all primary content sections and design system (completed 2026-03-05)
 - [ ] **Phase 2: Gallery + Bilingual** - Add photo gallery and EN/ES language toggle to complete v1
 
 ## Phase Details
@@ -53,5 +53,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Site | 1/2 | In Progress|  |
+| 1. Core Site | 2/2 | Complete   | 2026-03-05 |
 | 2. Gallery + Bilingual | 0/2 | Not started | - |

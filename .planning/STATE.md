@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-core-site-01-01-PLAN.md — Plan 01 complete, ready for Plan 02 (content sections)
-last_updated: "2026-03-05T16:31:15.261Z"
+stopped_at: Completed 01-core-site-01-02-PLAN.md — Phase 1 all plans complete
+last_updated: "2026-03-05T16:39:19.800Z"
 last_activity: 2026-03-05 — Roadmap created, phases defined
 progress:
   total_phases: 2
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-core-site P01 | 2 | 3 tasks | 6 files |
+| Phase 01-core-site P02 | 10min | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,8 @@ Recent decisions affecting current work:
 - [Phase 01-core-site]: All visible text strings use data-i18n attributes — applyLanguage() in js/main.js applies ES/EN translations on demand
 - [Phase 01-core-site]: Custom colors in @theme block (not tailwind.config.js) — Tailwind v4 CDN ignores external config files
 - [Phase 01-core-site]: All visible strings use data-i18n attributes — applyLanguage() in js/main.js applies ES/EN translations on demand
+- [Phase 01-core-site]: Service cards use data-service attribute with short keys for future JS targeting
+- [Phase 01-core-site]: Booking CTA uses BOOKING_URL_PENDING href with TODO comment — client will supply booking platform URL before launch
 
 ### Pending Todos
 
@@ -78,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T16:31:15.259Z
-Stopped at: Completed 01-core-site-01-01-PLAN.md — Plan 01 complete, ready for Plan 02 (content sections)
+Last session: 2026-03-05T16:39:19.798Z
+Stopped at: Completed 01-core-site-01-02-PLAN.md — Phase 1 all plans complete
 Resume file: None

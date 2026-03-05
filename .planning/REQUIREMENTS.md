@@ -11,15 +11,15 @@
 
 ### Content
 
-- [ ] **CONT-01**: Visitor reads a dedicated philosophy section communicating Doma Racional + emotional connection approach — horse as teacher, mirror, and guide — with founder context (Álvaro's 45+ years, Luisana's emotional guidance focus)
-- [ ] **CONT-02**: Visitor reads an About section explaining the school and its approach
-- [ ] **CONT-03**: Visitor sees a Services section with 6 cards using official service names: Clases de Equitación, Horsemanship & Doma Racional, Interacciones con Caballos, Programas para Niños y Personas con Condición, Cabalgatas, and Eventos y Experiencias Especiales — never using the word "therapy/terapia"
+- [x] **CONT-01**: Visitor reads a dedicated philosophy section communicating Doma Racional + emotional connection approach — horse as teacher, mirror, and guide — with founder context (Álvaro's 45+ years, Luisana's emotional guidance focus)
+- [x] **CONT-02**: Visitor reads an About section explaining the school and its approach
+- [x] **CONT-03**: Visitor sees a Services section with 6 cards using official service names: Clases de Equitación, Horsemanship & Doma Racional, Interacciones con Caballos, Programas para Niños y Personas con Condición, Cabalgatas, and Eventos y Experiencias Especiales — never using the word "therapy/terapia"
 - [ ] **CONT-04**: Visitor browses a photo gallery showcasing the school and horses
 
 ### Contact & Conversion
 
-- [ ] **CTCT-01**: Visitor sees a Contact section displaying the school's phone number (689-339-6132) and Instagram handle (@ac.aballo)
-- [ ] **CTCT-02**: Visitor can click a Booking CTA that links to the external booking platform
+- [x] **CTCT-01**: Visitor sees a Contact section displaying the school's phone number (689-339-6132) and Instagram handle (@ac.aballo)
+- [x] **CTCT-02**: Visitor can click a Booking CTA that links to the external booking platform
 
 ### Internationalization
 
@@ -54,12 +54,12 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | HERO-01 | Phase 1 | Complete |
-| CONT-01 | Phase 1 | Pending |
-| CONT-02 | Phase 1 | Pending |
-| CONT-03 | Phase 1 | Pending |
+| CONT-01 | Phase 1 | Complete |
+| CONT-02 | Phase 1 | Complete |
+| CONT-03 | Phase 1 | Complete |
 | CONT-04 | Phase 2 | Pending |
-| CTCT-01 | Phase 1 | Pending |
-| CTCT-02 | Phase 1 | Pending |
+| CTCT-01 | Phase 1 | Complete |
+| CTCT-02 | Phase 1 | Complete |
 | I18N-01 | Phase 2 | Pending |
 | DSGN-01 | Phase 1 | Complete |
 
