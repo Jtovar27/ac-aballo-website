@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AC.aballo — Escuela de Caballos</title>
+
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Design System: @theme block with brand tokens -->
+  <style type="text/tailwindcss">
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @theme {
+      --color-earth-900: #2C1810;
+      --color-earth-800: #4A2C1A;
+      --color-earth-600: #7B4A2D;
+      --color-earth-400: #B8845A;
+      --color-earth-100: #F5E8D8;
+      --color-sage-600:  #5C7A5C;
+      --color-sage-400:  #8AAE8A;
+      --color-sage-100:  #E8F0E8;
+      --color-gold-500:  #C9A84C;
+      --color-gold-200:  #EDD9A3;
+      --color-sky-400:   #87B5C8;
+      --color-sky-100:   #D6EAF2;
+      --color-neutral-50: #FAFAF8;
+      --font-serif: "Playfair Display", Georgia, serif;
+      --font-sans:  "Inter", system-ui, sans-serif;
+    }
+  </style>
+
+  <!-- Custom overrides (after Tailwind so it loads first) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-neutral-50 font-sans text-earth-600">
+
+  <!-- ===================== FIXED NAVIGATION ===================== -->
+  <nav class="fixed top-0 w-full z-50 bg-earth-900/95 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+
+      <!-- Brand logo -->
+      <a href="#hero" class="font-serif text-gold-500 text-xl font-bold">AC.aballo</a>
+
+      <!-- Desktop nav links -->
+      <ul class="hidden md:flex gap-8 text-neutral-50 text-sm items-center">
+        <li><a href="#philosophy" data-i18n="nav.philosophy" class="hover:text-gold-500 transition-colors">Filosofía</a></li>
+        <li><a href="#about"      data-i18n="nav.about"      class="hover:text-gold-500 transition-colors">Nosotros</a></li>
+        <li><a href="#services"   data-i18n="nav.services"   class="hover:text-gold-500 transition-colors">Servicios</a></li>
+        <li><a href="#contact"    data-i18n="nav.contact"    class="hover:text-gold-500 transition-colors">Contacto</a></li>
+
+        <!-- Language toggle — hidden in Phase 1; Phase 2 activates it -->
+        <li>
+          <button id="lang-toggle" class="hidden text-neutral-50 text-sm border border-neutral-50/40 rounded px-2 py-1 ml-4" aria-label="Toggle language">EN/ES</button>
+        </li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden text-neutral-50 text-2xl" aria-label="Abrir menú">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu — sits after </nav>, positioned absolutely -->
+  <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 w-full bg-earth-900 px-6 py-4 z-40">
+    <ul class="flex flex-col gap-4 text-neutral-50 text-sm">
+      <li><a href="#philosophy" data-i18n="nav.philosophy" class="hover:text-gold-500 transition-colors block py-1">Filosofía</a></li>
+      <li><a href="#about"      data-i18n="nav.about"      class="hover:text-gold-500 transition-colors block py-1">Nosotros</a></li>
+      <li><a href="#services"   data-i18n="nav.services"   class="hover:text-gold-500 transition-colors block py-1">Servicios</a></li>
+      <li><a href="#contact"    data-i18n="nav.contact"    class="hover:text-gold-500 transition-colors block py-1">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section
+    id="hero"
+    class="relative min-h-screen flex items-center justify-center pt-16"
+    style="background-image: url('images/hero/hero-placeholder.jpg'); background-size: cover; background-position: center; background-color: #2C1810;"
+  >
+    <!-- Dark overlay — required for WCAG 4.5:1 contrast when photo is present -->
+    <div class="absolute inset-0 bg-earth-900/60"></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 text-center text-neutral-50 px-6 max-w-4xl mx-auto">
+      <h1
+        class="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight"
+        data-i18n="hero.headline"
+      >Transformando corazones a través de los caballos</h1>
+
+      <p
+        class="text-xl md:text-2xl mb-10 text-earth-100 font-light"
+        data-i18n="hero.tagline"
+      >Escuela de Caballos · Conexión · Bienestar · Horsemanship</p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <!-- TODO: Replace BOOKING_URL_PENDING with client-provided booking platform URL -->
+        <a
+          href="BOOKING_URL_PENDING"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-gold-500 text-earth-900 font-bold py-3 px-8 rounded-full hover:bg-gold-200 transition-colors"
+          data-i18n="hero.cta"
+          data-booking-url="PENDING"
+        >Reserva tu Sesión</a>
+
+        <a
+          href="#philosophy"
+          class="inline-block border-2 border-neutral-50 text-neutral-50 font-semibold py-3 px-8 rounded-full hover:bg-neutral-50/20 transition-colors"
+          data-i18n="hero.learnMore"
+        >Conoce Nuestra Filosofía</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-neutral-50/60 text-sm animate-bounce" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <!-- ===================== SECTION PLACEHOLDERS ===================== -->
+  <!-- Minimum height set so sections are visible during development -->
+
+  <section id="philosophy" class="min-h-screen flex items-center justify-center bg-earth-100">
+    <!-- Philosophy section — Plan 02 -->
+    <p class="text-earth-600 text-lg font-serif italic">Filosofía — próximamente</p>
+  </section>
+
+  <section id="about" class="min-h-screen flex items-center justify-center bg-sage-100">
+    <!-- About section — Plan 02 -->
+    <p class="text-earth-600 text-lg font-serif italic">Nosotros — próximamente</p>
+  </section>
+
+  <section id="services" class="min-h-screen flex items-center justify-center bg-neutral-50">
+    <!-- Services section — Plan 02 -->
+    <p class="text-earth-600 text-lg font-serif italic">Servicios — próximamente</p>
+  </section>
+
+  <section id="contact" class="min-h-screen flex items-center justify-center bg-earth-900">
+    <!-- Contact section — Plan 02 -->
+    <p class="text-neutral-50 text-lg font-serif italic">Contacto — próximamente</p>
+  </section>
+
+  <footer id="footer" class="bg-earth-900 py-8 text-center text-neutral-50/60 text-sm">
+    <!-- Footer — Plan 02 -->
+    <p>&copy; 2025 AC.aballo · Escuela de Caballos · Florida</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
