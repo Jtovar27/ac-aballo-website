@@ -14,6 +14,48 @@
   <!-- Tailwind v4 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+  <!--
+  ═══════════════════════════════════════════════════════════
+   AC.ABALLO — DESIGN SYSTEM v2.0  ·  UI/UX PRO MAX
+  ═══════════════════════════════════════════════════════════
+
+  COLOR PALETTE — Green & Beige Equestrian
+  ─────────────────────────────────────────
+  Forest    forest-950 #0F1E10  forest-900 #1A2D1C  forest-800 #243B26
+            forest-700 #2E4D30  forest-600 #3D6140  forest-500 #527A55
+            forest-400 #6E9B71  forest-300 #95BA97  forest-200 #BDD8BF
+            forest-100 #DDEEDE  forest-50  #EEF7EE
+
+  Sage      sage-600 #5C7A5C  sage-400 #8AAD8A  sage-200 #C5DCC5
+            sage-50  #F0F7F0
+
+  Beige     beige-900 #4A3820  beige-700 #7A5F38  beige-500 #B08D5E
+            beige-300 #D9C09A  beige-200 #EDD9BD  beige-100 #F7EDE0
+            beige-50  #FDF8F2
+
+  Gold      gold-700 #8C6820  gold-600 #A8832A  gold-500 #C9A84C
+            gold-300 #E0C87A  gold-200 #EDD9A3  gold-100 #F7EDCA
+
+  TYPOGRAPHY
+  ──────────
+  Display   Cormorant Garamond 700  — hero, section headings
+  Serif     Playfair Display 400/italic — quotes, founder names
+  Sans      DM Sans 400/500/600  — body, nav, labels, forms
+
+  SPACING
+  ───────
+  Sections  py-28 md:py-36
+  Container max-w-7xl mx-auto px-6 lg:px-10
+  Cards     p-8
+  Radius    rounded-2xl (cards) · rounded-3xl (featured) · rounded-full (pills)
+
+  SHADOW SCALE
+  ────────────
+  card:  0 4px 16px rgba(15,30,16,0.07)
+  hover: 0 24px 56px rgba(15,30,16,0.14)
+  ═══════════════════════════════════════════════════════════
+  -->
+
   <style type="text/tailwindcss">
     html { scroll-behavior: smooth; }
 
@@ -30,13 +72,11 @@
       --color-forest-200: #BDD8BF;
       --color-forest-100: #DDEEDE;
       --color-forest-50:  #EEF7EE;
-
       /* Sage */
       --color-sage-600:   #5C7A5C;
       --color-sage-400:   #8AAD8A;
       --color-sage-200:   #C5DCC5;
       --color-sage-50:    #F0F7F0;
-
       /* Beige */
       --color-beige-900:  #4A3820;
       --color-beige-700:  #7A5F38;
@@ -45,7 +85,6 @@
       --color-beige-200:  #EDD9BD;
       --color-beige-100:  #F7EDE0;
       --color-beige-50:   #FDF8F2;
-
       /* Gold */
       --color-gold-700:   #8C6820;
       --color-gold-600:   #A8832A;
@@ -53,12 +92,14 @@
       --color-gold-300:   #E0C87A;
       --color-gold-200:   #EDD9A3;
       --color-gold-100:   #F7EDCA;
-
+      /* Brand brown (from logo) */
+      --color-brand-brown: #7B3200;
       /* Fonts */
       --font-display: "Cormorant Garamond", Georgia, serif;
       --font-serif:   "Playfair Display", Georgia, serif;
       --font-sans:    "DM Sans", system-ui, sans-serif;
     }
+
 
     /* ── Typography utilities ── */
     .font-display { font-family: var(--font-display); }
@@ -157,24 +198,13 @@
     .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.35s; }
     .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.45s; }
     .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:0.55s; }
-
-    /* ── Hero responsive fix ── */
-    .hero-image {
-      object-fit: cover;
-      object-position: center 22%;
-    }
-
-    @media (max-width: 768px) {
-      .hero-image {
-        object-position: center top;
-      }
-    }
   </style>
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="font-sans antialiased" style="background:#FDF8F2; color:#2E4D30;">
+
 
   <!-- ══════════════════════════════════════════
        NAVIGATION (fixed, transparent → solid)
@@ -184,14 +214,13 @@
 
       <!-- Brand wordmark + logo -->
       <a href="#hero" class="flex items-center gap-3 group" aria-label="AC.aballo inicio">
-        <img
-          src="images/logo/B96D004D-B28A-4A8D-B88E-5077FE04EF08_1_105_c.jpeg"
-          alt="AC.aballo"
-          class="object-contain flex-shrink-0"
-          style="height:42px; width:42px;"
-        />
+        <!-- AC monogram logo -->
+        <img src="images/logo/B96D004D-B28A-4A8D-B88E-5077FE04EF08_1_105_c.jpeg"
+             alt="AC.aballo"
+             class="object-contain flex-shrink-0"
+             style="height:42px; width:42px;" />
         <div class="flex flex-col leading-none">
-          <span class="font-display text-gold-600 text-2xl font-bold tracking-wide group-hover:text-gold-500 transition-colors duration-200" style="line-height:1;">AC.aballo</span>
+          <span class="font-display text-2xl font-bold tracking-wide transition-colors duration-200" style="line-height:1; color:#7B3200;">AC.aballo</span>
           <span class="text-forest-500 font-sans font-medium mt-0.5" style="font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase;">Escuela Ecuestre · Florida</span>
         </div>
       </a>
@@ -199,19 +228,17 @@
       <!-- Desktop links -->
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-forest-700">
         <li><a href="#philosophy" class="hover:text-gold-600 transition-colors duration-200 py-1">Filosofía</a></li>
-        <li><a href="#about" class="hover:text-gold-600 transition-colors duration-200 py-1">Nosotros</a></li>
-        <li><a href="#services" class="hover:text-gold-600 transition-colors duration-200 py-1">Servicios</a></li>
-        <li><a href="#gallery" class="hover:text-gold-600 transition-colors duration-200 py-1">Galería</a></li>
-        <li><a href="#contact" class="hover:text-gold-600 transition-colors duration-200 py-1">Contacto</a></li>
+        <li><a href="#about"      class="hover:text-gold-600 transition-colors duration-200 py-1">Nosotros</a></li>
+        <li><a href="#services"   class="hover:text-gold-600 transition-colors duration-200 py-1">Servicios</a></li>
+        <li><a href="#gallery"    class="hover:text-gold-600 transition-colors duration-200 py-1">Galería</a></li>
+        <li><a href="#contact"    class="hover:text-gold-600 transition-colors duration-200 py-1">Contacto</a></li>
       </ul>
 
       <div class="flex items-center gap-4">
-        <a
-          href="BOOKING_URL_PENDING"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hidden md:inline-flex items-center gap-2 bg-gold-500 text-forest-900 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-gold-600 hover:text-white transition-colors duration-200 font-sans"
-        >
+        <!-- CTA pill (desktop) -->
+        <!-- TODO: Replace BOOKING_URL_PENDING with client booking URL -->
+        <a href="BOOKING_URL_PENDING" target="_blank" rel="noopener noreferrer"
+           class="hidden md:inline-flex items-center gap-2 bg-gold-500 text-forest-900 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-gold-600 hover:text-white transition-colors duration-200 font-sans">
           Reservar
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -233,37 +260,37 @@
   <div id="mobile-menu" class="hidden fixed top-20 left-0 w-full z-40 font-sans" style="background:#1A2D1C; border-top:1px solid rgba(255,255,255,0.07);">
     <ul class="flex flex-col px-6 py-3 text-forest-50 text-sm font-medium">
       <li><a href="#philosophy" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Filosofía</a></li>
-      <li><a href="#about" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Nosotros</a></li>
-      <li><a href="#services" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Servicios</a></li>
-      <li><a href="#gallery" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Galería</a></li>
-      <li><a href="#contact" class="block py-3.5 hover:text-gold-300 transition-colors">Contacto</a></li>
+      <li><a href="#about"      class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Nosotros</a></li>
+      <li><a href="#services"   class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Servicios</a></li>
+      <li><a href="#gallery"    class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Galería</a></li>
+      <li><a href="#contact"    class="block py-3.5 hover:text-gold-300 transition-colors">Contacto</a></li>
     </ul>
     <div class="px-6 pb-6 pt-2">
-      <a
-        href="BOOKING_URL_PENDING"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block text-center bg-gold-500 text-forest-900 font-bold py-3.5 rounded-full hover:bg-gold-300 transition-colors duration-200"
-      >
+      <!-- TODO: Replace BOOKING_URL_PENDING -->
+      <a href="BOOKING_URL_PENDING" target="_blank" rel="noopener noreferrer"
+         class="block text-center bg-gold-500 text-forest-900 font-bold py-3.5 rounded-full hover:bg-gold-300 transition-colors duration-200">
         Reserva tu Sesión
       </a>
     </div>
   </div>
+
 
   <!-- ══════════════════════════════════════════
        HERO
   ══════════════════════════════════════════ -->
   <section
     id="hero"
-    class="relative min-h-[75vh] md:min-h-screen flex items-center pt-20"
+    class="relative min-h-screen flex items-center pt-20"
     style="background-color: #1A2D1C;"
     aria-label="Sección principal"
   >
+    <!-- Hero photo: real <img> for perfect responsive behavior on all devices -->
     <img
       src="images/hero/40CF2885-D892-4CE8-9B7C-A96C58E6B46D_1_105_c.jpeg"
       alt=""
       aria-hidden="true"
-      class="hero-image absolute inset-0 w-full h-full"
+      class="absolute inset-0 w-full h-full"
+      style="object-fit: cover; object-position: center 22%;"
       fetchpriority="high"
     />
 
@@ -271,7 +298,7 @@
     <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.88) 0%, rgba(15,30,16,0.60) 55%, rgba(15,30,16,0.25) 100%);"></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,30,16,0.75) 0%, transparent 50%);"></div>
 
-    <!-- Decorative horse silhouette -->
+    <!-- Decorative horse silhouette (shows when no photo) -->
     <div class="absolute right-0 bottom-0 top-0 flex items-center pr-8 pointer-events-none select-none opacity-[0.06]" aria-hidden="true">
       <svg viewBox="0 0 480 520" width="420" height="460" fill="rgba(201,168,76,1)" xmlns="http://www.w3.org/2000/svg">
         <path d="M390 95 C375 58, 345 42, 322 62 C308 44, 282 36, 264 56 C250 40, 224 40, 212 60 C194 46, 172 54, 168 76 C148 70, 130 86, 132 110 C112 112, 100 132, 108 152 C94 166, 94 194, 114 208 L118 420 L152 420 L158 280 C178 300, 200 316, 202 350 L202 420 L236 420 L238 346 C232 318, 218 292, 218 262 L262 262 C262 294, 248 320, 250 350 L250 420 L284 420 L284 348 C286 316, 300 294, 308 268 L330 268 L332 420 L368 420 L368 262 C390 248, 412 226, 418 198 C442 190, 448 162, 418 148 L390 95Z"/>
@@ -283,17 +310,21 @@
 
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-20 md:py-28">
       <div class="max-w-2xl md:max-w-3xl">
+
+        <!-- Eyebrow -->
         <div class="flex items-center gap-3 mb-5 md:mb-8">
           <div class="h-px w-8 md:w-10" style="background:rgba(201,168,76,0.6);"></div>
           <span class="section-label text-gold-300/75" style="margin-bottom:0;">Escuela Ecuestre · St Cloud, Florida</span>
         </div>
 
+        <!-- H1 -->
         <h1 class="font-display text-forest-50 leading-[1.06] mb-5 md:mb-8" style="font-size: clamp(2.4rem, 7vw, 5.75rem); font-weight:700;">
           Transformando<br />
           corazones<br />
           <em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">a través de los caballos</em>
         </h1>
 
+        <!-- Tagline -->
         <p class="text-forest-200/80 text-base md:text-xl font-light leading-relaxed mb-2 md:mb-3 font-sans">
           Escuela de Caballos · Conexión · Bienestar · Horsemanship
         </p>
@@ -301,32 +332,30 @@
           "Aquí no solo se aprende a montar. Aquí se aprende a sentir, regular, confiar y avanzar."
         </p>
 
+        <!-- CTAs -->
         <div class="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
-          <a
-            href="BOOKING_URL_PENDING"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2.5 bg-gold-500 text-forest-900 font-bold py-3.5 md:py-4 px-7 md:px-8 rounded-full hover:bg-gold-300 transition-all duration-200 hover:shadow-xl text-sm md:text-base font-sans"
-          >
+          <!-- TODO: Replace BOOKING_URL_PENDING -->
+          <a href="BOOKING_URL_PENDING" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2.5 bg-gold-500 text-forest-900 font-bold py-3.5 md:py-4 px-7 md:px-8 rounded-full hover:bg-gold-300 transition-all duration-200 hover:shadow-xl text-sm md:text-base font-sans">
             Reserva tu Sesión
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a
-            href="#philosophy"
-            class="inline-flex items-center justify-center gap-2 border text-forest-100 font-medium py-3.5 md:py-4 px-7 md:px-8 rounded-full hover:bg-forest-100/10 transition-all duration-200 text-sm md:text-base font-sans"
-            style="border-color:rgba(238,247,238,0.35);"
-          >
+          <a href="#philosophy"
+             class="inline-flex items-center justify-center gap-2 border text-forest-100 font-medium py-3.5 md:py-4 px-7 md:px-8 rounded-full hover:bg-forest-100/10 transition-all duration-200 text-sm md:text-base font-sans" style="border-color:rgba(238,247,238,0.35);">
             Nuestra Filosofía
           </a>
         </div>
+
       </div>
     </div>
 
+    <!-- Scroll cue -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-none" style="color:rgba(149,186,151,0.45);" aria-hidden="true">
       <span class="font-sans" style="font-size:0.6rem; letter-spacing:0.28em; text-transform:uppercase;">Scroll</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24" class="animate-bounce"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        STATS BAR
@@ -334,6 +363,7 @@
   <div style="background:#243B26;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-10">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
         <div class="flex flex-col items-center gap-1">
           <span class="font-display text-gold-400 font-bold" style="font-size:2.6rem; line-height:1.1;">5</span>
           <span class="font-sans text-forest-200/55" style="font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;">Años en Florida</span>
@@ -345,7 +375,7 @@
         </div>
 
         <div class="flex flex-col items-center gap-1">
-          <span class="font-display text-gold-400 font-bold" style="font-size:2.6rem; line-height:1.1;">11m+</span>
+          <span class="font-display text-gold-400 font-bold leading-tight text-center" style="font-size:2rem; line-height:1.15;">Desde los<br/>11 meses</span>
           <span class="font-sans text-forest-200/55" style="font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;">Todas las Edades</span>
         </div>
 
@@ -353,22 +383,28 @@
           <span class="font-display text-gold-400 font-bold" style="font-size:2.6rem; line-height:1.1;">45+</span>
           <span class="font-sans text-forest-200/55" style="font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;">Años de Experiencia</span>
         </div>
+
       </div>
     </div>
   </div>
+
 
   <!-- ══════════════════════════════════════════
        PHILOSOPHY
   ══════════════════════════════════════════ -->
   <section id="philosophy" class="py-28 md:py-36 reveal" style="background:#FDF8F2;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <!-- Header -->
       <div class="text-center mb-20">
         <span class="section-label text-forest-500">Nuestra Filosofía</span>
         <h2 class="font-display text-forest-900 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Doma Racional · Conexión Emocional</h2>
         <span class="gold-rule"></span>
       </div>
 
+      <!-- Body -->
       <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-start mb-24">
+
         <div class="space-y-6">
           <p class="text-forest-700 text-lg leading-relaxed font-sans">
             El caballo es el maestro más honesto que existe. No juzga, no miente, no impone — simplemente responde a lo que siente en quien se acerca. En AC.aballo creemos que la relación entre el ser humano y el caballo es un espejo: lo que el caballo refleja, la persona aprende. Esa es la base de la Doma Racional.
@@ -378,15 +414,31 @@
           </p>
 
           <ul class="mt-8 space-y-3 font-sans">
-            <li class="flex items-center gap-3 text-forest-700"><span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>El binomio perfecto entre caballo y humano</li>
-            <li class="flex items-center gap-3 text-forest-700"><span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>La sensibilidad como fortaleza</li>
-            <li class="flex items-center gap-3 text-forest-700"><span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>El control emocional como base de la seguridad</li>
-            <li class="flex items-center gap-3 text-forest-700"><span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>La conexión antes que la imposición</li>
-            <li class="flex items-center gap-3 text-forest-700"><span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>El respeto al caballo como ser sensible</li>
+            <li class="flex items-center gap-3 text-forest-700">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>
+              El binomio perfecto entre caballo y humano
+            </li>
+            <li class="flex items-center gap-3 text-forest-700">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>
+              La sensibilidad como fortaleza
+            </li>
+            <li class="flex items-center gap-3 text-forest-700">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>
+              El control emocional como base de la seguridad
+            </li>
+            <li class="flex items-center gap-3 text-forest-700">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>
+              La conexión antes que la imposición
+            </li>
+            <li class="flex items-center gap-3 text-forest-700">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></span>
+              El respeto al caballo como ser sensible
+            </li>
           </ul>
         </div>
 
         <div class="space-y-6">
+          <!-- Feature quote card (dark green) -->
           <blockquote class="relative p-8 rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #2E4D30, #3D6140);">
             <span class="font-display text-gold-300/25 absolute -top-3 left-5 leading-none select-none pointer-events-none" style="font-size:7rem;" aria-hidden="true">"</span>
             <p class="font-serif text-xl text-forest-50 italic leading-relaxed relative z-10">
@@ -398,16 +450,21 @@
             </div>
           </blockquote>
 
+          <!-- Secondary card (light) -->
           <div class="p-6 rounded-2xl border border-beige-200" style="background:#FDF8F2;">
             <p class="font-serif text-forest-700 text-base italic leading-relaxed text-center">
-              "Aquí no solo se aprende a montar.<br />Aquí se aprende a sentir, regular, confiar y avanzar."
+              "El caballo te muestra lo que eres antes de que tú mismo lo sepas."
             </p>
           </div>
         </div>
+
       </div>
 
+      <!-- Founders -->
       <h3 class="text-center font-display text-forest-900 mb-10" style="font-size:1.9rem; font-weight:600;">Los Fundadores</h3>
       <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto reveal-stagger">
+
+        <!-- Álvaro -->
         <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift" style="box-shadow:0 4px 16px rgba(15,30,16,0.07);">
           <div class="flex items-start gap-5 mb-6">
             <div class="rounded-full overflow-hidden flex-shrink-0 border-2 border-gold-300/40" style="width:4.25rem; height:4.25rem; background:#EDD9BD;">
@@ -424,6 +481,7 @@
           </p>
         </div>
 
+        <!-- Luisana -->
         <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift" style="box-shadow:0 4px 16px rgba(15,30,16,0.07);">
           <div class="flex items-start gap-5 mb-6">
             <div class="rounded-full overflow-hidden flex-shrink-0 border-2 border-forest-300/40" style="width:4.25rem; height:4.25rem; background:#DDEEDE;">
@@ -439,9 +497,11 @@
             "El caballo saca la mejor versión de quien está dispuesto a escucharse."
           </p>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        ABOUT
@@ -449,12 +509,18 @@
   <section id="about" class="py-28 md:py-36 reveal" style="background:#EEF7EE;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="grid md:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+        <!-- Photo placeholder -->
         <div class="order-2 md:order-1">
           <div class="rounded-3xl border border-forest-700/20 overflow-hidden" style="aspect-ratio:4/5; max-width:440px; margin:0 auto;">
-            <img src="images/school/765f19e6-c202-4776-a6c4-6143b487e9f6.jpg" alt="Luisana Gallardo Flores en el rancho AC.aballo" class="w-full h-full object-cover" style="object-position: center top;" />
+            <img src="images/school/765f19e6-c202-4776-a6c4-6143b487e9f6.jpg"
+                 alt="Luisana Gallardo Flores en el rancho AC.aballo"
+                 class="w-full h-full object-cover"
+                 style="object-position: center top;" />
           </div>
         </div>
 
+        <!-- Content -->
         <div class="order-1 md:order-2">
           <span class="section-label text-forest-500">Quiénes Somos</span>
           <h2 class="font-display text-forest-900 mb-4 leading-tight" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;">Una Escuela con Alma</h2>
@@ -473,19 +539,22 @@
             "Somos familia. Somos manada. Somos escuela. Somos emoción."
           </p>
 
+          <!-- Value badges -->
           <div class="flex flex-wrap gap-2">
             <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Respeto</span>
             <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Empatía</span>
             <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Conexión</span>
             <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Confianza</span>
             <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Familia</span>
-            <span class="bg-gold-100 text-gold-700 text-xs font-semibold px-4 py-2 rounded-full border border-gold-200 font-sans">Bienestar emocional</span>
-            <span class="bg-gold-100 text-gold-700 text-xs font-semibold px-4 py-2 rounded-full border border-gold-200 font-sans">Amor por los caballos</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Bienestar emocional</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Amor por los caballos</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        PROMISE STRIP
@@ -498,19 +567,21 @@
     </div>
   </div>
 
+
   <!-- ══════════════════════════════════════════
        SERVICES
   ══════════════════════════════════════════ -->
   <section id="services" class="py-28 md:py-36 reveal" style="background:#FDF8F2;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
       <div class="text-center mb-20">
         <span class="section-label text-forest-500">Nuestros Programas</span>
-        <h2 class="font-display text-forest-900 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Nuestros Servicios</h2>
         <span class="gold-rule"></span>
-        <p class="text-forest-600 max-w-xl mx-auto mt-5 text-lg font-sans">Ac.aballo no forma jinetes solamente. Forma seres humanos conectados consigo mismos.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- 1: Clases de Equitación -->
         <div class="bg-white rounded-2xl overflow-hidden border border-beige-100 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06);">
           <div class="h-1.5 bg-gold-500"></div>
           <div class="p-8">
@@ -526,6 +597,7 @@
           </div>
         </div>
 
+        <!-- 2: Horsemanship & Doma Racional -->
         <div class="bg-white rounded-2xl overflow-hidden border border-beige-100 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06);">
           <div class="h-1.5 bg-forest-600"></div>
           <div class="p-8">
@@ -541,6 +613,7 @@
           </div>
         </div>
 
+        <!-- 3: Interacciones con Caballos -->
         <div class="bg-white rounded-2xl overflow-hidden border border-beige-100 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06);">
           <div class="h-1.5 bg-sage-400"></div>
           <div class="p-8">
@@ -557,6 +630,7 @@
           </div>
         </div>
 
+        <!-- 4: Programas para Niños y Personas con Condición -->
         <div class="bg-white rounded-2xl overflow-hidden border border-beige-100 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06);">
           <div class="h-1.5 bg-beige-500"></div>
           <div class="p-8">
@@ -573,6 +647,7 @@
           </div>
         </div>
 
+        <!-- 5: Cabalgatas -->
         <div class="bg-white rounded-2xl overflow-hidden border border-beige-100 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06);">
           <div class="h-1.5 bg-forest-400"></div>
           <div class="p-8">
@@ -588,6 +663,7 @@
           </div>
         </div>
 
+        <!-- 6: Eventos y Experiencias Especiales -->
         <div class="bg-white rounded-2xl overflow-hidden border border-beige-100 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06);">
           <div class="h-1.5 bg-gold-300"></div>
           <div class="p-8">
@@ -600,28 +676,30 @@
             <p class="text-forest-600 text-sm leading-relaxed font-sans">Cumpleaños, actividades familiares, programas de bienestar y eventos privados.</p>
           </div>
         </div>
+
       </div>
 
+      <!-- Services CTA -->
       <div class="text-center mt-14">
-        <a
-          href="BOOKING_URL_PENDING"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-forest-50 font-semibold py-4 px-10 rounded-full transition-all duration-200 hover:opacity-90 text-base font-sans"
-          style="background:#2E4D30;"
-        >
+        <!-- TODO: Replace BOOKING_URL_PENDING -->
+        <a href="BOOKING_URL_PENDING" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-forest-50 font-semibold py-4 px-10 rounded-full transition-all duration-200 hover:opacity-90 text-base font-sans"
+           style="background:#2E4D30;">
           Reserva tu Sesión
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
+
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        GALLERY
   ══════════════════════════════════════════ -->
   <section id="gallery" class="py-28 md:py-36 reveal" style="background:#1A2D1C;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
       <div class="text-center mb-16">
         <span class="section-label text-gold-300/55">Galería</span>
         <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Momentos en el Rancho</h2>
@@ -629,56 +707,81 @@
         <p class="text-forest-300/55 max-w-sm mx-auto mt-4 text-sm font-sans">Caballos, personas y conexión real.</p>
       </div>
 
+      <!-- Mosaic gallery grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+
+        <!-- Large featured: col-span-2 × row-span-2 -->
         <div class="col-span-2 row-span-2 rounded-2xl border border-forest-700/25 overflow-hidden" style="min-height:340px;">
-          <img src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Álvaro y Luisana en el rancho AC.aballo" class="w-full h-full object-cover" style="min-height:340px;" />
+          <img src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg"
+               alt="Álvaro y Luisana en el rancho AC.aballo"
+               class="w-full h-full object-cover" style="min-height:340px;" />
         </div>
 
+        <!-- Small 1 -->
         <div class="aspect-square rounded-xl border border-forest-700/25 overflow-hidden">
-          <img src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Álvaro con caballo — conexión" class="w-full h-full object-cover" />
+          <img src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg"
+               alt="Álvaro con caballo — conexión" class="w-full h-full object-cover" />
         </div>
 
+        <!-- Small 2 -->
         <div class="aspect-square rounded-xl border border-forest-700/25 overflow-hidden">
-          <img src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Luisana alimentando caballo blanco" class="w-full h-full object-cover" style="object-position: center top;" />
+          <img src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg"
+               alt="Luisana alimentando caballo blanco" class="w-full h-full object-cover" style="object-position: center top;" />
         </div>
 
+        <!-- Small 3 -->
         <div class="aspect-square rounded-xl border border-forest-700/25 overflow-hidden">
-          <img src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Luisana con caballo palomino" class="w-full h-full object-cover" style="object-position: center center;" />
+          <img src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg"
+               alt="Luisana con caballo palomino" class="w-full h-full object-cover" style="object-position: center center;" />
         </div>
 
+        <!-- Small 4 -->
         <div class="aspect-square rounded-xl border border-forest-700/25 overflow-hidden">
-          <img src="images/school/3ab9be17-12d1-41b0-befe-dc554e31093a.jpg" alt="Niños disfrutando en el rancho" class="w-full h-full object-cover" style="object-position: center top;" />
+          <img src="images/school/3ab9be17-12d1-41b0-befe-dc554e31093a.jpg"
+               alt="Niños disfrutando en el rancho" class="w-full h-full object-cover" style="object-position: center top;" />
         </div>
 
+        <!-- Wide panoramic: col-span-2 -->
         <div class="col-span-2 rounded-xl border border-forest-700/25 overflow-hidden" style="min-height:180px;">
-          <img src="images/school/28C3B0E0-5813-41CB-A493-0A152B8D0D65_1_105_c.jpeg" alt="Álvaro y Luisana con yegua blanca y potro negro" class="w-full h-full object-cover" style="object-position: center 40%;" />
+          <img src="images/school/28C3B0E0-5813-41CB-A493-0A152B8D0D65_1_105_c.jpeg"
+               alt="Álvaro y Luisana con yegua blanca y potro negro" class="w-full h-full object-cover" style="object-position: center 40%;" />
         </div>
 
+        <!-- Small 5 -->
         <div class="aspect-square rounded-xl border border-forest-700/25 overflow-hidden">
-          <img src="images/school/1ed448ae-5075-4390-93ff-aa7c45dd918b.jpg" alt="Luisana abrazando caballo en el rancho" class="w-full h-full object-cover" style="object-position: center top;" />
+          <img src="images/school/1ed448ae-5075-4390-93ff-aa7c45dd918b.jpg"
+               alt="Luisana abrazando caballo en el rancho" class="w-full h-full object-cover" style="object-position: center top;" />
         </div>
 
+        <!-- Small 6 -->
         <div class="aspect-square rounded-xl border border-forest-700/25 overflow-hidden">
-          <img src="images/school/21426fd0-2ea2-4d6c-8aae-cce5bba5dcf0.jpg" alt="Álvaro y Luisana con caballos palominos" class="w-full h-full object-cover" style="object-position: center top;" />
+          <img src="images/school/21426fd0-2ea2-4d6c-8aae-cce5bba5dcf0.jpg"
+               alt="Álvaro y Luisana con caballos palominos" class="w-full h-full object-cover" style="object-position: center top;" />
         </div>
+
       </div>
 
+      <!-- Instagram CTA -->
       <div class="text-center mt-12">
-        <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-forest-300/65 hover:text-gold-400 transition-colors duration-200 text-sm font-sans">
+        <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-3 text-forest-300/65 hover:text-gold-400 transition-colors duration-200 text-sm font-sans">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
             <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
           </svg>
           Ver más en @ac.aballo
         </a>
       </div>
+
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        TESTIMONIALS
   ══════════════════════════════════════════ -->
   <section id="testimonials" class="py-28 md:py-36 reveal" style="background:#F7EDE0;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
       <div class="text-center mb-16">
         <span class="section-label text-beige-700">Testimonios</span>
         <h2 class="font-display text-forest-900 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Lo Que Dicen Nuestras Familias</h2>
@@ -686,6 +789,8 @@
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- Testimonial 1 -->
         <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift flex flex-col" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
           <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
             <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
@@ -702,6 +807,7 @@
           </div>
         </div>
 
+        <!-- Testimonial 2 -->
         <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift flex flex-col" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
           <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
             <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
@@ -718,6 +824,7 @@
           </div>
         </div>
 
+        <!-- Testimonial 3 -->
         <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift flex flex-col" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
           <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
             <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
@@ -733,15 +840,18 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        CONTACT
   ══════════════════════════════════════════ -->
   <section id="contact" class="py-28 md:py-36 reveal" style="background:#243B26;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
       <div class="text-center mb-16">
         <span class="section-label text-gold-300/55">Contacto</span>
         <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Contáctanos</h2>
@@ -750,7 +860,11 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+        <!-- Contact info -->
         <div class="space-y-8">
+
+          <!-- Phone -->
           <div class="flex items-start gap-5">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.08);">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
@@ -763,6 +877,7 @@
             </div>
           </div>
 
+          <!-- Instagram -->
           <div class="flex items-start gap-5">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.08);">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
@@ -771,10 +886,12 @@
             </div>
             <div>
               <p class="text-forest-300/50 text-xs uppercase tracking-widest mb-1 font-sans font-medium">Instagram</p>
-              <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer" class="text-gold-400 text-xl font-semibold font-sans hover:text-gold-200 transition-colors duration-200">@ac.aballo</a>
+              <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer"
+                 class="text-gold-400 text-xl font-semibold font-sans hover:text-gold-200 transition-colors duration-200">@ac.aballo</a>
             </div>
           </div>
 
+          <!-- Address -->
           <div class="flex items-start gap-5">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.08);">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
@@ -783,12 +900,14 @@
             </div>
             <div>
               <p class="text-forest-300/50 text-xs uppercase tracking-widest mb-1 font-sans font-medium">Dirección</p>
-              <a href="https://maps.google.com/?q=955+N+Narcoosee+Rd,+St+Cloud,+FL+34771" target="_blank" rel="noopener noreferrer" class="text-forest-100 text-base leading-relaxed font-sans hover:text-gold-400 transition-colors duration-200">
+              <a href="https://maps.google.com/?q=955+N+Narcoosee+Rd,+St+Cloud,+FL+34771" target="_blank" rel="noopener noreferrer"
+                 class="text-forest-100 text-base leading-relaxed font-sans hover:text-gold-400 transition-colors duration-200">
                 955 N Narcoosee Rd<br />St Cloud, FL 34771
               </a>
             </div>
           </div>
 
+          <!-- Hours -->
           <div class="flex items-start gap-5">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.08);">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
@@ -802,26 +921,26 @@
             </div>
           </div>
 
+          <!-- Booking CTA -->
           <div class="pt-2">
-            <a
-              href="BOOKING_URL_PENDING"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 text-base font-sans"
-            >
+            <!-- TODO: Replace BOOKING_URL_PENDING -->
+            <a href="BOOKING_URL_PENDING" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 text-base font-sans">
               Reserva tu Sesión
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
+
         </div>
 
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          class="rounded-2xl p-8 border space-y-5"
-          style="background:rgba(255,255,255,0.05); border-color:rgba(149,186,151,0.15);"
-        >
+        <!-- Contact form -->
+        <!--
+          Netlify: add  data-netlify="true"  (already set)
+          Formspree: change action="https://formspree.io/f/YOUR_ID" method="POST"
+        -->
+        <form name="contact" method="POST" data-netlify="true"
+              class="rounded-2xl p-8 border space-y-5"
+              style="background:rgba(255,255,255,0.05); border-color:rgba(149,186,151,0.15);">
           <input type="hidden" name="form-name" value="contact" />
 
           <div class="grid sm:grid-cols-2 gap-5">
@@ -858,23 +977,30 @@
             <textarea id="f-message" name="mensaje" rows="4" required placeholder="Cuéntanos más sobre ti o tu interés..." class="form-input resize-none"></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 text-base font-sans flex items-center justify-center gap-2">
+          <button type="submit"
+                  class="w-full bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 text-base font-sans flex items-center justify-center gap-2">
             Enviar Mensaje
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
           </button>
+
         </form>
+
       </div>
     </div>
   </section>
+
 
   <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
   <footer style="background:#0F1E10;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
+
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Brand column -->
         <div class="lg:col-span-2">
-          <p class="font-display text-gold-400 text-2xl font-bold mb-3">AC.aballo</p>
+          <p class="font-display text-2xl font-bold mb-3" style="color:#7B3200;">AC.aballo</p>
           <p class="text-sm leading-relaxed mb-4 max-w-xs font-sans" style="color:rgba(149,186,151,0.50);">
             Escuela de Caballos · Conexión · Bienestar · Horsemanship
           </p>
@@ -882,12 +1008,18 @@
             Transformando corazones a través de los caballos desde 2020.
           </p>
           <div class="flex gap-3">
-            <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gold-500" style="background:rgba(255,255,255,0.08); color:rgba(149,186,151,0.60);" aria-label="Instagram @ac.aballo">
+            <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer"
+               class="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gold-500"
+               style="background:rgba(255,255,255,0.08); color:rgba(149,186,151,0.60);"
+               aria-label="Instagram @ac.aballo">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
               </svg>
             </a>
-            <a href="tel:6893396132" class="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gold-500" style="background:rgba(255,255,255,0.08); color:rgba(149,186,151,0.60);" aria-label="Llamar a AC.aballo">
+            <a href="tel:6893396132"
+               class="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gold-500"
+               style="background:rgba(255,255,255,0.08); color:rgba(149,186,151,0.60);"
+               aria-label="Llamar a AC.aballo">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.18A2 2 0 0 1 4.71 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.41-.41a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/>
               </svg>
@@ -895,22 +1027,25 @@
           </div>
         </div>
 
+        <!-- Navigation -->
         <div>
           <p class="text-xs font-semibold mb-5 uppercase font-sans" style="letter-spacing:0.2em; color:rgba(149,186,151,0.85);">Navegación</p>
           <ul class="space-y-3 text-sm font-sans" style="color:rgba(149,186,151,0.45);">
             <li><a href="#philosophy" class="hover:text-gold-400 transition-colors duration-200">Filosofía</a></li>
-            <li><a href="#about" class="hover:text-gold-400 transition-colors duration-200">Nosotros</a></li>
-            <li><a href="#services" class="hover:text-gold-400 transition-colors duration-200">Servicios</a></li>
-            <li><a href="#gallery" class="hover:text-gold-400 transition-colors duration-200">Galería</a></li>
-            <li><a href="#contact" class="hover:text-gold-400 transition-colors duration-200">Contacto</a></li>
+            <li><a href="#about"      class="hover:text-gold-400 transition-colors duration-200">Nosotros</a></li>
+            <li><a href="#services"   class="hover:text-gold-400 transition-colors duration-200">Servicios</a></li>
+            <li><a href="#gallery"    class="hover:text-gold-400 transition-colors duration-200">Galería</a></li>
+            <li><a href="#contact"    class="hover:text-gold-400 transition-colors duration-200">Contacto</a></li>
           </ul>
         </div>
 
+        <!-- Location -->
         <div>
           <p class="text-xs font-semibold mb-5 uppercase font-sans" style="letter-spacing:0.2em; color:rgba(149,186,151,0.85);">Ubicación</p>
           <address class="not-italic text-sm leading-relaxed space-y-3 font-sans" style="color:rgba(149,186,151,0.45);">
             <p>
-              <a href="https://maps.google.com/?q=955+N+Narcoosee+Rd,+St+Cloud,+FL+34771" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors duration-200">
+              <a href="https://maps.google.com/?q=955+N+Narcoosee+Rd,+St+Cloud,+FL+34771" target="_blank" rel="noopener noreferrer"
+                 class="hover:text-gold-400 transition-colors duration-200">
                 955 N Narcoosee Rd<br />St Cloud, FL 34771
               </a>
             </p>
@@ -918,23 +1053,31 @@
             <p class="text-xs" style="color:rgba(149,186,151,0.28);">Lun–Dom: 8am – 6pm</p>
           </address>
         </div>
+
       </div>
 
+      <!-- Bottom strip -->
       <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 font-sans" style="border-color:rgba(255,255,255,0.07); color:rgba(149,186,151,0.28); font-size:0.75rem;">
         <p>&copy; 2025 AC.aballo &nbsp;&middot;&nbsp; St Cloud, Florida &nbsp;&middot;&nbsp; Todos los derechos reservados</p>
         <p class="italic">Sesiones por cita previa &nbsp;&middot;&nbsp; Diseñado con amor por los caballos</p>
       </div>
+
     </div>
   </footer>
+
 
   <!-- ══════════════════════════════════════════
        FLOATING CALL BUTTON (mobile only)
   ══════════════════════════════════════════ -->
-  <a href="tel:6893396132" class="fixed bottom-6 right-6 z-50 md:hidden w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-transform duration-200 active:scale-95 hover:scale-110" style="background:#C9A84C;" aria-label="Llamar a AC.aballo">
+  <a href="tel:6893396132"
+     class="fixed bottom-6 right-6 z-50 md:hidden w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-transform duration-200 active:scale-95 hover:scale-110"
+     style="background:#C9A84C;"
+     aria-label="Llamar a AC.aballo">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#1A2D1C" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.18A2 2 0 0 1 4.71 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.41-.41a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/>
     </svg>
   </a>
+
 
   <!-- ══════════════════════════════════════════
        SCRIPTS
@@ -953,20 +1096,21 @@
     updateNav();
 
     // ── Mobile menu toggle ──
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconMenu = document.getElementById('icon-menu');
-    const iconClose = document.getElementById('icon-close');
+    const menuToggle  = document.getElementById('menu-toggle');
+    const mobileMenu  = document.getElementById('mobile-menu');
+    const iconMenu    = document.getElementById('icon-menu');
+    const iconClose   = document.getElementById('icon-close');
     let menuOpen = false;
 
     menuToggle.addEventListener('click', () => {
       menuOpen = !menuOpen;
       mobileMenu.classList.toggle('hidden', !menuOpen);
-      iconMenu.classList.toggle('hidden', menuOpen);
+      iconMenu.classList.toggle('hidden',  menuOpen);
       iconClose.classList.toggle('hidden', !menuOpen);
       menuToggle.setAttribute('aria-expanded', String(menuOpen));
     });
 
+    // Close menu on nav link click
     mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', () => {
         menuOpen = false;
