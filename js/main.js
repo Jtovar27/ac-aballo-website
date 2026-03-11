@@ -185,5 +185,41 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+// Web3Forms contact form
+var contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var successMsg = document.getElementById('form-success');
+    var errorMsg = document.getElementById('form-error');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(contactForm)
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          successMsg.classList.remove('hidden');
+          errorMsg.classList.add('hidden');
+          contactForm.reset();
+        } else {
+          errorMsg.classList.remove('hidden');
+          successMsg.classList.add('hidden');
+        }
+      })
+      .catch(function () {
+        errorMsg.classList.remove('hidden');
+        successMsg.classList.add('hidden');
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.innerHTML = 'Enviar Mensaje <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>';
+      });
+  });
+}
+
 // Init
 applyLanguage(localStorage.getItem('lang') || 'es');

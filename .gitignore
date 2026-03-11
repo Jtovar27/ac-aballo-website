@@ -15,6 +15,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+*.code-workspace
 
 # Node (if ever added)
 node_modules/
