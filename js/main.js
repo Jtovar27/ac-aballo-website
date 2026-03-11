@@ -103,8 +103,8 @@ const translations = {
     'services.eventos.btn': 'Consultar disponibilidad',
 
     'services.campamentos.title': 'Campamentos',
-    'services.campamentos.desc': 'Inmersión ecuestre para niños y jóvenes en el rancho. Cuidado, monta y conexión.',
-    'services.campamentos.detail': 'Programas de campamento en el rancho donde los participantes aprenden a cuidar, cepillar, alimentar y montar caballos. Trabajo en equipo, contacto con la naturaleza e inmersión completa en el mundo ecuestre.',
+    'services.campamentos.desc': 'Campamentos de Spring Break y Summer Camp para niños de 5 a 12 años. Experiencia única de aprendizaje y conexión con los caballos.',
+    'services.campamentos.detail': 'En nuestros campamentos de Spring Break y Summer Camp, los niños viven una experiencia única de aprendizaje y conexión con los caballos y la naturaleza. Los participantes disfrutan de interacción con caballos, pony rides, juegos ecuestres, gincanas, actividades en cancha e indoor y la Zona de Arte con Caballos.<br><br>También aprenden sobre el cuidado del caballo: alimentación, agua, heno, manejo básico y las partes del caballo tanto anatómicamente como su comportamiento, desarrollando responsabilidad y confianza.<br><br>Durante el campamento fomentamos la conexión con la naturaleza a través de actividades de siembra y cuidado de plantas, además de dinámicas creativas como construcción de títeres y pequeñas obras teatrales.<br><br>Aceptamos niños de 5 a 12 años. También ofrecemos Summer Camp para Teenagers, donde Álvaro guía a los jóvenes en horsemanship, formando a los caballistas del mañana.',
     'services.campamentos.tag1': 'Niños y jóvenes',
     'services.campamentos.tag2': 'Temporada',
     'services.campamentos.tag3': 'Trabajo en equipo',
@@ -276,8 +276,8 @@ const translations = {
     'services.eventos.btn': 'Check availability',
 
     'services.campamentos.title': 'Camps',
-    'services.campamentos.desc': 'Equestrian immersion for children and youth at the ranch. Care, riding, and connection.',
-    'services.campamentos.detail': 'Ranch camp programs where participants learn to care for, groom, feed, and ride horses. Teamwork, nature contact, and full immersion in the equestrian world.',
+    'services.campamentos.desc': 'Spring Break and Summer Camp programs for children ages 5 to 12. A unique learning experience connecting with horses and nature.',
+    'services.campamentos.detail': 'In our Spring Break and Summer Camp programs, children experience a unique learning adventure connecting with horses and nature. Participants enjoy horse interaction, pony rides, equestrian games, gymkhanas, outdoor and indoor activities, and the Horse Art Zone.<br><br>They also learn about horse care: feeding, water, hay, basic handling, and the parts of the horse — both anatomically and behaviorally — developing responsibility and confidence.<br><br>During camp, we foster a connection with nature through planting and plant care activities, as well as creative dynamics such as puppet-making and small theatrical performances.<br><br>We welcome children ages 5 to 12. We also offer a Summer Camp for Teenagers, where Álvaro guides young people in horsemanship, shaping the equestrians of tomorrow.',
     'services.campamentos.tag1': 'Children & youth',
     'services.campamentos.tag2': 'Seasonal',
     'services.campamentos.tag3': 'Teamwork',
