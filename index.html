@@ -255,7 +255,7 @@
       <li><a href="#gallery" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Galería</a></li>
       <li><a href="#contact" class="block py-3.5 hover:text-gold-300 transition-colors">Contacto</a></li>
     </ul>
-    <div class="px-6 pb-6 pt-2">
+    <div class="px-6 pb-6 pt-2 space-y-3">
       <a
         href="https://calendly.com/ac-aballofl/30min"
         target="_blank"
@@ -264,6 +264,10 @@
       >
         Reserva tu Sesión
       </a>
+      <button id="lang-toggle-mobile" class="w-full flex items-center justify-center gap-2 text-sm font-semibold font-sans py-3 rounded-full border transition-colors duration-200" style="border-color:rgba(255,255,255,0.15); color:rgba(255,255,255,0.7);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="lang-label-mobile">EN</span>
+      </button>
     </div>
   </div>
 
@@ -890,7 +894,7 @@
             </div>
             <div>
               <p class="text-forest-300/50 text-xs uppercase tracking-widest mb-1 font-sans font-medium">Teléfono</p>
-              <a href="tel:6893396132" class="text-gold-400 text-xl font-semibold font-sans hover:text-gold-200 transition-colors duration-200">(689) 339-6132</a>
+              <a href="tel:6893396132" class="text-xl font-semibold font-sans transition-colors duration-200" style="color:#ffffff;" onmouseover="this.style.color='#E0C87A'" onmouseout="this.style.color='#ffffff'">(689) 339-6132</a>
             </div>
           </div>
 
@@ -902,7 +906,7 @@
             </div>
             <div>
               <p class="text-forest-300/50 text-xs uppercase tracking-widest mb-1 font-sans font-medium">Instagram</p>
-              <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer" class="text-gold-400 text-xl font-semibold font-sans hover:text-gold-200 transition-colors duration-200">@ac.aballo</a>
+              <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer" class="text-xl font-semibold font-sans transition-colors duration-200" style="color:#ffffff;" onmouseover="this.style.color='#E0C87A'" onmouseout="this.style.color='#ffffff'">@ac.aballo</a>
             </div>
           </div>
 
@@ -1051,7 +1055,7 @@
 
       <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 font-sans" style="border-color:rgba(255,255,255,0.07); color:rgba(149,186,151,0.28); font-size:0.75rem;">
         <p>&copy; 2025 AC.aballo &nbsp;&middot;&nbsp; St Cloud, Florida &nbsp;&middot;&nbsp; Todos los derechos reservados</p>
-        <p class="italic">Sesiones por cita previa &nbsp;&middot;&nbsp; Diseñado con amor por los caballos</p>
+        <p>Diseñado y desarrollado por <span style="color:rgba(201,168,76,0.6); font-weight:600;">RuutDev</span></p>
       </div>
     </div>
   </footer>
@@ -1125,31 +1129,13 @@
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <script>
-    // ── Program accordion ──
+    // ── Program accordion (global so onclick= works) ──
     function toggleProgram(card) {
       var details = card.querySelector('.program-details');
       var chevron = card.querySelector('.program-chevron');
       var isOpen = !details.classList.contains('hidden');
       details.classList.toggle('hidden', isOpen);
       chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
-    }
-
-    // ── Language toggle ──
-    var currentLang = localStorage.getItem('lang') || 'es';
-    var langToggleBtn = document.getElementById('lang-toggle');
-    var langLabel = document.getElementById('lang-label');
-
-    function updateLangButton() {
-      if (langLabel) langLabel.textContent = currentLang === 'es' ? 'EN' : 'ES';
-    }
-    updateLangButton();
-
-    if (langToggleBtn) {
-      langToggleBtn.addEventListener('click', function () {
-        currentLang = currentLang === 'es' ? 'en' : 'es';
-        if (typeof applyLanguage === 'function') applyLanguage(currentLang);
-        updateLangButton();
-      });
     }
   </script>
 </body>

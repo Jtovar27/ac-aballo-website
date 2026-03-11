@@ -221,5 +221,26 @@ if (contactForm) {
   });
 }
 
+// ── Language toggle buttons ──
+function setupLangToggle(btnId, labelId) {
+  var btn = document.getElementById(btnId);
+  var label = document.getElementById(labelId);
+  if (!btn) return;
+  function refresh(lang) {
+    if (label) label.textContent = lang === 'es' ? 'EN' : 'ES';
+  }
+  refresh(localStorage.getItem('lang') || 'es');
+  btn.addEventListener('click', function () {
+    var next = (localStorage.getItem('lang') || 'es') === 'es' ? 'en' : 'es';
+    applyLanguage(next);
+    refresh(next);
+    // keep both buttons in sync
+    var otherLabel = document.getElementById(btnId === 'lang-toggle' ? 'lang-label-mobile' : 'lang-label');
+    if (otherLabel) otherLabel.textContent = next === 'es' ? 'EN' : 'ES';
+  });
+}
+setupLangToggle('lang-toggle', 'lang-label');
+setupLangToggle('lang-toggle-mobile', 'lang-label-mobile');
+
 // Init
 applyLanguage(localStorage.getItem('lang') || 'es');
