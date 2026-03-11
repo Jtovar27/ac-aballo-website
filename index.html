@@ -170,8 +170,16 @@
     }
 
     @media (max-width: 768px) {
+      .hero-section {
+        min-height: 0;
+      }
+      /* Show full image width on mobile so both riders are visible */
       .hero-image {
-        object-position: center center;
+        height: auto !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translateY(-50%);
+        object-fit: fill;
       }
     }
 
