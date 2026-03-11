@@ -12,7 +12,7 @@ const translations = {
 
     // Hero
     'hero.headline': 'Transformando<br />corazones<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">a través de los caballos</em>',
-    'hero.tagline': 'Escuela de Caballos · Conexión · Bienestar · Horsemanship',
+    'hero.tagline': 'Escuela Ecuestre · Conexión · Bienestar · Horsemanship',
     'hero.cta': 'Reserva tu Sesión',
     'hero.learnMore': 'Nuestra Filosofía',
 
@@ -163,7 +163,7 @@ const translations = {
     'contact.form.error': 'Hubo un error. Por favor intenta de nuevo o escríbenos directamente.',
 
     // Footer
-    'footer.tagline': 'Escuela de Caballos · Conexión · Bienestar · Horsemanship',
+    'footer.tagline': 'Escuela Ecuestre · Conexión · Bienestar · Horsemanship',
     'footer.since': 'Transformando corazones a través de los caballos desde 2020.',
     'footer.rights': '© 2025 AC.aballo · St Cloud, Florida · Todos los derechos reservados',
     'footer.credit': 'Diseñado y desarrollado por',
@@ -251,7 +251,7 @@ const translations = {
     'services.interacciones.tag3': 'All ages',
     'services.interacciones.btn': 'Book',
 
-    'services.especial.title': 'Programs for Children & People with Special Conditions',
+    'services.especial.title': 'Programs for Children and People with Special Conditions',
     'services.especial.desc': 'Personalized sessions for autism, attention deficit, and sensory conditions.',
     'services.especial.detail': 'The horse as co-therapist. We work individually, respecting each person\'s pace. We coordinate with parents and therapists when needed to achieve maximum impact.',
     'services.especial.tag1': 'Autism · ADD/ADHD',
@@ -267,7 +267,7 @@ const translations = {
     'services.cabalgatas.tag3': 'By appointment',
     'services.cabalgatas.btn': 'Book',
 
-    'services.eventos.title': 'Events & Special Experiences',
+    'services.eventos.title': 'Events and Special Experiences',
     'services.eventos.desc': 'Birthdays, wellness retreats, and private events with horses as the stars.',
     'services.eventos.detail': 'We organize unique events: equestrian birthday parties, corporate wellness retreats, family activities, and private celebrations. Each experience is personalized and designed to create unique memories.',
     'services.eventos.tag1': 'Birthdays',
