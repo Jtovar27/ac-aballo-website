@@ -157,6 +157,8 @@
     .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.35s; }
     .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.45s; }
     .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:0.55s; }
+    .reveal-stagger.visible > *:nth-child(7) { opacity:1; transform:none; transition-delay:0.65s; }
+    .reveal-stagger.visible > *:nth-child(n+7) { opacity:1; transform:none; transition-delay:0.65s; }
 
     /* ── Hero responsive fix ── */
     .hero-image {
@@ -209,11 +211,11 @@
 
       <!-- Desktop links -->
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-forest-700">
-        <li><a href="#philosophy" class="hover:text-gold-600 transition-colors duration-200 py-1">Filosofía</a></li>
-        <li><a href="#about" class="hover:text-gold-600 transition-colors duration-200 py-1">Nosotros</a></li>
+        <li><a href="#philosophy" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.philosophy">Filosofía</a></li>
+        <li><a href="#about" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.about">Nosotros</a></li>
         <li><a href="#services" class="hover:text-gold-600 transition-colors duration-200 py-1">Servicios</a></li>
-        <li><a href="#gallery" class="hover:text-gold-600 transition-colors duration-200 py-1">Galería</a></li>
-        <li><a href="#contact" class="hover:text-gold-600 transition-colors duration-200 py-1">Contacto</a></li>
+        <li><a href="#gallery" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.gallery">Galería</a></li>
+        <li><a href="#contact" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.contact">Contacto</a></li>
       </ul>
 
       <div class="flex items-center gap-3">
@@ -229,7 +231,7 @@
           rel="noopener noreferrer"
           class="hidden md:inline-flex items-center gap-2 bg-gold-500 text-forest-900 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-gold-600 hover:text-white transition-colors duration-200 font-sans"
         >
-          Reservar
+          <span data-i18n="nav.cta">Reservar</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
@@ -249,11 +251,11 @@
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden fixed top-20 left-0 w-full z-40 font-sans" style="background:#1A2D1C; border-top:1px solid rgba(255,255,255,0.07);">
     <ul class="flex flex-col px-6 py-3 text-forest-50 text-sm font-medium">
-      <li><a href="#philosophy" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Filosofía</a></li>
-      <li><a href="#about" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Nosotros</a></li>
+      <li><a href="#philosophy" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.philosophy">Filosofía</a></li>
+      <li><a href="#about" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.about">Nosotros</a></li>
       <li><a href="#services" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Servicios</a></li>
-      <li><a href="#gallery" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);">Galería</a></li>
-      <li><a href="#contact" class="block py-3.5 hover:text-gold-300 transition-colors">Contacto</a></li>
+      <li><a href="#gallery" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.gallery">Galería</a></li>
+      <li><a href="#contact" class="block py-3.5 hover:text-gold-300 transition-colors" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <div class="px-6 pb-6 pt-2 space-y-3">
       <a
@@ -262,7 +264,7 @@
         rel="noopener noreferrer"
         class="block text-center bg-gold-500 text-forest-900 font-bold py-3.5 rounded-full hover:bg-gold-300 transition-colors duration-200"
       >
-        Reserva tu Sesión
+        <span data-i18n="nav.book">Reserva tu Sesión</span>
       </a>
       <button id="lang-toggle-mobile" class="w-full flex items-center justify-center gap-2 text-sm font-semibold font-sans py-3 rounded-full border transition-colors duration-200" style="border-color:rgba(255,255,255,0.15); color:rgba(255,255,255,0.7);">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -308,29 +310,29 @@
           <span class="section-label text-gold-300/75" style="margin-bottom:0;">Escuela Ecuestre · St Cloud, Florida</span>
         </div>
 
-        <h1 class="font-display text-forest-50 leading-[1.06] mb-5 md:mb-8" style="font-size: clamp(2.4rem, 7vw, 5.75rem); font-weight:700;">
+        <h1 class="font-display text-forest-50 leading-[1.06] mb-5 md:mb-8" style="font-size: clamp(2.4rem, 7vw, 5.75rem); font-weight:700;" data-i18n-html="hero.headline">
           Transformando<br />
           corazones<br />
           <em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">a través de los caballos</em>
         </h1>
 
-        <p class="text-forest-200/80 text-base md:text-xl font-light leading-relaxed mb-2 md:mb-3 font-sans">
+        <p class="text-forest-200/80 text-base md:text-xl font-light leading-relaxed mb-2 md:mb-3 font-sans" data-i18n="hero.tagline">
           Escuela de Caballos · Conexión · Bienestar · Horsemanship
         </p>
-        <p class="text-forest-100/55 text-sm md:text-base mb-8 md:mb-10 max-w-lg font-serif italic">
+        <p class="text-forest-100/55 text-sm md:text-base mb-8 md:mb-10 max-w-lg font-serif italic" data-i18n="hero.quote">
           "Aquí no solo se aprende a montar. Aquí se aprende a sentir, regular, confiar y avanzar."
         </p>
 
         <div class="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
           <a href="https://calendly.com/ac-aballofl/30min" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center justify-center gap-2.5 bg-gold-500 text-forest-900 font-bold py-3.5 md:py-4 px-7 md:px-8 rounded-full hover:bg-gold-300 transition-all duration-200 hover:shadow-xl text-sm md:text-base font-sans">
-            Reserva tu Sesión
+            <span data-i18n="hero.cta">Reserva tu Sesión</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#philosophy"
              class="inline-flex items-center justify-center gap-2 border text-forest-100 font-medium py-3.5 md:py-4 px-7 md:px-8 rounded-full hover:bg-forest-100/10 transition-all duration-200 text-sm md:text-base font-sans"
              style="border-color:rgba(238,247,238,0.35);">
-            Nuestra Filosofía
+            <span data-i18n="hero.learnMore">Nuestra Filosofía</span>
           </a>
         </div>
       </div>
@@ -377,17 +379,17 @@
   <section id="philosophy" class="py-28 md:py-36 reveal" style="background:#FDF8F2;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="text-center mb-20">
-        <span class="section-label text-forest-500">Nuestra Filosofía</span>
-        <h2 class="font-display text-forest-900 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Doma Racional · Conexión Emocional</h2>
+        <span class="section-label text-forest-500" data-i18n="philosophy.label">Nuestra Filosofía</span>
+        <h2 class="font-display text-forest-900 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;" data-i18n="philosophy.heading">Doma Racional · Conexión Emocional</h2>
         <span class="gold-rule"></span>
       </div>
 
       <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-start mb-24">
         <div class="space-y-6">
-          <p class="text-forest-700 text-lg leading-relaxed font-sans">
+          <p class="text-forest-700 text-lg leading-relaxed font-sans" data-i18n="philosophy.body1">
             El caballo es el maestro más honesto que existe. No juzga, no miente, no impone — simplemente responde a lo que siente en quien se acerca. En AC.aballo creemos que la relación entre el ser humano y el caballo es un espejo: lo que el caballo refleja, la persona aprende. Esa es la base de la Doma Racional.
           </p>
-          <p class="text-forest-700 text-lg leading-relaxed font-sans">
+          <p class="text-forest-700 text-lg leading-relaxed font-sans" data-i18n="philosophy.body2">
             Nuestro enfoque parte de la conexión antes que de la corrección. Trabajamos el binomio caballo–jinete desde la consciencia emocional, el liderazgo sereno y el respeto mutuo. Cada sesión es una oportunidad de crecer — no solo como jinete, sino como persona.
           </p>
 
@@ -403,12 +405,12 @@
         <div class="space-y-6">
           <blockquote class="relative p-8 rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #2E4D30, #3D6140);">
             <span class="font-display text-gold-300/25 absolute -top-3 left-5 leading-none select-none pointer-events-none" style="font-size:7rem;" aria-hidden="true">"</span>
-            <p class="font-serif text-xl text-forest-50 italic leading-relaxed relative z-10">
+            <p class="font-serif text-xl text-forest-50 italic leading-relaxed relative z-10" data-i18n="philosophy.lema">
               El caballo es nuestro maestro. La persona, el proceso. El vínculo, el camino.
             </p>
             <div class="mt-6 flex items-center gap-3">
               <div class="h-px flex-1 bg-gold-500/25"></div>
-              <span class="font-sans text-gold-300/60" style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;">Lema filosófico</span>
+              <span class="font-sans text-gold-300/60" style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;" data-i18n="philosophy.lema.label">Lema filosófico</span>
             </div>
           </blockquote>
 
@@ -420,7 +422,7 @@
         </div>
       </div>
 
-      <h3 class="text-center font-display text-forest-900 mb-10" style="font-size:1.9rem; font-weight:600;">Los Fundadores</h3>
+      <h3 class="text-center font-display text-forest-900 mb-10" style="font-size:1.9rem; font-weight:600;" data-i18n="philosophy.founders">Los Fundadores</h3>
       <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto reveal-stagger">
         <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift" style="box-shadow:0 4px 16px rgba(15,30,16,0.07);">
           <div class="flex items-start gap-5 mb-6">
@@ -429,11 +431,11 @@
             </div>
             <div>
               <p class="font-serif text-forest-900 text-lg font-bold leading-snug">Álvaro Rodríguez Colmenares</p>
-              <p class="text-forest-500 text-sm mt-1 font-sans">Horseman · Doma Racional · Coaching con Caballos</p>
-              <p class="text-beige-500 text-xs mt-1 font-sans">+45 años de experiencia · +600 potros domados</p>
+              <p class="text-forest-500 text-sm mt-1 font-sans" data-i18n="philosophy.alvaro.role">Horseman · Doma Racional · Coaching con Caballos</p>
+              <p class="text-beige-500 text-xs mt-1 font-sans" data-i18n="philosophy.alvaro.detail">+45 años de experiencia · +600 potros domados</p>
             </div>
           </div>
-          <p class="font-serif text-forest-700 italic text-base leading-relaxed border-t border-beige-100 pt-5">
+          <p class="font-serif text-forest-700 italic text-base leading-relaxed border-t border-beige-100 pt-5" data-i18n="philosophy.alvaro.quote">
             "Un caballo no se domina: se escucha, se entiende y se acompaña."
           </p>
         </div>
@@ -445,11 +447,11 @@
             </div>
             <div>
               <p class="font-serif text-forest-900 text-lg font-bold leading-snug">Luisana Gallardo Flores</p>
-              <p class="text-forest-500 text-sm mt-1 font-sans">Cofundadora · Guía Emocional · Educación y Conexión</p>
-              <p class="text-beige-500 text-xs mt-1 font-sans">Niños · Familias · Desarrollo emocional</p>
+              <p class="text-forest-500 text-sm mt-1 font-sans" data-i18n="philosophy.luisana.role">Cofundadora · Guía Emocional · Educación y Conexión</p>
+              <p class="text-beige-500 text-xs mt-1 font-sans" data-i18n="philosophy.luisana.detail">Niños · Familias · Desarrollo emocional</p>
             </div>
           </div>
-          <p class="font-serif text-forest-700 italic text-base leading-relaxed border-t border-beige-100 pt-5">
+          <p class="font-serif text-forest-700 italic text-base leading-relaxed border-t border-beige-100 pt-5" data-i18n="philosophy.luisana.quote">
             "El caballo saca la mejor versión de quien está dispuesto a escucharse."
           </p>
         </div>
@@ -470,31 +472,31 @@
         </div>
 
         <div class="order-1 md:order-2">
-          <span class="section-label text-forest-500">Quiénes Somos</span>
-          <h2 class="font-display text-forest-900 mb-4 leading-tight" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;">Una Escuela con Alma</h2>
+          <span class="section-label text-forest-500" data-i18n="about.label">Quiénes Somos</span>
+          <h2 class="font-display text-forest-900 mb-4 leading-tight" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;" data-i18n="about.heading">Una Escuela con Alma</h2>
           <span class="gold-rule gold-rule-left"></span>
 
           <div class="space-y-5 mt-6">
-            <p class="text-forest-700 text-lg leading-relaxed font-sans">
+            <p class="text-forest-700 text-lg leading-relaxed font-sans" data-i18n="about.body1">
               AC.aballo nació en noviembre de 2020 en Florida como un proyecto familiar impulsado por el amor a los caballos y la convicción de que el vínculo entre el ser humano y el caballo tiene el poder de transformar vidas.
             </p>
-            <p class="text-forest-700 text-lg leading-relaxed font-sans">
+            <p class="text-forest-700 text-lg leading-relaxed font-sans" data-i18n="about.body2">
               Abrimos nuestras puertas a todos: bebés desde los 11 meses, niños, adolescentes, adultos y familias completas. También acompañamos a personas con condiciones especiales con sesiones personalizadas y un enfoque de respeto y consciencia.
             </p>
           </div>
 
-          <p class="font-serif text-forest-800 text-xl italic my-8">
+          <p class="font-serif text-forest-800 text-xl italic my-8" data-i18n="about.body3">
             "Somos familia. Somos manada. Somos escuela. Somos emoción."
           </p>
 
           <div class="flex flex-wrap gap-2">
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Respeto</span>
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Empatía</span>
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Conexión</span>
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Confianza</span>
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Familia</span>
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Bienestar emocional</span>
-            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans">Amor por los caballos</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.respeto">Respeto</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.empatia">Empatía</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.conexion">Conexión</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.confianza">Confianza</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.familia">Familia</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.bienestar">Bienestar emocional</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.amor">Amor por los caballos</span>
           </div>
         </div>
       </div>
@@ -518,7 +520,7 @@
   <section id="services" class="py-28 md:py-36 reveal" style="background:#FDF8F2;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="text-center mb-16">
-        <span class="section-label text-forest-500">Nuestros Programas</span>
+        <span class="section-label text-forest-500" data-i18n="services.label">Nuestros Programas</span>
         <span class="gold-rule"></span>
       </div>
 
@@ -862,17 +864,17 @@
   <section id="contact" class="py-28 md:py-36 reveal" style="background:#243B26;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="text-center mb-16">
-        <span class="section-label text-gold-300/55">Contacto</span>
-        <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;">Contáctanos</h2>
+        <span class="section-label text-gold-300/55" data-i18n="contact.label">Contacto</span>
+        <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight:700;" data-i18n="contact.heading">Contáctanos</h2>
         <span class="gold-rule"></span>
-        <p class="text-forest-300/55 max-w-sm mx-auto mt-4 text-sm font-sans">Estamos aquí para acompañarte. Escríbenos o llámanos.</p>
+        <p class="text-forest-300/55 max-w-sm mx-auto mt-4 text-sm font-sans" data-i18n="contact.subtitle">Estamos aquí para acompañarte. Escríbenos o llámanos.</p>
       </div>
 
       <!-- Calendly inline widget -->
       <div class="mb-14 rounded-2xl overflow-hidden border border-forest-700/20" style="background:rgba(255,255,255,0.04);">
         <div class="text-center pt-8 pb-4">
-          <p class="text-gold-300/70 text-xs uppercase tracking-widest font-sans font-medium mb-2">Reserva online</p>
-          <h3 class="font-display text-forest-100 text-2xl font-semibold">Selecciona tu fecha y horario</h3>
+          <p class="text-gold-300/70 text-xs uppercase tracking-widest font-sans font-medium mb-2" data-i18n="contact.book.label">Reserva online</p>
+          <h3 class="font-display text-forest-100 text-2xl font-semibold" data-i18n="contact.book.heading">Selecciona tu fecha y horario</h3>
         </div>
         <div class="calendly-inline-widget" data-url="https://calendly.com/ac-aballofl/30min" style="min-width:320px;height:700px;"></div>
       </div>
@@ -880,7 +882,7 @@
       <!-- Divider -->
       <div class="flex items-center gap-4 mb-12">
         <div class="flex-1 h-px" style="background:rgba(149,186,151,0.12);"></div>
-        <p class="text-forest-300/40 text-xs font-sans uppercase tracking-widest">O escríbenos directamente</p>
+        <p class="text-forest-300/40 text-xs font-sans uppercase tracking-widest" data-i18n="contact.divider">O escríbenos directamente</p>
         <div class="flex-1 h-px" style="background:rgba(149,186,151,0.12);"></div>
       </div>
 
@@ -1008,7 +1010,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="lg:col-span-2">
           <p class="font-display text-gold-400 text-2xl font-bold mb-3">AC.aballo</p>
-          <p class="text-sm leading-relaxed mb-4 max-w-xs font-sans" style="color:rgba(149,186,151,0.50);">
+          <p class="text-sm leading-relaxed mb-4 max-w-xs font-sans" style="color:rgba(149,186,151,0.50);" data-i18n="footer.tagline">
             Escuela de Caballos · Conexión · Bienestar · Horsemanship
           </p>
           <p class="text-xs italic mb-7 max-w-xs font-sans" style="color:rgba(149,186,151,0.30);">
@@ -1054,8 +1056,8 @@
       </div>
 
       <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 font-sans" style="border-color:rgba(255,255,255,0.07); color:rgba(149,186,151,0.28); font-size:0.75rem;">
-        <p>&copy; 2025 AC.aballo &nbsp;&middot;&nbsp; St Cloud, Florida &nbsp;&middot;&nbsp; Todos los derechos reservados</p>
-        <p>Diseñado y desarrollado por <span style="color:rgba(201,168,76,0.6); font-weight:600;">RuutDev</span></p>
+        <p data-i18n="footer.rights">&copy; 2025 AC.aballo &nbsp;&middot;&nbsp; St Cloud, Florida &nbsp;&middot;&nbsp; Todos los derechos reservados</p>
+        <p><span data-i18n="footer.credit">Diseñado y desarrollado por</span> <span style="color:rgba(201,168,76,0.6); font-weight:600;">RuutDev</span></p>
       </div>
     </div>
   </footer>
