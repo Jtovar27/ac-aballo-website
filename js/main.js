@@ -185,7 +185,7 @@ const translations = {
 
     // Hero
     'hero.headline': 'Transforming<br />Hearts<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">Through Horses</em>',
-    'hero.tagline': 'Equestrian School · Horsemanship · Connection · Wellness · Guide',
+    'hero.tagline': 'Equestrian School · Horsemanship · Connection · Wellness · Guidance',
     'hero.cta': 'Book Your Session',
     'hero.learnMore': 'Our Philosophy',
 
