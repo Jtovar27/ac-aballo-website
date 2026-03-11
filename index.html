@@ -173,19 +173,16 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
     min-height: 100svh;
   }
 
   .hero-image {
-    position: relative !important;
-    inset: auto !important;
+    position: absolute !important;
+    inset: 0 !important;
     width: 100% !important;
-    height: auto !important;
-    object-fit: fill !important;
-    flex-shrink: 0;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: 55% center;
   }
 }
 
