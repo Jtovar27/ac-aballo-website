@@ -11,10 +11,8 @@ const translations = {
     'nav.subtitle': 'Escuela Ecuestre · Florida',
 
     // Hero
-    'hero.eyebrow': 'Escuela Ecuestre · St Cloud, Florida',
     'hero.headline': 'Transformando<br />corazones<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">a través de los caballos</em>',
     'hero.tagline': 'Escuela de Caballos · Conexión · Bienestar · Horsemanship',
-    'hero.quote': '"Aquí no solo se aprende a montar. Aquí se aprende a sentir, regular, confiar y avanzar."',
     'hero.cta': 'Reserva tu Sesión',
     'hero.learnMore': 'Nuestra Filosofía',
 
@@ -186,10 +184,8 @@ const translations = {
     'nav.subtitle': 'Equestrian School · Florida',
 
     // Hero
-    'hero.eyebrow': 'Equestrian School · St Cloud, Florida',
     'hero.headline': 'Transforming<br />Hearts<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">Through Horses</em>',
     'hero.tagline': 'Equestrian School · Connection · Wellness · Horsemanship',
-    'hero.quote': '"Here you don\'t just learn to ride. Here you learn to feel, regulate, trust, and move forward."',
     'hero.cta': 'Book Your Session',
     'hero.learnMore': 'Our Philosophy',
 
