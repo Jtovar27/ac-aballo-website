@@ -3,6 +3,7 @@ const translations = {
     // Navigation
     'nav.philosophy': 'Filosofía',
     'nav.about':      'Nosotros',
+    'nav.services':   'Servicios',
     'nav.gallery':    'Galería',
     'nav.contact':    'Contacto',
     'nav.cta':        'Reservar',
@@ -45,19 +46,127 @@ const translations = {
     'about.values.bienestar':'Bienestar emocional',
     'about.values.amor':     'Amor por los caballos',
 
-    // Services
+    // Services label
     'services.label': 'Nuestros Programas',
 
-    // Contact
-    'contact.label':    'Contacto',
-    'contact.heading':  'Contáctanos',
-    'contact.subtitle': 'Estamos aquí para acompañarte. Escríbenos o llámanos.',
-    'contact.book.label': 'Reserva online',
-    'contact.book.heading': 'Selecciona tu fecha y horario',
-    'contact.divider':  'O escríbenos directamente',
+    // Services - Equitación
+    'services.equitacion.title':  'Clases Regulares de Equitación',
+    'services.equitacion.desc':   'Monta Western y English para todos los niveles. Técnica, seguridad y confianza.',
+    'services.equitacion.detail': 'Desde los 4 años. Clases individuales y grupales de 45 min. Desarrollamos postura, equilibrio, control del caballo y gestión emocional en cada sesión.',
+    'services.equitacion.tag1':   'Desde 4 años',
+    'services.equitacion.tag2':   'Individual y grupal',
+    'services.equitacion.tag3':   '45 min',
+    'services.equitacion.btn':    'Reservar',
+
+    // Services - Horsemanship
+    'services.horsemanship.title':  'Horsemanship & Doma Racional',
+    'services.horsemanship.desc':   'Comunicación consciente y trabajo desde el suelo para todos los niveles.',
+    'services.horsemanship.detail': 'Lectura del lenguaje corporal equino, presión y liberación, trabajo en libertad y formación del binomio. Para jinetes que quieren una relación más profunda con su caballo.',
+    'services.horsemanship.tag1':   'Todos los niveles',
+    'services.horsemanship.tag2':   'Trabajo en tierra',
+    'services.horsemanship.tag3':   'Desde 8 años',
+    'services.horsemanship.btn':    'Reservar',
+
+    // Services - Interacciones
+    'services.interacciones.title':  'Interacciones con Caballos',
+    'services.interacciones.desc':   'Vínculo y calma con los caballos, sin necesidad de montar. Para todas las edades.',
+    'services.interacciones.detail': 'Para bebés desde 11 meses, adultos y quienes nunca han montado. El caballo como regulador emocional. Sin experiencia previa requerida. Sesiones guiadas en un entorno seguro y tranquilo.',
+    'services.interacciones.tag1':   'Desde 11 meses',
+    'services.interacciones.tag2':   'Sin experiencia',
+    'services.interacciones.tag3':   'Todas las edades',
+    'services.interacciones.btn':    'Reservar',
+
+    // Services - Condición Especial
+    'services.especial.title':  'Programas para Niños y Personas con Condición Especial',
+    'services.especial.desc':   'Sesiones personalizadas para autismo, déficit de atención y condiciones sensoriales.',
+    'services.especial.detail': 'El caballo como co-terapeuta. Trabajamos de forma individual respetando el ritmo de cada persona. Coordinamos con padres y terapeutas cuando es necesario para lograr el máximo impacto.',
+    'services.especial.tag1':   'Autismo · TDA/TDAH',
+    'services.especial.tag2':   'Condiciones sensoriales',
+    'services.especial.tag3':   'Individual',
+    'services.especial.btn':    'Reservar',
+
+    // Services - Cabalgatas
+    'services.cabalgatas.title':  'Cabalgatas',
+    'services.cabalgatas.desc':   'Rutas dentro y fuera del rancho para niños, adultos y familias. Por cita previa.',
+    'services.cabalgatas.detail': 'Disponibles en el rancho y en parques naturales de la zona. Para grupos familiares, parejas o individuales. Duración variable según ruta. Ideal para desconectarse y vivir la naturaleza a caballo.',
+    'services.cabalgatas.tag1':   'Rancho y parques',
+    'services.cabalgatas.tag2':   'Familias y grupos',
+    'services.cabalgatas.tag3':   'Por cita previa',
+    'services.cabalgatas.btn':    'Reservar',
+
+    // Services - Eventos
+    'services.eventos.title':  'Eventos y Experiencias Especiales',
+    'services.eventos.desc':   'Cumpleaños, retiros de bienestar y eventos privados con los caballos como protagonistas.',
+    'services.eventos.detail': 'Organizamos eventos únicos: fiestas de cumpleaños ecuestres, retiros corporativos de bienestar, actividades familiares y celebraciones privadas. Cada experiencia es personalizada y diseñada para crear memorias únicas.',
+    'services.eventos.tag1':   'Cumpleaños',
+    'services.eventos.tag2':   'Retiros',
+    'services.eventos.tag3':   'Eventos privados',
+    'services.eventos.btn':    'Consultar disponibilidad',
+
+    // Services - Campamentos
+    'services.campamentos.title':  'Campamentos',
+    'services.campamentos.desc':   'Inmersión ecuestre para niños y jóvenes en el rancho. Cuidado, monta y conexión.',
+    'services.campamentos.detail': 'Programas de campamento en el rancho donde los participantes aprenden a cuidar, cepillar, alimentar y montar caballos. Trabajo en equipo, contacto con la naturaleza e inmersión completa en el mundo ecuestre.',
+    'services.campamentos.tag1':   'Niños y jóvenes',
+    'services.campamentos.tag2':   'Temporada',
+    'services.campamentos.tag3':   'Trabajo en equipo',
+    'services.campamentos.btn':    'Consultar fechas',
+
+    // Gallery
+    'gallery.label':     'Galería',
+    'gallery.heading':   'Momentos en el Rancho',
+    'gallery.tagline':   'Caballos, personas y conexión real.',
+    'gallery.instagram': 'Ver más en @ac.aballo',
+
+    // Testimonials
+    'testimonials.label':   'Testimonios',
+    'testimonials.heading': 'Lo Que Dicen Nuestras Familias',
+    'testimonials.1.text':  '"Mi hijo tiene autismo y desde que empezó en AC.aballo hemos visto cambios increíbles. Álvaro sabe exactamente cómo conectar con él — con paciencia, amor y sabiduría. El caballo hace lo que ninguna terapia sola puede lograr."',
+    'testimonials.1.name':  'Daniela S.',
+    'testimonials.1.role':  'Mamá de Felipe (7 años) · Orlando, FL',
+    'testimonials.2.text':  '"Llegué sin ninguna experiencia pensando que montar era solo una actividad. Salí entendiendo que era un proceso de crecimiento personal. Luisana te acompaña de una forma muy especial — siempre presente y muy atenta a cada detalle."',
+    'testimonials.2.name':  'Roberto M.',
+    'testimonials.2.role':  'Jinete principiante · St Cloud, FL',
+    'testimonials.3.text':  '"Toda la familia tomamos clases — desde mi hija de 5 años hasta mi esposo y yo. Es un lugar que te recibe como en casa. Los caballos, el ambiente y Álvaro y Luisana lo transmiten todo: paz, amor y autenticidad."',
+    'testimonials.3.name':  'Camila R.',
+    'testimonials.3.role':  'Familia · Kissimmee, FL',
+
+    // Contact info
+    'contact.label':         'Contacto',
+    'contact.heading':       'Contáctanos',
+    'contact.subtitle':      'Estamos aquí para acompañarte. Escríbenos o llámanos.',
+    'contact.book.label':    'Reserva online',
+    'contact.book.heading':  'Selecciona tu fecha y horario',
+    'contact.divider':       'O escríbenos directamente',
+    'contact.phone.label':   'Teléfono',
+    'contact.address.label': 'Dirección',
+    'contact.hours.label':   'Horario',
+    'contact.hours.text':    'Lunes – Sábado: 9:00am – 6:00pm',
+    'contact.hours.note':    'Domingos: eventos o planificación previa',
+
+    // Contact form
+    'contact.form.name.label':        'Nombre',
+    'contact.form.name.placeholder':  'Tu nombre completo',
+    'contact.form.email.placeholder': 'tu@email.com',
+    'contact.form.phone.label':       'Teléfono',
+    'contact.form.service.label':     'Servicio de Interés',
+    'contact.form.service.default':   'Selecciona un servicio...',
+    'contact.form.service.opt1':      'Clases Regulares de Equitación',
+    'contact.form.service.opt2':      'Horsemanship & Doma Racional',
+    'contact.form.service.opt3':      'Interacciones con Caballos',
+    'contact.form.service.opt4':      'Programas para Niños y Personas con Condición',
+    'contact.form.service.opt5':      'Cabalgatas',
+    'contact.form.service.opt6':      'Eventos y Experiencias Especiales',
+    'contact.form.message.label':     'Mensaje',
+    'contact.form.message.placeholder': 'Cuéntanos más sobre ti o tu interés...',
+    'contact.form.submit':    'Enviar Mensaje',
+    'contact.form.sending':   'Enviando...',
+    'contact.form.success':   '¡Mensaje enviado! Te contactaremos pronto.',
+    'contact.form.error':     'Hubo un error. Por favor intenta de nuevo o escríbenos directamente.',
 
     // Footer
     'footer.tagline': 'Escuela de Caballos · Conexión · Bienestar · Horsemanship',
+    'footer.since':   'Transformando corazones a través de los caballos desde 2020.',
     'footer.rights':  '© 2025 AC.aballo · St Cloud, Florida · Todos los derechos reservados',
     'footer.credit':  'Diseñado y desarrollado por',
   },
@@ -66,6 +175,7 @@ const translations = {
     // Navigation
     'nav.philosophy': 'Philosophy',
     'nav.about':      'About',
+    'nav.services':   'Services',
     'nav.gallery':    'Gallery',
     'nav.contact':    'Contact',
     'nav.cta':        'Book',
@@ -108,19 +218,127 @@ const translations = {
     'about.values.bienestar':'Emotional Wellbeing',
     'about.values.amor':     'Love for Horses',
 
-    // Services
+    // Services label
     'services.label': 'Our Programs',
 
-    // Contact
-    'contact.label':    'Contact',
-    'contact.heading':  'Contact Us',
-    'contact.subtitle': 'We are here to accompany you. Write or call us.',
-    'contact.book.label': 'Book online',
-    'contact.book.heading': 'Select your date and time',
-    'contact.divider':  'Or write to us directly',
+    // Services - Equitación
+    'services.equitacion.title':  'Regular Riding Classes',
+    'services.equitacion.desc':   'Western and English riding for all levels. Technique, safety, and confidence.',
+    'services.equitacion.detail': 'From age 4. Individual and group classes of 45 min. We develop posture, balance, horse control, and emotional management in each session.',
+    'services.equitacion.tag1':   'From age 4',
+    'services.equitacion.tag2':   'Individual & group',
+    'services.equitacion.tag3':   '45 min',
+    'services.equitacion.btn':    'Book',
+
+    // Services - Horsemanship
+    'services.horsemanship.title':  'Horsemanship & Rational Training',
+    'services.horsemanship.desc':   'Conscious communication and groundwork for all levels.',
+    'services.horsemanship.detail': 'Reading equine body language, pressure and release, liberty work, and partnership building. For riders who want a deeper relationship with their horse.',
+    'services.horsemanship.tag1':   'All levels',
+    'services.horsemanship.tag2':   'Groundwork',
+    'services.horsemanship.tag3':   'From age 8',
+    'services.horsemanship.btn':    'Book',
+
+    // Services - Interacciones
+    'services.interacciones.title':  'Horse Interactions',
+    'services.interacciones.desc':   'Connection and calm with horses, no riding required. For all ages.',
+    'services.interacciones.detail': 'For babies from 11 months, adults, and those who have never ridden. The horse as an emotional regulator. No prior experience required. Guided sessions in a safe and calm environment.',
+    'services.interacciones.tag1':   'From 11 months',
+    'services.interacciones.tag2':   'No experience needed',
+    'services.interacciones.tag3':   'All ages',
+    'services.interacciones.btn':    'Book',
+
+    // Services - Condición Especial
+    'services.especial.title':  'Programs for Children & People with Special Conditions',
+    'services.especial.desc':   'Personalized sessions for autism, attention deficit, and sensory conditions.',
+    'services.especial.detail': 'The horse as co-therapist. We work individually, respecting each person\'s pace. We coordinate with parents and therapists when needed to achieve maximum impact.',
+    'services.especial.tag1':   'Autism · ADD/ADHD',
+    'services.especial.tag2':   'Sensory conditions',
+    'services.especial.tag3':   'Individual',
+    'services.especial.btn':    'Book',
+
+    // Services - Cabalgatas
+    'services.cabalgatas.title':  'Trail Rides',
+    'services.cabalgatas.desc':   'Rides on and off the ranch for children, adults, and families. By appointment.',
+    'services.cabalgatas.detail': 'Available at the ranch and in local nature parks. For family groups, couples, or individuals. Variable duration by route. Perfect for disconnecting and experiencing nature on horseback.',
+    'services.cabalgatas.tag1':   'Ranch & parks',
+    'services.cabalgatas.tag2':   'Families & groups',
+    'services.cabalgatas.tag3':   'By appointment',
+    'services.cabalgatas.btn':    'Book',
+
+    // Services - Eventos
+    'services.eventos.title':  'Events & Special Experiences',
+    'services.eventos.desc':   'Birthdays, wellness retreats, and private events with horses as the stars.',
+    'services.eventos.detail': 'We organize unique events: equestrian birthday parties, corporate wellness retreats, family activities, and private celebrations. Each experience is personalized and designed to create unique memories.',
+    'services.eventos.tag1':   'Birthdays',
+    'services.eventos.tag2':   'Retreats',
+    'services.eventos.tag3':   'Private events',
+    'services.eventos.btn':    'Check availability',
+
+    // Services - Campamentos
+    'services.campamentos.title':  'Camps',
+    'services.campamentos.desc':   'Equestrian immersion for children and youth at the ranch. Care, riding, and connection.',
+    'services.campamentos.detail': 'Ranch camp programs where participants learn to care for, groom, feed, and ride horses. Teamwork, nature contact, and full immersion in the equestrian world.',
+    'services.campamentos.tag1':   'Children & youth',
+    'services.campamentos.tag2':   'Seasonal',
+    'services.campamentos.tag3':   'Teamwork',
+    'services.campamentos.btn':    'Check dates',
+
+    // Gallery
+    'gallery.label':     'Gallery',
+    'gallery.heading':   'Moments at the Ranch',
+    'gallery.tagline':   'Horses, people, and real connection.',
+    'gallery.instagram': 'See more at @ac.aballo',
+
+    // Testimonials
+    'testimonials.label':   'Testimonials',
+    'testimonials.heading': 'What Our Families Say',
+    'testimonials.1.text':  '"My son has autism and since he started at AC.aballo we have seen incredible changes. Álvaro knows exactly how to connect with him — with patience, love, and wisdom. The horse does what no therapy alone can achieve."',
+    'testimonials.1.name':  'Daniela S.',
+    'testimonials.1.role':  'Mom of Felipe (7 years) · Orlando, FL',
+    'testimonials.2.text':  '"I arrived with no experience thinking riding was just an activity. I left understanding it was a process of personal growth. Luisana accompanies you in a very special way — always present and very attentive to every detail."',
+    'testimonials.2.name':  'Roberto M.',
+    'testimonials.2.role':  'Beginner rider · St Cloud, FL',
+    'testimonials.3.text':  '"The whole family takes classes — from my 5-year-old daughter to my husband and me. It\'s a place that welcomes you like home. The horses, the atmosphere, and Álvaro and Luisana convey it all: peace, love, and authenticity."',
+    'testimonials.3.name':  'Camila R.',
+    'testimonials.3.role':  'Family · Kissimmee, FL',
+
+    // Contact info
+    'contact.label':         'Contact',
+    'contact.heading':       'Contact Us',
+    'contact.subtitle':      'We are here to accompany you. Write or call us.',
+    'contact.book.label':    'Book online',
+    'contact.book.heading':  'Select your date and time',
+    'contact.divider':       'Or write to us directly',
+    'contact.phone.label':   'Phone',
+    'contact.address.label': 'Address',
+    'contact.hours.label':   'Hours',
+    'contact.hours.text':    'Monday – Saturday: 9:00am – 6:00pm',
+    'contact.hours.note':    'Sundays: events or prior arrangement',
+
+    // Contact form
+    'contact.form.name.label':        'Name',
+    'contact.form.name.placeholder':  'Your full name',
+    'contact.form.email.placeholder': 'you@email.com',
+    'contact.form.phone.label':       'Phone',
+    'contact.form.service.label':     'Service of Interest',
+    'contact.form.service.default':   'Select a service...',
+    'contact.form.service.opt1':      'Regular Riding Classes',
+    'contact.form.service.opt2':      'Horsemanship & Rational Training',
+    'contact.form.service.opt3':      'Horse Interactions',
+    'contact.form.service.opt4':      'Programs for Children & People with Special Conditions',
+    'contact.form.service.opt5':      'Trail Rides',
+    'contact.form.service.opt6':      'Events & Special Experiences',
+    'contact.form.message.label':     'Message',
+    'contact.form.message.placeholder': 'Tell us more about you or your interest...',
+    'contact.form.submit':    'Send Message',
+    'contact.form.sending':   'Sending...',
+    'contact.form.success':   'Message sent! We\'ll contact you soon.',
+    'contact.form.error':     'There was an error. Please try again or write to us directly.',
 
     // Footer
     'footer.tagline': 'Equestrian School · Connection · Wellness · Horsemanship',
+    'footer.since':   'Transforming hearts through horses since 2020.',
     'footer.rights':  '© 2025 AC.aballo · St Cloud, Florida · All rights reserved',
     'footer.credit':  'Designed and developed by',
   },
@@ -128,16 +346,25 @@ const translations = {
 
 function applyLanguage(lang) {
   var t = translations[lang] || translations['es'];
+
   // Plain text elements
   document.querySelectorAll('[data-i18n]').forEach(function (el) {
     var key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.textContent = t[key];
   });
+
   // HTML elements (contain tags like <br>, <em>)
   document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
     var key = el.getAttribute('data-i18n-html');
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
+
+  // Placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+  });
+
   document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
 }
@@ -167,8 +394,11 @@ if (contactForm) {
     var btn = document.getElementById('submit-btn');
     var successMsg = document.getElementById('form-success');
     var errorMsg = document.getElementById('form-error');
+    var lang = localStorage.getItem('lang') || 'es';
+    var t = translations[lang] || translations['es'];
+    var btnSpan = btn.querySelector('span');
     btn.disabled = true;
-    btn.textContent = 'Enviando...';
+    if (btnSpan) btnSpan.textContent = t['contact.form.sending'];
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: new FormData(contactForm)
@@ -190,7 +420,7 @@ if (contactForm) {
       })
       .finally(function () {
         btn.disabled = false;
-        btn.innerHTML = 'Enviar Mensaje <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>';
+        if (btnSpan) btnSpan.textContent = translations[localStorage.getItem('lang') || 'es']['contact.form.submit'];
       });
   });
 }
