@@ -336,7 +336,7 @@ const translations = {
     'contact.form.error': 'There was an error. Please try again or write to us directly.',
 
     // Footer
-    'footer.tagline': 'Equestrian School · Horsemanship · Connection · Wellness · Guide',
+    'footer.tagline': 'Equestrian School · Horsemanship · Connection · Wellness · Guidance',
     'footer.since': 'Transforming hearts through horses since 2020.',
     'footer.rights': '© 2025 AC.aballo · St Cloud, Florida · All rights reserved',
     'footer.credit': 'Designed and developed by',
