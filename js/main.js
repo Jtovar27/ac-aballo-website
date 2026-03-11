@@ -12,7 +12,7 @@ const translations = {
 
     // Hero
     'hero.headline': 'Transformando<br />corazones<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">a través de los caballos</em>',
-    'hero.tagline': 'Escuela Ecuestre · Conexión · Bienestar · Horsemanship',
+    'hero.tagline': 'Escuela Ecuestre · Horsemanship · Conexión · Bienestar',
     'hero.cta': 'Reserva tu Sesión',
     'hero.learnMore': 'Nuestra Filosofía',
 
@@ -163,7 +163,7 @@ const translations = {
     'contact.form.error': 'Hubo un error. Por favor intenta de nuevo o escríbenos directamente.',
 
     // Footer
-    'footer.tagline': 'Escuela Ecuestre · Conexión · Bienestar · Horsemanship',
+    'footer.tagline': 'Escuela Ecuestre · Horsemanship · Conexión · Bienestar',
     'footer.since': 'Transformando corazones a través de los caballos desde 2020.',
     'footer.rights': '© 2025 AC.aballo · St Cloud, Florida · Todos los derechos reservados',
     'footer.credit': 'Diseñado y desarrollado por',
@@ -185,7 +185,7 @@ const translations = {
 
     // Hero
     'hero.headline': 'Transforming<br />Hearts<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">Through Horses</em>',
-    'hero.tagline': 'Equestrian School · Connection · Wellness · Horsemanship',
+    'hero.tagline': 'Equestrian School · Horsemanship · Connection · Wellness',
     'hero.cta': 'Book Your Session',
     'hero.learnMore': 'Our Philosophy',
 
@@ -336,7 +336,7 @@ const translations = {
     'contact.form.error': 'There was an error. Please try again or write to us directly.',
 
     // Footer
-    'footer.tagline': 'Equestrian School · Connection · Wellness · Horsemanship',
+    'footer.tagline': 'Equestrian School · Horsemanship · Connection · Wellness',
     'footer.since': 'Transforming hearts through horses since 2020.',
     'footer.rights': '© 2025 AC.aballo · St Cloud, Florida · All rights reserved',
     'footer.credit': 'Designed and developed by',
