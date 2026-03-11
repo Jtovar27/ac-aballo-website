@@ -161,6 +161,9 @@
     .reveal-stagger.visible > *:nth-child(n+7) { opacity:1; transform:none; transition-delay:0.65s; }
 
     /* ── Hero responsive fix ── */
+    .hero-section {
+      min-height: 100svh;
+    }
     .hero-image {
       object-fit: cover;
       object-position: center 22%;
@@ -168,7 +171,7 @@
 
     @media (max-width: 768px) {
       .hero-image {
-        object-position: center top;
+        object-position: center center;
       }
     }
 
