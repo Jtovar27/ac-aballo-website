@@ -8,8 +8,10 @@ const translations = {
     'nav.contact': 'Contacto',
     'nav.cta': 'Reservar',
     'nav.book': 'Reserva tu Sesión',
+    'nav.subtitle': 'Escuela Ecuestre · Florida',
 
     // Hero
+    'hero.eyebrow': 'Escuela Ecuestre · St Cloud, Florida',
     'hero.headline': 'Transformando<br />corazones<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">a través de los caballos</em>',
     'hero.tagline': 'Escuela de Caballos · Conexión · Bienestar · Horsemanship',
     'hero.quote': '"Aquí no solo se aprende a montar. Aquí se aprende a sentir, regular, confiar y avanzar."',
@@ -21,6 +23,11 @@ const translations = {
     'philosophy.heading': 'Doma Racional · Conexión Emocional',
     'philosophy.body1': 'El caballo es el maestro más honesto que existe. No juzga, no miente, no impone — simplemente responde a lo que siente en quien se acerca. En AC.aballo creemos que la relación entre el ser humano y el caballo es un espejo: lo que el caballo refleja, la persona aprende. Esa es la base de la Doma Racional.',
     'philosophy.body2': 'Nuestro enfoque parte de la conexión antes que de la corrección. Trabajamos el binomio caballo–jinete desde la consciencia emocional, el liderazgo sereno y el respeto mutuo. Cada sesión es una oportunidad de crecer — no solo como jinete, sino como persona.',
+    'philosophy.bullet1': 'El binomio perfecto entre caballo y humano',
+    'philosophy.bullet2': 'La sensibilidad como fortaleza',
+    'philosophy.bullet3': 'El control emocional como base de la seguridad',
+    'philosophy.bullet4': 'La conexión antes que la imposición',
+    'philosophy.bullet5': 'El respeto al caballo como ser sensible',
     'philosophy.lema': 'El caballo es nuestro maestro. La persona, el proceso. El vínculo, el camino.',
     'philosophy.lema.label': 'Lema filosófico',
     'philosophy.phrase': '"Aquí no solo se aprende a montar.<br />Aquí se aprende a sentir, regular, confiar y avanzar."',
@@ -45,6 +52,7 @@ const translations = {
     'about.values.familia': 'Familia',
     'about.values.bienestar': 'Bienestar emocional',
     'about.values.amor': 'Amor por los caballos',
+    'about.promise': '"AC.aballo no forma jinetes solamente.<br />Forma seres humanos conectados consigo mismos."',
 
     // Services
     'services.label': 'Nuestros Programas',
@@ -175,8 +183,10 @@ const translations = {
     'nav.contact': 'Contact',
     'nav.cta': 'Book',
     'nav.book': 'Book Your Session',
+    'nav.subtitle': 'Equestrian School · Florida',
 
     // Hero
+    'hero.eyebrow': 'Equestrian School · St Cloud, Florida',
     'hero.headline': 'Transforming<br />Hearts<br /><em class="font-display not-italic text-gold-300" style="font-weight:400; font-style:italic;">Through Horses</em>',
     'hero.tagline': 'Equestrian School · Connection · Wellness · Horsemanship',
     'hero.quote': '"Here you don\'t just learn to ride. Here you learn to feel, regulate, trust, and move forward."',
@@ -188,6 +198,11 @@ const translations = {
     'philosophy.heading': 'Rational Horsemanship · Emotional Connection',
     'philosophy.body1': 'The horse is the most honest teacher there is. It does not judge, does not lie, does not impose — it simply responds to what it senses in those who approach. At AC.aballo we believe the relationship between human and horse is a mirror: what the horse reflects, the person learns. That is the foundation of Doma Racional.',
     'philosophy.body2': 'Our approach starts with connection rather than correction. We develop the horse–rider partnership through emotional awareness, calm leadership, and mutual respect. Every session is an opportunity to grow — not just as a rider, but as a person.',
+    'philosophy.bullet1': 'The perfect partnership between horse and human',
+    'philosophy.bullet2': 'Sensitivity as strength',
+    'philosophy.bullet3': 'Emotional control as the foundation of safety',
+    'philosophy.bullet4': 'Connection before imposition',
+    'philosophy.bullet5': 'Respect for the horse as a sensitive being',
     'philosophy.lema': 'The horse is our teacher. The person, the process. The bond, the path.',
     'philosophy.lema.label': 'Philosophical motto',
     'philosophy.phrase': '"Here you don\'t just learn to ride.<br />Here you learn to feel, regulate, trust, and move forward."',
@@ -212,6 +227,7 @@ const translations = {
     'about.values.familia': 'Family',
     'about.values.bienestar': 'Emotional Wellbeing',
     'about.values.amor': 'Love for Horses',
+    'about.promise': '"AC.aballo doesn\'t just train riders.<br />It forms human beings connected to themselves."',
 
     // Services
     'services.label': 'Our Programs',
