@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preguntas frecuentes sobre programas, reservas, pagos por Zelle y políticas de AC.aballo. Escuela ecuestre en St Cloud, Florida." />
+  <title>FAQ — AC.aballo · Escuela de Caballos · Florida</title>
+
+  <!-- Google Fonts: Cormorant Garamond (display) + Playfair Display (serif) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    html { scroll-behavior: smooth; }
+
+    @theme {
+      --color-forest-950: #0F1E10;
+      --color-forest-900: #1A2D1C;
+      --color-forest-800: #243B26;
+      --color-forest-700: #2E4D30;
+      --color-forest-600: #3D6140;
+      --color-forest-500: #527A55;
+      --color-forest-400: #6E9B71;
+      --color-forest-300: #95BA97;
+      --color-forest-200: #BDD8BF;
+      --color-forest-100: #DDEEDE;
+      --color-forest-50:  #EEF7EE;
+      --color-sage-600:   #5C7A5C;
+      --color-sage-400:   #8AAD8A;
+      --color-sage-200:   #C5DCC5;
+      --color-sage-50:    #F0F7F0;
+      --color-beige-900:  #4A3820;
+      --color-beige-700:  #7A5F38;
+      --color-beige-500:  #B08D5E;
+      --color-beige-300:  #D9C09A;
+      --color-beige-200:  #EDD9BD;
+      --color-beige-100:  #F7EDE0;
+      --color-beige-50:   #FDF8F2;
+      --color-gold-700:   #8C6820;
+      --color-gold-600:   #A8832A;
+      --color-gold-500:   #C9A84C;
+      --color-gold-300:   #E0C87A;
+      --color-gold-200:   #EDD9A3;
+      --color-gold-100:   #F7EDCA;
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-serif:   "Playfair Display", Georgia, serif;
+      --font-sans:    "DM Sans", system-ui, sans-serif;
+    }
+
+    .font-display { font-family: var(--font-display); }
+    .font-serif   { font-family: var(--font-serif); }
+    .font-sans    { font-family: var(--font-sans); }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .gold-rule {
+      display: block;
+      width: 52px;
+      height: 1.5px;
+      background: linear-gradient(to right, var(--color-gold-500), var(--color-gold-300));
+      margin: 1.25rem auto;
+    }
+    .gold-rule-left { margin-left: 0; }
+
+    .card-lift {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 56px rgba(15,30,16,0.14);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
+    .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:0.15s; }
+    .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:0.25s; }
+    .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.35s; }
+    .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.45s; }
+    .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:0.55s; }
+    .reveal-stagger.visible > *:nth-child(7) { opacity:1; transform:none; transition-delay:0.65s; }
+    .reveal-stagger.visible > *:nth-child(n+7) { opacity:1; transform:none; transition-delay:0.65s; }
+
+    /* FAQ accordion */
+    .faq-answer {
+      animation: fadeSlideDown 0.25s ease;
+    }
+    @keyframes fadeSlideDown {
+      from { opacity:0; transform:translateY(-8px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    .faq-item { transition: box-shadow 0.2s ease; }
+    .faq-item:hover { box-shadow: 0 4px 20px rgba(15,30,16,0.08) !important; }
+  </style>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-sans antialiased" style="background:#FDF8F2; color:#2E4D30;">
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION (fixed, white)
+  ══════════════════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-300" style="background:#ffffff; border-bottom:1px solid rgba(46,77,48,0.10); box-shadow:0 1px 8px rgba(15,30,16,0.05);" aria-label="Navegación principal">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between" style="height:5rem;">
+
+      <!-- Brand wordmark + logo -->
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="AC.aballo inicio">
+        <img
+          src="images/logo/B96D004D-B28A-4A8D-B88E-5077FE04EF08_1_105_c.jpeg"
+          alt="AC.aballo"
+          class="object-contain flex-shrink-0"
+          style="height:42px; width:42px;"
+        />
+        <div class="flex flex-col leading-none">
+          <span class="font-display text-2xl font-bold tracking-wide transition-colors duration-200" style="line-height:1; color:#7B3200;">AC.aballo</span>
+          <span class="text-forest-500 font-sans font-medium mt-0.5" style="font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase;" data-i18n="nav.subtitle">Escuela Ecuestre · Florida</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-forest-700">
+        <li><a href="index.html#philosophy" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.philosophy">Filosofía</a></li>
+        <li><a href="index.html#about" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="programs.html" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="index.html#gallery" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.gallery">Galería</a></li>
+        <li><a href="index.html#contact" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <!-- Language toggle -->
+        <button id="lang-toggle" class="hidden md:flex items-center gap-1.5 text-xs font-semibold font-sans px-3 py-2 rounded-full border transition-colors duration-200" style="border-color:rgba(46,77,48,0.25); color:#3D6140;" aria-label="Cambiar idioma">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">EN</span>
+        </button>
+
+        <!-- Book CTA -->
+        <a
+          href="book.html"
+          class="hidden md:inline-flex items-center gap-2 bg-gold-500 text-forest-900 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-gold-600 hover:text-white transition-colors duration-200 font-sans"
+        >
+          <span data-i18n="nav.cta">Reservar</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-toggle" class="md:hidden text-forest-800 p-2 -mr-2" aria-label="Abrir menú" aria-expanded="false">
+          <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#2E4D30" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
+            <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="14" x2="21" y2="14"/>
+          </svg>
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#2E4D30" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" class="hidden">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden fixed top-20 left-0 w-full z-40 font-sans" style="background:#1A2D1C; border-top:1px solid rgba(255,255,255,0.07);">
+    <ul class="flex flex-col px-6 py-3 text-forest-50 text-sm font-medium">
+      <li><a href="index.html#philosophy" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.philosophy">Filosofía</a></li>
+      <li><a href="index.html#about" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.about">Nosotros</a></li>
+      <li><a href="programs.html" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="index.html#gallery" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.gallery">Galería</a></li>
+      <li><a href="index.html#contact" class="block py-3.5 hover:text-gold-300 transition-colors" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="px-6 pb-6 pt-2 space-y-3">
+      <a
+        href="book.html"
+        class="block text-center bg-gold-500 text-forest-900 font-bold py-3.5 rounded-full hover:bg-gold-300 transition-colors duration-200"
+      >
+        <span data-i18n="nav.book">Reserva tu Sesión</span>
+      </a>
+      <button id="lang-toggle-mobile" class="w-full flex items-center justify-center gap-2 text-sm font-semibold font-sans py-3 rounded-full border transition-colors duration-200" style="border-color:rgba(255,255,255,0.15); color:rgba(255,255,255,0.7);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="lang-label-mobile">EN</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PAGE MINI-HERO
+  ══════════════════════════════════════════ -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-24 reveal" style="background:#1A2D1C; position:relative; overflow:hidden; min-height:48vh; display:flex; align-items:center;" aria-label="Preguntas Frecuentes">
+    <img src="images/school/46a371ec-138a-483d-9ae7-4bae0f0e729f.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover" style="object-position:center;" fetchpriority="high" />
+    <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.92) 0%, rgba(15,30,16,0.72) 60%, rgba(15,30,16,0.50) 100%);"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,30,16,0.80) 0%, transparent 50%);"></div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 text-center py-16">
+      <span class="section-label text-gold-300/55" data-i18n="faq.label">Preguntas Frecuentes</span>
+      <h1 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.4rem, 6vw, 4rem); font-weight:700;" data-i18n="faq.heading">FAQ</h1>
+      <span class="gold-rule"></span>
+      <p class="text-forest-300/60 max-w-xl mx-auto mt-2 text-base md:text-lg font-sans font-light" data-i18n="faq.subtitle">Respuestas claras sobre nuestros programas, reservas y políticas.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FAQ ACCORDION SECTION
+  ══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 pb-8 md:pb-12 reveal" style="background:#FDF8F2;">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+
+      <!-- Section header -->
+      <div class="text-center mb-12">
+        <span class="section-label text-forest-500" data-i18n="faq.label">Preguntas Frecuentes</span>
+        <span class="gold-rule"></span>
+      </div>
+
+      <!-- FAQ Item 1 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">1</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.1.q">¿Cómo reservo una clase?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.1.a">Visita nuestra página de Reservas, selecciona la fecha y horario de tu preferencia en el calendario, y completa el pago por Zelle para confirmar tu cupo.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">2</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.2.q">¿Cómo realizo el pago?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.2.a">Los pagos se realizan exclusivamente por Zelle al número (689) 339-6132 a nombre de AC.aballo. Una vez realizado el pago, envía el comprobante por mensaje de texto o Instagram para confirmar tu reserva.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">3</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.3.q">¿Puedo cancelar mi clase?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.3.a">Sí. Los clientes pueden cancelar con hasta 24 horas de anticipación sin penalidad. Las cancelaciones con menos de 24 horas de anticipación no son elegibles para reembolso.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">4</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.4.q">¿Puedo reprogramar mi clase?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.4.a">Sí. Puedes reprogramar tu clase utilizando el mismo pago ya realizado, siempre que lo solicites con al menos 24 horas de anticipación. La reprogramación está sujeta a disponibilidad.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">5</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.5.q">¿Qué pasa si no asisto a una clase?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.5.a">Si estás registrado y has pagado el paquete completo, una inasistencia sin previo aviso generará un cargo de $20. Comunícate con nosotros con al menos 24 horas de anticipación si no puedes asistir.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">6</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.6.q">¿Por cuánto tiempo es válida mi registración?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.6.a">La registración es un proceso único con vigencia de 6 meses desde la fecha de inscripción. Al vencer este período, deberás renovar tu registro para continuar participando.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">7</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.7.q">¿Desde qué edad pueden participar los niños?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.7.a">Aceptamos bebés desde los 11 meses para interacciones con caballos y desde los 4 años para clases regulares de equitación. También tenemos programas para familias y adultos de todas las edades.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">8</span>
+            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.8.q">¿Tienen programas para personas con condiciones especiales?</h3>
+          </div>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
+          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.8.a">Sí. Contamos con sesiones personalizadas para niños y adultos con autismo, TDA/TDAH y condiciones sensoriales. Coordinamos con padres y terapeutas cuando es necesario.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       RELATED LINKS ROW
+  ══════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 reveal" style="background:#EEF7EE;">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10">
+      <div class="grid sm:grid-cols-2 gap-4">
+
+        <!-- Card 1: Book -->
+        <a href="book.html" class="flex items-center gap-4 p-6 bg-white rounded-2xl border border-forest-200 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06); text-decoration:none;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#F7EDCA;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#A8832A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <p class="font-serif text-forest-900 text-lg font-bold mb-1" data-i18n="nav.book">Reserva tu Sesión</p>
+            <p class="text-forest-600 text-sm font-sans" data-i18n="book.subtitle">Selecciona tu programa y fecha</p>
+          </div>
+          <svg class="ml-auto text-forest-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Card 2: Policies -->
+        <a href="policies.html" class="flex items-center gap-4 p-6 bg-white rounded-2xl border border-forest-200 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06); text-decoration:none;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#EEF7EE;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#3D6140" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <p class="font-serif text-forest-900 text-lg font-bold mb-1" data-i18n="nav.policies">Políticas</p>
+            <p class="text-forest-600 text-sm font-sans" data-i18n="policies.subtitle">Claridad y transparencia</p>
+          </div>
+          <svg class="ml-auto text-forest-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CTA SECTION
+  ══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 reveal" style="background:#243B26;">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <span class="section-label text-gold-300/55" data-i18n="faq.cta.heading">¿Tienes otra pregunta?</span>
+      <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight:700;" data-i18n="faq.cta.heading">¿Tienes otra pregunta?</h2>
+      <span class="gold-rule"></span>
+      <p class="text-forest-300/60 text-base font-sans mb-8 mt-2" data-i18n="faq.cta.body">Escríbenos directamente, con gusto te orientamos.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html#contact" class="inline-flex items-center justify-center gap-2.5 bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 hover:shadow-xl font-sans">
+          <span data-i18n="faq.cta.btn">Contáctanos</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="book.html" class="inline-flex items-center justify-center gap-2 border text-forest-100 font-medium py-4 px-8 rounded-full hover:bg-forest-100/10 transition-all duration-200 font-sans" style="border-color:rgba(238,247,238,0.35);">
+          <span data-i18n="nav.book">Reserva tu Sesión</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer style="background:#0F1E10;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <p class="font-display text-gold-400 text-2xl font-bold mb-3">AC.aballo</p>
+          <p class="text-sm leading-relaxed mb-4 max-w-xs font-sans" style="color:rgba(149,186,151,0.50);" data-i18n="footer.tagline">
+            Escuela Ecuestre · Horsemanship · Conexión · Bienestar · Guía
+          </p>
+          <p class="text-xs italic mb-7 max-w-xs font-sans" style="color:rgba(149,186,151,0.30);" data-i18n="footer.since">
+            Transformando corazones a través de los caballos desde 2020.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com/ac.aballo" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gold-500" style="background:rgba(255,255,255,0.08); color:#ffffff;" aria-label="Instagram @ac.aballo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="tel:6893396132" class="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gold-500" style="background:rgba(255,255,255,0.08); color:#ffffff;" aria-label="Llamar a AC.aballo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.18A2 2 0 0 1 4.71 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.41-.41a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-semibold mb-5 uppercase font-sans" style="letter-spacing:0.2em; color:rgba(149,186,151,0.85);" data-i18n="footer.nav.title">Navegación</p>
+          <ul class="space-y-3 text-sm font-sans" style="color:rgba(149,186,151,0.45);">
+            <li><a href="index.html#philosophy" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.philosophy">Filosofía</a></li>
+            <li><a href="index.html#about" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="programs.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="book.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.cta">Reservar</a></li>
+            <li><a href="policies.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.policies">Políticas</a></li>
+            <li><a href="faq.html" class="text-gold-400 font-medium" aria-current="page" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="index.html#gallery" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.gallery">Galería</a></li>
+            <li><a href="index.html#contact" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-xs font-semibold mb-5 uppercase font-sans" style="letter-spacing:0.2em; color:rgba(149,186,151,0.85);" data-i18n="footer.location.title">Ubicación</p>
+          <address class="not-italic text-sm leading-relaxed space-y-3 font-sans" style="color:rgba(149,186,151,0.45);">
+            <p>
+              <a href="https://maps.google.com/?q=955+N+Narcoosee+Rd,+St+Cloud,+FL+34771" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors duration-200">
+                955 N Narcoosee Rd<br />St Cloud, FL 34771
+              </a>
+            </p>
+            <p><a href="tel:6893396132" class="hover:text-gold-400 transition-colors duration-200">(689) 339-6132</a></p>
+            <p class="text-xs" style="color:rgba(149,186,151,0.28);" data-i18n="footer.hours.short">Lun–Sáb: 9am – 6pm · Dom: eventos previa planificación</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 font-sans" style="border-color:rgba(255,255,255,0.07); color:rgba(149,186,151,0.28); font-size:0.75rem;">
+        <p data-i18n="footer.rights">&copy; 2025 AC.aballo &nbsp;&middot;&nbsp; St Cloud, Florida &nbsp;&middot;&nbsp; Todos los derechos reservados</p>
+        <p><span data-i18n="footer.credit">Diseñado y desarrollado por</span> <span style="color:rgba(201,168,76,0.6); font-weight:600;">RuutDev</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       FLOATING CALL BUTTON (mobile only)
+  ══════════════════════════════════════════ -->
+  <a href="tel:6893396132" class="fixed bottom-6 right-6 z-50 md:hidden w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-transform duration-200 active:scale-95 hover:scale-110" style="background:#C9A84C;" aria-label="Llamar a AC.aballo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#1A2D1C" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.18A2 2 0 0 1 4.71 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.41-.41a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/>
+    </svg>
+  </a>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script>
+    // ── Nav: white always, deeper shadow on scroll ──
+    var nav = document.getElementById('main-nav');
+    function updateNav() {
+      if (window.scrollY > 40) {
+        nav.style.boxShadow = '0 2px 20px rgba(15,30,16,0.12)';
+      } else {
+        nav.style.boxShadow = '0 1px 8px rgba(15,30,16,0.05)';
+      }
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // ── Mobile menu toggle ──
+    var menuToggle = document.getElementById('menu-toggle');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var iconMenu = document.getElementById('icon-menu');
+    var iconClose = document.getElementById('icon-close');
+    var menuOpen = false;
+
+    menuToggle.addEventListener('click', function() {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('hidden', !menuOpen);
+      iconMenu.classList.toggle('hidden', menuOpen);
+      iconClose.classList.toggle('hidden', !menuOpen);
+      menuToggle.setAttribute('aria-expanded', String(menuOpen));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menuOpen = false;
+        mobileMenu.classList.add('hidden');
+        iconMenu.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── FAQ Accordion ──
+    function toggleFaq(item) {
+      var answer = item.querySelector('.faq-answer');
+      var chevron = item.querySelector('.faq-chevron');
+      var isOpen = !answer.classList.contains('hidden');
+
+      // Close all other open FAQs
+      document.querySelectorAll('.faq-item').forEach(function(other) {
+        if (other !== item) {
+          var otherAnswer = other.querySelector('.faq-answer');
+          var otherChevron = other.querySelector('.faq-chevron');
+          if (otherAnswer) otherAnswer.classList.add('hidden');
+          if (otherChevron) otherChevron.style.transform = '';
+        }
+      });
+
+      answer.classList.toggle('hidden', isOpen);
+      chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+    }
+
+    // ── Scroll reveal (Intersection Observer) ──
+    var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.07 });
+    revealEls.forEach(function(el) { io.observe(el); });
+  </script>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
