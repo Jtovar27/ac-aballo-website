@@ -588,53 +588,81 @@
         <span class="gold-rule"></span>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
-        <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift flex flex-col" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
-          <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
-            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-          </div>
-          <p class="font-serif text-forest-700 text-base italic leading-relaxed flex-1 mb-6" data-i18n="testimonials.1.text">
-            "Mi hijo tiene autismo y desde que empezó en AC.aballo hemos visto cambios increíbles. Álvaro sabe exactamente cómo conectar con él — con paciencia, amor y sabiduría. El caballo hace lo que ninguna terapia sola puede lograr."
-          </p>
-          <div class="flex items-center gap-3 border-t border-beige-100 pt-5">
-            <div class="w-10 h-10 rounded-full bg-beige-200 flex items-center justify-center text-beige-700 font-bold text-sm flex-shrink-0 font-sans">D</div>
-            <div>
-              <p class="font-semibold text-forest-900 text-sm font-sans" data-i18n="testimonials.1.name">Daniela S.</p>
-              <p class="text-beige-500 text-xs font-sans" data-i18n="testimonials.1.role">Mamá de Felipe (7 años) · Orlando, FL</p>
+      <!-- Carousel wrapper -->
+      <div class="relative" id="testimonials-carousel">
+        <!-- Overflow mask -->
+        <div class="overflow-hidden">
+          <div class="flex transition-transform duration-500 ease-in-out" id="testimonials-track">
+
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 px-2 sm:px-8 md:px-20 lg:px-40">
+              <div class="bg-white rounded-2xl p-8 border border-beige-200 flex flex-col mx-auto max-w-2xl" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
+                <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
+                  <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <p class="font-serif text-forest-700 text-base italic leading-relaxed flex-1 mb-6" data-i18n="testimonials.1.text">
+                  "Mi hijo tiene autismo y desde que empezó en AC.aballo hemos visto cambios increíbles. Álvaro sabe exactamente cómo conectar con él — con paciencia, amor y sabiduría. El caballo hace lo que ninguna terapia sola puede lograr."
+                </p>
+                <div class="flex items-center gap-3 border-t border-beige-100 pt-5">
+                  <div class="w-10 h-10 rounded-full bg-beige-200 flex items-center justify-center text-beige-700 font-bold text-sm flex-shrink-0 font-sans">D</div>
+                  <div>
+                    <p class="font-semibold text-forest-900 text-sm font-sans" data-i18n="testimonials.1.name">Daniela S.</p>
+                    <p class="text-beige-500 text-xs font-sans" data-i18n="testimonials.1.role">Mamá de Felipe (7 años) · Orlando, FL</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 px-2 sm:px-8 md:px-20 lg:px-40">
+              <div class="bg-white rounded-2xl p-8 border border-beige-200 flex flex-col mx-auto max-w-2xl" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
+                <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
+                  <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <p class="font-serif text-forest-700 text-base italic leading-relaxed flex-1 mb-6" data-i18n="testimonials.2.text">
+                  "Llegué sin ninguna experiencia pensando que montar era solo una actividad. Salí entendiendo que era un proceso de crecimiento personal. Luisana te acompaña de una forma muy especial — siempre presente y muy atenta a cada detalle."
+                </p>
+                <div class="flex items-center gap-3 border-t border-beige-100 pt-5">
+                  <div class="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center text-forest-600 font-bold text-sm flex-shrink-0 font-sans">R</div>
+                  <div>
+                    <p class="font-semibold text-forest-900 text-sm font-sans" data-i18n="testimonials.2.name">Roberto M.</p>
+                    <p class="text-beige-500 text-xs font-sans" data-i18n="testimonials.2.role">Jinete principiante · St Cloud, FL</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="w-full flex-shrink-0 px-2 sm:px-8 md:px-20 lg:px-40">
+              <div class="bg-white rounded-2xl p-8 border border-beige-200 flex flex-col mx-auto max-w-2xl" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
+                <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
+                  <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <p class="font-serif text-forest-700 text-base italic leading-relaxed flex-1 mb-6" data-i18n="testimonials.3.text">
+                  "Toda la familia tomamos clases — desde mi hija de 5 años hasta mi esposo y yo. Es un lugar que te recibe como en casa. Los caballos, el ambiente y Álvaro y Luisana lo transmiten todo: paz, amor y autenticidad."
+                </p>
+                <div class="flex items-center gap-3 border-t border-beige-100 pt-5">
+                  <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 font-bold text-sm flex-shrink-0 font-sans">C</div>
+                  <div>
+                    <p class="font-semibold text-forest-900 text-sm font-sans" data-i18n="testimonials.3.name">Camila R.</p>
+                    <p class="text-beige-500 text-xs font-sans" data-i18n="testimonials.3.role">Familia · Kissimmee, FL</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift flex flex-col" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
-          <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
-            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-          </div>
-          <p class="font-serif text-forest-700 text-base italic leading-relaxed flex-1 mb-6" data-i18n="testimonials.2.text">
-            "Llegué sin ninguna experiencia pensando que montar era solo una actividad. Salí entendiendo que era un proceso de crecimiento personal. Luisana te acompaña de una forma muy especial — siempre presente y muy atenta a cada detalle."
-          </p>
-          <div class="flex items-center gap-3 border-t border-beige-100 pt-5">
-            <div class="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center text-forest-600 font-bold text-sm flex-shrink-0 font-sans">R</div>
-            <div>
-              <p class="font-semibold text-forest-900 text-sm font-sans" data-i18n="testimonials.2.name">Roberto M.</p>
-              <p class="text-beige-500 text-xs font-sans" data-i18n="testimonials.2.role">Jinete principiante · St Cloud, FL</p>
-            </div>
-          </div>
-        </div>
+        <!-- Prev / Next arrows -->
+        <button id="testimonials-prev" aria-label="Anterior" class="absolute top-1/2 -translate-y-1/2 left-0 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-beige-200 text-forest-700 hover:bg-beige-50 transition-colors shadow-sm" style="font-size:1.2rem;">&#8249;</button>
+        <button id="testimonials-next" aria-label="Siguiente" class="absolute top-1/2 -translate-y-1/2 right-0 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-beige-200 text-forest-700 hover:bg-beige-50 transition-colors shadow-sm" style="font-size:1.2rem;">&#8250;</button>
 
-        <div class="bg-white rounded-2xl p-8 border border-beige-200 card-lift flex flex-col" style="box-shadow:0 4px 16px rgba(74,56,32,0.07);">
-          <div class="flex gap-0.5 mb-5 text-gold-500 text-base">
-            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-          </div>
-          <p class="font-serif text-forest-700 text-base italic leading-relaxed flex-1 mb-6" data-i18n="testimonials.3.text">
-            "Toda la familia tomamos clases — desde mi hija de 5 años hasta mi esposo y yo. Es un lugar que te recibe como en casa. Los caballos, el ambiente y Álvaro y Luisana lo transmiten todo: paz, amor y autenticidad."
-          </p>
-          <div class="flex items-center gap-3 border-t border-beige-100 pt-5">
-            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 font-bold text-sm flex-shrink-0 font-sans">C</div>
-            <div>
-              <p class="font-semibold text-forest-900 text-sm font-sans" data-i18n="testimonials.3.name">Camila R.</p>
-              <p class="text-beige-500 text-xs font-sans" data-i18n="testimonials.3.role">Familia · Kissimmee, FL</p>
-            </div>
-          </div>
+        <!-- Dots -->
+        <div class="flex justify-center gap-2 mt-8" id="testimonials-dots">
+          <button class="w-2.5 h-2.5 rounded-full bg-beige-400 transition-colors duration-300" data-index="0" aria-label="Testimonio 1"></button>
+          <button class="w-2.5 h-2.5 rounded-full bg-beige-400 transition-colors duration-300" data-index="1" aria-label="Testimonio 2"></button>
+          <button class="w-2.5 h-2.5 rounded-full bg-beige-400 transition-colors duration-300" data-index="2" aria-label="Testimonio 3"></button>
         </div>
       </div>
     </div>

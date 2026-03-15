@@ -721,4 +721,51 @@ function setupLangToggle(btnId, labelId) {
 setupLangToggle('lang-toggle', 'lang-label');
 setupLangToggle('lang-toggle-mobile', 'lang-label-mobile');
 
+// ── Testimonials Carousel ──────────────────────────────────────────────────
+(function () {
+  var track = document.getElementById('testimonials-track');
+  var dotsContainer = document.getElementById('testimonials-dots');
+  var prevBtn = document.getElementById('testimonials-prev');
+  var nextBtn = document.getElementById('testimonials-next');
+  if (!track) return;
+
+  var total = track.children.length;
+  var current = 0;
+  var interval;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    Array.from(dotsContainer.children).forEach(function (dot, i) {
+      dot.style.backgroundColor = i === current ? '#C49A3A' : '';
+      dot.classList.toggle('bg-gold-500', i === current);
+      dot.classList.toggle('bg-beige-400', i !== current);
+    });
+  }
+
+  function startAuto() {
+    interval = setInterval(function () { goTo(current + 1); }, 5000);
+  }
+
+  function stopAuto() { clearInterval(interval); }
+
+  prevBtn.addEventListener('click', function () { stopAuto(); goTo(current - 1); startAuto(); });
+  nextBtn.addEventListener('click', function () { stopAuto(); goTo(current + 1); startAuto(); });
+
+  Array.from(dotsContainer.children).forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      stopAuto();
+      goTo(parseInt(dot.getAttribute('data-index')));
+      startAuto();
+    });
+  });
+
+  // Pause on hover
+  track.closest('#testimonials-carousel').addEventListener('mouseenter', stopAuto);
+  track.closest('#testimonials-carousel').addEventListener('mouseleave', startAuto);
+
+  goTo(0);
+  startAuto();
+}());
+
 applyLanguage(localStorage.getItem('lang') || 'es');
