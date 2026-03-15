@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Preguntas frecuentes sobre programas, reservas, pagos por Zelle y políticas de AC.aballo. Escuela ecuestre en St Cloud, Florida." />
-  <title>FAQ — AC.aballo · Escuela de Caballos · Florida</title>
+  <meta name="description" content="Quiénes Somos — AC.aballo, escuela ecuestre familiar en Florida fundada en 2020. Conexión, bienestar y crecimiento a través de los caballos." />
+  <title>Nosotros — AC.aballo · Escuela de Caballos · Florida</title>
 
   <!-- Google Fonts: Cormorant Garamond (display) + Playfair Display (serif) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -82,6 +82,43 @@
       box-shadow: 0 24px 56px rgba(15,30,16,0.14);
     }
 
+    .img-ph {
+      background: linear-gradient(145deg, #243B26 0%, #2E4D30 55%, #3D6140 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .img-ph::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 0.75rem;
+      padding: 0.9rem 1.1rem;
+      color: #EEF7EE;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-input::placeholder { color: rgba(149,186,151,0.35); }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--color-gold-500);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+    }
+    .form-input option { background: #243B26; color: #DDEEDE; }
+
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -106,16 +143,9 @@
     .reveal-stagger.visible > *:nth-child(7) { opacity:1; transform:none; transition-delay:0.65s; }
     .reveal-stagger.visible > *:nth-child(n+7) { opacity:1; transform:none; transition-delay:0.65s; }
 
-    /* FAQ accordion */
     .faq-answer {
       animation: fadeSlideDown 0.25s ease;
     }
-    @keyframes fadeSlideDown {
-      from { opacity:0; transform:translateY(-8px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-    .faq-item { transition: box-shadow 0.2s ease; }
-    .faq-item:hover { box-shadow: 0 4px 20px rgba(15,30,16,0.08) !important; }
   </style>
 
   <link rel="stylesheet" href="css/styles.css" />
@@ -146,7 +176,7 @@
       <!-- Desktop links -->
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-forest-700">
         <li><a href="philosophy.html" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.philosophy">Filosofía</a></li>
-        <li><a href="about.html" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="about.html" class="text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.about">Nosotros</a></li>
         <li><a href="programs.html" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.services">Servicios</a></li>
         <li><a href="gallery.html" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.gallery">Galería</a></li>
         <li><a href="contact.html" class="hover:text-gold-600 transition-colors duration-200 py-1" data-i18n="nav.contact">Contacto</a></li>
@@ -159,7 +189,6 @@
           <span id="lang-label">EN</span>
         </button>
 
-        <!-- Book CTA -->
         <a
           href="book.html"
           class="hidden md:inline-flex items-center gap-2 bg-gold-500 text-forest-900 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-gold-600 hover:text-white transition-colors duration-200 font-sans"
@@ -185,7 +214,7 @@
   <div id="mobile-menu" class="hidden fixed top-20 left-0 w-full z-40 font-sans" style="background:#1A2D1C; border-top:1px solid rgba(255,255,255,0.07);">
     <ul class="flex flex-col px-6 py-3 text-forest-50 text-sm font-medium">
       <li><a href="philosophy.html" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.philosophy">Filosofía</a></li>
-      <li><a href="about.html" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.about">Nosotros</a></li>
+      <li><a href="about.html" class="block py-3.5 border-b text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.about">Nosotros</a></li>
       <li><a href="programs.html" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.services">Servicios</a></li>
       <li><a href="gallery.html" class="block py-3.5 border-b hover:text-gold-300 transition-colors" style="border-color:rgba(255,255,255,0.07);" data-i18n="nav.gallery">Galería</a></li>
       <li><a href="contact.html" class="block py-3.5 hover:text-gold-300 transition-colors" data-i18n="nav.contact">Contacto</a></li>
@@ -207,200 +236,111 @@
   <!-- ══════════════════════════════════════════
        PAGE MINI-HERO
   ══════════════════════════════════════════ -->
-  <section class="pt-32 pb-20 md:pt-40 md:pb-24 reveal" style="background:#1A2D1C; position:relative; overflow:hidden; min-height:48vh; display:flex; align-items:center;" aria-label="Preguntas Frecuentes">
-    <img src="images/school/46a371ec-138a-483d-9ae7-4bae0f0e729f.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover" style="object-position:center;" fetchpriority="high" />
-    <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.92) 0%, rgba(15,30,16,0.72) 60%, rgba(15,30,16,0.50) 100%);"></div>
-    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,30,16,0.80) 0%, transparent 50%);"></div>
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 text-center py-16">
-      <span class="section-label text-gold-300/55" data-i18n="faq.label">Preguntas Frecuentes</span>
-      <h1 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.4rem, 6vw, 4rem); font-weight:700;" data-i18n="faq.heading">FAQ</h1>
+  <section class="relative flex items-center pt-20 reveal" style="min-height:52vh; background-color:#1A2D1C; overflow:hidden;" aria-label="Nosotros AC.aballo">
+    <!-- Background image -->
+    <img
+      src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: center 30%;"
+      fetchpriority="high"
+    />
+
+    <!-- Overlays -->
+    <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.90) 0%, rgba(15,30,16,0.65) 55%, rgba(15,30,16,0.35) 100%);"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,30,16,0.80) 0%, transparent 55%);"></div>
+
+    <!-- Decorative horse SVG watermark -->
+    <div class="absolute right-0 bottom-0 top-0 flex items-center pr-8 pointer-events-none select-none opacity-[0.04]" aria-hidden="true">
+      <svg viewBox="0 0 480 520" width="420" height="460" fill="rgba(201,168,76,1)" xmlns="http://www.w3.org/2000/svg">
+        <path d="M390 95 C375 58, 345 42, 322 62 C308 44, 282 36, 264 56 C250 40, 224 40, 212 60 C194 46, 172 54, 168 76 C148 70, 130 86, 132 110 C112 112, 100 132, 108 152 C94 166, 94 194, 114 208 L118 420 L152 420 L158 280 C178 300, 200 316, 202 350 L202 420 L236 420 L238 346 C232 318, 218 292, 218 262 L262 262 C262 294, 248 320, 250 350 L250 420 L284 420 L284 348 C286 316, 300 294, 308 268 L330 268 L332 420 L368 420 L368 262 C390 248, 412 226, 418 198 C442 190, 448 162, 418 148 L390 95Z"/>
+        <ellipse cx="330" cy="72" rx="22" ry="30" transform="rotate(-15 330 72)"/>
+        <rect x="316" y="44" width="10" height="36" rx="5" transform="rotate(-20 316 44)"/>
+        <rect x="338" y="38" width="10" height="42" rx="5" transform="rotate(10 338 38)"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-32 text-center relative z-10 w-full">
+      <span class="section-label text-gold-300/55" data-i18n="about.label">Quiénes Somos</span>
+      <h1 class="font-display text-forest-50 mb-4" style="font-size: clamp(2.4rem, 6vw, 4rem); font-weight:700;" data-i18n="about.heading">Una Escuela con Alma</h1>
       <span class="gold-rule"></span>
-      <p class="text-forest-300/60 max-w-xl mx-auto mt-2 text-base md:text-lg font-sans font-light" data-i18n="faq.subtitle">Respuestas claras sobre nuestros programas, reservas y políticas.</p>
     </div>
   </section>
 
   <!-- ══════════════════════════════════════════
-       FAQ ACCORDION SECTION
+       ABOUT
   ══════════════════════════════════════════ -->
-  <section class="py-20 md:py-28 pb-8 md:pb-12 reveal" style="background:#FDF8F2;">
-    <div class="max-w-3xl mx-auto px-6 lg:px-10">
-
-      <!-- Section header -->
-      <div class="text-center mb-12">
-        <span class="section-label text-forest-500" data-i18n="faq.label">Preguntas Frecuentes</span>
-        <span class="gold-rule"></span>
-      </div>
-
-      <!-- FAQ Item 1 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">1</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.1.q">¿Cómo reservo una clase?</h3>
+  <section id="about" class="py-28 md:py-36 reveal" style="background:#EEF7EE;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid md:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div class="order-2 md:order-1">
+          <div class="rounded-3xl border border-forest-700/20 overflow-hidden" style="aspect-ratio:4/5; max-width:440px; margin:0 auto;">
+            <img src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Luisana Gallardo Flores en el rancho AC.aballo" class="w-full h-full object-cover" style="object-position: center top;" />
           </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.1.a">Visita nuestra página de Reservas, selecciona la fecha y horario de tu preferencia en el calendario, y completa el pago por Zelle para confirmar tu cupo.</p>
-        </div>
-      </div>
 
-      <!-- FAQ Item 2 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">2</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.2.q">¿Cómo realizo el pago?</h3>
+        <div class="order-1 md:order-2">
+          <span class="section-label text-forest-500" data-i18n="about.label">Quiénes Somos</span>
+          <h2 class="font-display text-forest-900 mb-4 leading-tight" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;" data-i18n="about.heading">Una Escuela con Alma</h2>
+          <span class="gold-rule gold-rule-left"></span>
+
+          <div class="space-y-5 mt-6">
+            <p class="text-forest-700 text-lg leading-relaxed font-sans" data-i18n="about.body1">
+              AC.aballo nació en noviembre de 2020 en Florida como un proyecto familiar impulsado por el amor a los caballos y la convicción de que el vínculo entre el ser humano y el caballo tiene el poder de transformar vidas.
+            </p>
+            <p class="text-forest-700 text-lg leading-relaxed font-sans" data-i18n="about.body2">
+              Abrimos nuestras puertas a todos: bebés desde los 11 meses, niños, adolescentes, adultos y familias completas. También acompañamos a personas con condiciones especiales con sesiones personalizadas y un enfoque de respeto y consciencia.
+            </p>
           </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.2.a">Los pagos se realizan exclusivamente por Zelle al número (689) 339-6132 a nombre de AC.aballo. Una vez realizado el pago, envía el comprobante por mensaje de texto o Instagram para confirmar tu reserva.</p>
-        </div>
-      </div>
 
-      <!-- FAQ Item 3 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">3</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.3.q">¿Puedo cancelar mi clase?</h3>
+          <p class="font-serif text-forest-800 text-xl italic my-8" data-i18n="about.body3">
+            "Somos familia. Somos manada. Somos escuela. Somos emoción."
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.respeto">Respeto</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.empatia">Empatía</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.conexion">Conexión</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.confianza">Confianza</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.familia">Familia</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.bienestar">Bienestar emocional</span>
+            <span class="bg-forest-100 text-forest-700 text-xs font-semibold px-4 py-2 rounded-full border border-forest-200 font-sans" data-i18n="about.values.amor">Amor por los caballos</span>
           </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.3.a">Sí. Los clientes pueden cancelar con hasta 24 horas de anticipación sin penalidad. Las cancelaciones con menos de 24 horas de anticipación no son elegibles para reembolso.</p>
         </div>
       </div>
-
-      <!-- FAQ Item 4 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">4</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.4.q">¿Puedo reprogramar mi clase?</h3>
-          </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.4.a">Sí. Puedes reprogramar tu clase utilizando el mismo pago ya realizado, siempre que lo solicites con al menos 24 horas de anticipación. La reprogramación está sujeta a disponibilidad.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 5 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">5</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.5.q">¿Qué pasa si no asisto a una clase?</h3>
-          </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.5.a">Si estás registrado y has pagado el paquete completo, una inasistencia sin previo aviso generará un cargo de $20. Comunícate con nosotros con al menos 24 horas de anticipación si no puedes asistir.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 6 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">6</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.6.q">¿Por cuánto tiempo es válida mi registración?</h3>
-          </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.6.a">La registración es un proceso único con vigencia de 6 meses desde la fecha de inscripción. Al vencer este período, deberás renovar tu registro para continuar participando.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 7 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">7</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.7.q">¿Desde qué edad pueden participar los niños?</h3>
-          </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.7.a">Aceptamos bebés desde los 11 meses para interacciones con caballos y desde los 4 años para clases regulares de equitación. También tenemos programas para familias y adultos de todas las edades.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 8 -->
-      <div class="faq-item bg-white rounded-2xl border border-beige-100 overflow-hidden mb-4 cursor-pointer" style="box-shadow:0 2px 12px rgba(15,30,16,0.05);" onclick="toggleFaq(this)">
-        <div class="flex items-center justify-between gap-4 p-6 md:p-8">
-          <div class="flex items-center gap-4 min-w-0">
-            <span class="w-7 h-7 rounded-full bg-gold-100 text-gold-700 font-bold text-sm flex items-center justify-center flex-shrink-0 font-sans">8</span>
-            <h3 class="font-serif text-forest-900 text-lg leading-snug" data-i18n="faq.8.q">¿Tienen programas para personas con condiciones especiales?</h3>
-          </div>
-          <svg class="faq-chevron w-5 h-5 flex-shrink-0 text-forest-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer hidden px-6 md:px-8 pb-6 md:pb-8 border-t border-beige-100 pt-5">
-          <p class="font-sans text-forest-600 text-base leading-relaxed" data-i18n="faq.8.a">Sí. Contamos con sesiones personalizadas para niños y adultos con autismo, TDA/TDAH y condiciones sensoriales. Coordinamos con padres y terapeutas cuando es necesario.</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- ══════════════════════════════════════════
-       RELATED LINKS ROW
+       PROMISE STRIP
   ══════════════════════════════════════════ -->
-  <section class="py-12 md:py-16 reveal" style="background:#EEF7EE;">
-    <div class="max-w-4xl mx-auto px-6 lg:px-10">
-      <div class="grid sm:grid-cols-2 gap-4">
-
-        <!-- Card 1: Book -->
-        <a href="book.html" class="flex items-center gap-4 p-6 bg-white rounded-2xl border border-forest-200 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06); text-decoration:none;">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#F7EDCA;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#A8832A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-          </div>
-          <div class="min-w-0">
-            <p class="font-serif text-forest-900 text-lg font-bold mb-1" data-i18n="nav.book">Reserva tu Sesión</p>
-            <p class="text-forest-600 text-sm font-sans" data-i18n="book.subtitle">Selecciona tu programa y fecha</p>
-          </div>
-          <svg class="ml-auto text-forest-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
-        <!-- Card 2: Policies -->
-        <a href="policies.html" class="flex items-center gap-4 p-6 bg-white rounded-2xl border border-forest-200 card-lift" style="box-shadow:0 2px 12px rgba(15,30,16,0.06); text-decoration:none;">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#EEF7EE;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#3D6140" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <div class="min-w-0">
-            <p class="font-serif text-forest-900 text-lg font-bold mb-1" data-i18n="nav.policies">Políticas</p>
-            <p class="text-forest-600 text-sm font-sans" data-i18n="policies.subtitle">Claridad y transparencia</p>
-          </div>
-          <svg class="ml-auto text-forest-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
-      </div>
+  <div class="py-16" style="background: linear-gradient(120deg, #2E4D30 0%, #3D6140 60%, #527A55 100%);">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="font-display text-gold-200 italic leading-relaxed" style="font-size: clamp(1.4rem, 3.2vw, 2.1rem); font-weight:400;" data-i18n-html="about.promise">
+        "AC.aballo no forma jinetes solamente.<br />Forma seres humanos conectados consigo mismos."
+      </p>
     </div>
-  </section>
+  </div>
 
   <!-- ══════════════════════════════════════════
        CTA SECTION
   ══════════════════════════════════════════ -->
-  <section class="py-20 md:py-28 reveal" style="background:#243B26;">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <span class="section-label text-gold-300/55" data-i18n="faq.cta.heading">¿Tienes otra pregunta?</span>
-      <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight:700;" data-i18n="faq.cta.heading">¿Tienes otra pregunta?</h2>
+  <section class="py-28 md:py-36 reveal" style="background:#243B26;">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center">
+      <span class="section-label text-gold-300/55" data-i18n="nav.cta">Reservar</span>
+      <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;" data-i18n="cta.heading">¿Listo para comenzar?</h2>
       <span class="gold-rule"></span>
-      <p class="text-forest-300/60 text-base font-sans mb-8 mt-2" data-i18n="faq.cta.body">Escríbenos directamente, con gusto te orientamos.</p>
+      <p class="text-forest-300/65 text-base md:text-lg font-sans font-light mt-4 mb-10 max-w-xl mx-auto" data-i18n="cta.subtitle">
+        Da el primer paso. Agenda tu sesión de orientación gratuita y descubre qué programa es el más adecuado para ti y tu familia.
+      </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="contact.html" class="inline-flex items-center justify-center gap-2.5 bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 hover:shadow-xl font-sans">
-          <span data-i18n="faq.cta.btn">Contáctanos</span>
+        <a href="book.html" class="inline-flex items-center justify-center gap-2.5 bg-gold-500 text-forest-900 font-bold py-4 px-8 rounded-full hover:bg-gold-300 transition-all duration-200 hover:shadow-xl text-sm md:text-base font-sans">
+          <span data-i18n="hero.cta">Reserva tu Sesión</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="book.html" class="inline-flex items-center justify-center gap-2 border text-forest-100 font-medium py-4 px-8 rounded-full hover:bg-forest-100/10 transition-all duration-200 font-sans" style="border-color:rgba(238,247,238,0.35);">
-          <span data-i18n="nav.book">Reserva tu Sesión</span>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 border text-forest-100 font-medium py-4 px-8 rounded-full hover:bg-forest-100/10 transition-all duration-200 text-sm md:text-base font-sans" style="border-color:rgba(238,247,238,0.35);">
+          <span data-i18n="nav.contact">Contáctanos</span>
         </a>
       </div>
     </div>
@@ -415,7 +355,7 @@
         <div class="lg:col-span-2">
           <p class="font-display text-gold-400 text-2xl font-bold mb-3">AC.aballo</p>
           <p class="text-sm leading-relaxed mb-4 max-w-xs font-sans" style="color:rgba(149,186,151,0.50);" data-i18n="footer.tagline">
-            Escuela Ecuestre · Horsemanship · Conexión · Bienestar · Guía
+            Escuela de Caballos · Conexión · Bienestar · Horsemanship
           </p>
           <p class="text-xs italic mb-7 max-w-xs font-sans" style="color:rgba(149,186,151,0.30);" data-i18n="footer.since">
             Transformando corazones a través de los caballos desde 2020.
@@ -442,7 +382,7 @@
             <li><a href="programs.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.services">Servicios</a></li>
             <li><a href="book.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.cta">Reservar</a></li>
             <li><a href="policies.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.policies">Políticas</a></li>
-            <li><a href="faq.html" class="text-gold-400 font-medium" aria-current="page" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="faq.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.faq">FAQ</a></li>
             <li><a href="gallery.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.gallery">Galería</a></li>
             <li><a href="contact.html" class="hover:text-gold-400 transition-colors duration-200" data-i18n="nav.contact">Contacto</a></li>
           </ul>
@@ -483,7 +423,7 @@
   ══════════════════════════════════════════ -->
   <script>
     // ── Nav: white always, deeper shadow on scroll ──
-    var nav = document.getElementById('main-nav');
+    const nav = document.getElementById('main-nav');
     function updateNav() {
       if (window.scrollY > 40) {
         nav.style.boxShadow = '0 2px 20px rgba(15,30,16,0.12)';
@@ -495,13 +435,13 @@
     updateNav();
 
     // ── Mobile menu toggle ──
-    var menuToggle = document.getElementById('menu-toggle');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var iconMenu = document.getElementById('icon-menu');
-    var iconClose = document.getElementById('icon-close');
-    var menuOpen = false;
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+    let menuOpen = false;
 
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', () => {
       menuOpen = !menuOpen;
       mobileMenu.classList.toggle('hidden', !menuOpen);
       iconMenu.classList.toggle('hidden', menuOpen);
@@ -509,8 +449,8 @@
       menuToggle.setAttribute('aria-expanded', String(menuOpen));
     });
 
-    mobileMenu.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
         menuOpen = false;
         mobileMenu.classList.add('hidden');
         iconMenu.classList.remove('hidden');
@@ -519,37 +459,17 @@
       });
     });
 
-    // ── FAQ Accordion ──
-    function toggleFaq(item) {
-      var answer = item.querySelector('.faq-answer');
-      var chevron = item.querySelector('.faq-chevron');
-      var isOpen = !answer.classList.contains('hidden');
-
-      // Close all other open FAQs
-      document.querySelectorAll('.faq-item').forEach(function(other) {
-        if (other !== item) {
-          var otherAnswer = other.querySelector('.faq-answer');
-          var otherChevron = other.querySelector('.faq-chevron');
-          if (otherAnswer) otherAnswer.classList.add('hidden');
-          if (otherChevron) otherChevron.style.transform = '';
-        }
-      });
-
-      answer.classList.toggle('hidden', isOpen);
-      chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
-    }
-
     // ── Scroll reveal (Intersection Observer) ──
-    var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
+    const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
           io.unobserve(e.target);
         }
       });
     }, { threshold: 0.07 });
-    revealEls.forEach(function(el) { io.observe(el); });
+    revealEls.forEach(el => io.observe(el));
   </script>
 
   <script src="js/main.js" defer></script>

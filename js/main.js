@@ -110,6 +110,11 @@ const translations = {
     'services.campamentos.tag3': 'Trabajo en equipo',
     'services.campamentos.btn': 'Consultar fechas',
 
+    'services.heading': 'Todo lo que Ofrecemos',
+    'services.intro': 'Programas diseñados para conectar personas y caballos desde el respeto, la consciencia y el amor.',
+    'services.hero.subtitle': 'Experiencias ecuestres para todas las edades — conexión, bienestar y crecimiento a través de los caballos.',
+    'services.cta.all': 'Ver todos los programas',
+
     // Gallery
     'gallery.label': 'Galería',
     'gallery.heading': 'Momentos en el Rancho',
@@ -135,6 +140,7 @@ const translations = {
     'contact.subtitle': 'Estamos aquí para acompañarte. Escríbenos o llámanos.',
     'contact.book.label': 'Reserva online',
     'contact.book.heading': 'Selecciona tu fecha y horario',
+    'contact.book.cta': 'Agenda tu sesión online',
     'contact.divider': 'O escríbenos directamente',
     'contact.phone.label': 'Teléfono',
     'contact.address.label': 'Dirección',
@@ -161,6 +167,10 @@ const translations = {
     'contact.form.sending': 'Enviando...',
     'contact.form.success': '¡Mensaje enviado! Te contactaremos pronto.',
     'contact.form.error': 'Hubo un error. Por favor intenta de nuevo o escríbenos directamente.',
+
+    // CTA section (programs page)
+    'cta.heading': '¿Listo para comenzar?',
+    'cta.subtitle': 'Da el primer paso. Agenda tu sesión de orientación gratuita y descubre qué programa es el más adecuado para ti y tu familia.',
 
     // Footer
     'footer.tagline': 'Escuela Ecuestre · Horsemanship · Conexión · Bienestar · Guía',
@@ -234,7 +244,7 @@ const translations = {
     'policies.validity.label': 'Vigencia',
     'policies.validity.heading': 'Vigencia del Registro',
     'policies.validity.body': 'El registro se realiza una sola vez y es válido mientras el cliente asista de manera continua a los programas. Si transcurren 6 meses sin asistir a ninguna clase, se deberá abonar nuevamente la tarifa de registro para reactivar la cuenta.',
-    'policies.validity.price': '<!-- TODO: PRECIO DE REGISTRO -->',
+    'policies.validity.price': '$65',
     'policies.cta.heading': '¿Listo para comenzar?',
     'policies.cta.body': 'Agenda tu primera sesión y descubre la experiencia AC.aballo.',
     'policies.cta.btn': 'Reserva tu Sesión',
@@ -262,6 +272,39 @@ const translations = {
     'faq.cta.heading': '¿Tienes otra pregunta?',
     'faq.cta.body': 'Escríbenos directamente, con gusto te orientamos.',
     'faq.cta.btn': 'Contáctanos',
+
+    // Pricing
+    'pricing.label': 'Precios',
+    'pricing.registration.label': 'Registración',
+    'pricing.registration.price': '$65',
+    'pricing.ages.label': 'Por Edad',
+    'pricing.age1.label': '1 a 3 años',
+    'pricing.age1.price': '$45',
+    'pricing.age1.desc': 'Interacción de 30 minutos',
+    'pricing.age2.label': '4 a 12 años',
+    'pricing.age2.price': '$55',
+    'pricing.age2.desc': 'Cualquier tipo de programa',
+    'pricing.age3.label': '13 a 18 años',
+    'pricing.age3.price': '$65',
+    'pricing.age3.desc': 'Cualquier tipo de programa',
+    'pricing.age4.label': '18 años en adelante',
+    'pricing.age4.price': '$75',
+    'pricing.age4.desc': 'Cualquier tipo de programa',
+    'pricing.visit.label': 'Visita Única',
+    'pricing.visit.price': '$80',
+    'pricing.visit.desc': '1 hora individual',
+    'pricing.photo.title': 'Sesión de Fotos con los Caballos',
+    'pricing.photo.desc': 'Puede traer su propio fotógrafo profesional',
+    'pricing.photo.price': '$180',
+    'pricing.photo.detail': '1 hora con el caballo',
+    // Photo session service
+    'services.fotos.title': 'Sesión de Fotos con los Caballos',
+    'services.fotos.desc': 'Experiencia fotográfica de 1 hora con el caballo. Puede traer su propio fotógrafo profesional.',
+    'services.fotos.detail': 'Una experiencia única para capturar el vínculo entre personas y caballos. 1 hora con el caballo en nuestro rancho. Puede traer su propio fotógrafo profesional. Ideal para familias, parejas, quinceañeras y momentos especiales.',
+    'services.fotos.tag1': '1 hora',
+    'services.fotos.tag2': 'Fotógrafo propio',
+    'services.fotos.tag3': 'Experiencia única',
+    'services.fotos.btn': 'Reservar',
   },
 
   en: {
@@ -375,6 +418,11 @@ const translations = {
     'services.campamentos.tag3': 'Teamwork',
     'services.campamentos.btn': 'Check dates',
 
+    'services.heading': 'Everything We Offer',
+    'services.intro': 'Programs designed to connect people and horses through respect, awareness, and love.',
+    'services.hero.subtitle': 'Equestrian experiences for all ages — connection, wellness, and growth through horses.',
+    'services.cta.all': 'See all programs',
+
     // Gallery
     'gallery.label': 'Gallery',
     'gallery.heading': 'Moments at the Ranch',
@@ -400,6 +448,7 @@ const translations = {
     'contact.subtitle': 'We are here to accompany you. Write or call us.',
     'contact.book.label': 'Book online',
     'contact.book.heading': 'Select your date and time',
+    'contact.book.cta': 'Schedule your session online',
     'contact.divider': 'Or write to us directly',
     'contact.phone.label': 'Phone',
     'contact.address.label': 'Address',
@@ -426,6 +475,10 @@ const translations = {
     'contact.form.sending': 'Sending...',
     'contact.form.success': 'Message sent! We\'ll contact you soon.',
     'contact.form.error': 'There was an error. Please try again or write to us directly.',
+
+    // CTA section (programs page)
+    'cta.heading': 'Ready to begin?',
+    'cta.subtitle': 'Take the first step. Schedule your free orientation session and discover which program is right for you and your family.',
 
     // Footer
     'footer.tagline': 'Equestrian School · Horsemanship · Connection · Wellness · Guidance',
@@ -499,7 +552,7 @@ const translations = {
     'policies.validity.label': 'Validity',
     'policies.validity.heading': 'Registration Validity',
     'policies.validity.body': 'Registration is a one-time process and remains valid as long as the client attends programs on a continuous basis. If 6 months pass without attending any class, the registration fee must be paid again to reactivate the account.',
-    'policies.validity.price': '<!-- TODO: REGISTRATION PRICE -->',
+    'policies.validity.price': '$65',
     'policies.cta.heading': 'Ready to begin?',
     'policies.cta.body': 'Schedule your first session and discover the AC.aballo experience.',
     'policies.cta.btn': 'Book Your Session',
@@ -527,6 +580,39 @@ const translations = {
     'faq.cta.heading': 'Have another question?',
     'faq.cta.body': 'Write to us directly and we\'ll be happy to help.',
     'faq.cta.btn': 'Contact Us',
+
+    // Pricing
+    'pricing.label': 'Pricing',
+    'pricing.registration.label': 'Registration',
+    'pricing.registration.price': '$65',
+    'pricing.ages.label': 'By Age',
+    'pricing.age1.label': 'Ages 1 to 3',
+    'pricing.age1.price': '$45',
+    'pricing.age1.desc': '30-minute interaction',
+    'pricing.age2.label': 'Ages 4 to 12',
+    'pricing.age2.price': '$55',
+    'pricing.age2.desc': 'Any type of program',
+    'pricing.age3.label': 'Ages 13 to 18',
+    'pricing.age3.price': '$65',
+    'pricing.age3.desc': 'Any type of program',
+    'pricing.age4.label': 'Ages 18 and up',
+    'pricing.age4.price': '$75',
+    'pricing.age4.desc': 'Any type of program',
+    'pricing.visit.label': 'One-Time Visit',
+    'pricing.visit.price': '$80',
+    'pricing.visit.desc': '1-hour single visit',
+    'pricing.photo.title': 'Photo Session with the Horses',
+    'pricing.photo.desc': 'You may bring your own professional photographer',
+    'pricing.photo.price': '$180',
+    'pricing.photo.detail': '1 hour with the horse',
+    // Photo session service
+    'services.fotos.title': 'Photo Session with the Horses',
+    'services.fotos.desc': '1-hour photo experience with the horse. You may bring your own professional photographer.',
+    'services.fotos.detail': 'A unique experience to capture the bond between people and horses. 1 hour with the horse at our ranch. You may bring your own professional photographer. Perfect for families, couples, quinceañeras, and special moments.',
+    'services.fotos.tag1': '1 hour',
+    'services.fotos.tag2': 'Own photographer',
+    'services.fotos.tag3': 'Unique experience',
+    'services.fotos.btn': 'Book',
   },
 };
 
