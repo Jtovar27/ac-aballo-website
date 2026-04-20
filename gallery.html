@@ -29,6 +29,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
   <link rel="stylesheet" href="css/styles.css" />
+  <style type="text/tailwindcss">
+@theme {
+  --color-forest-950:#0F1E10;--color-forest-900:#1A2D1C;--color-forest-800:#243B26;--color-forest-700:#2E4D30;--color-forest-600:#3D6140;--color-forest-500:#527A55;--color-forest-400:#6E9B71;--color-forest-300:#95BA97;--color-forest-200:#BDD8BF;--color-forest-100:#DDEEDE;--color-forest-50:#EEF7EE;
+  --color-sage-600:#5C7A5C;--color-sage-400:#8AAD8A;--color-sage-200:#C5DCC5;--color-sage-50:#F0F7F0;
+  --color-beige-900:#4A3820;--color-beige-700:#7A5F38;--color-beige-500:#B08D5E;--color-beige-300:#D9C09A;--color-beige-200:#EDD9BD;--color-beige-100:#F7EDE0;--color-beige-50:#FDF8F2;
+  --color-gold-700:#8C6820;--color-gold-600:#A8832A;--color-gold-500:#C9A84C;--color-gold-300:#E0C87A;--color-gold-200:#EDD9A3;--color-gold-100:#F7EDCA;
+  --font-display:"Cormorant Garamond",Georgia,serif;--font-serif:"Playfair Display",Georgia,serif;--font-sans:"DM Sans",system-ui,sans-serif;
+}
+  </style>
 </head>
 
 <body class="font-sans antialiased" style="background:#1A2D1C; color:#EEF7EE;">
@@ -131,15 +140,7 @@
     <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.90) 0%, rgba(15,30,16,0.65) 55%, rgba(15,30,16,0.35) 100%);"></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,30,16,0.80) 0%, transparent 55%);"></div>
 
-    <!-- Decorative horse SVG watermark -->
-    <div class="absolute right-0 bottom-0 top-0 flex items-center pr-8 pointer-events-none select-none opacity-[0.04]" aria-hidden="true">
-      <svg viewBox="0 0 480 520" width="420" height="460" fill="rgba(201,168,76,1)" xmlns="http://www.w3.org/2000/svg">
-        <path d="M390 95 C375 58, 345 42, 322 62 C308 44, 282 36, 264 56 C250 40, 224 40, 212 60 C194 46, 172 54, 168 76 C148 70, 130 86, 132 110 C112 112, 100 132, 108 152 C94 166, 94 194, 114 208 L118 420 L152 420 L158 280 C178 300, 200 316, 202 350 L202 420 L236 420 L238 346 C232 318, 218 292, 218 262 L262 262 C262 294, 248 320, 250 350 L250 420 L284 420 L284 348 C286 316, 300 294, 308 268 L330 268 L332 420 L368 420 L368 262 C390 248, 412 226, 418 198 C442 190, 448 162, 418 148 L390 95Z"/>
-        <ellipse cx="330" cy="72" rx="22" ry="30" transform="rotate(-15 330 72)"/>
-        <rect x="316" y="44" width="10" height="36" rx="5" transform="rotate(-20 316 44)"/>
-        <rect x="338" y="38" width="10" height="42" rx="5" transform="rotate(10 338 38)"/>
-      </svg>
-    </div>
+
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-32 text-center relative z-10 w-full">
       <span class="section-label text-gold-300/55" data-i18n="gallery.label">Galería</span>
@@ -165,119 +166,246 @@
         <p class="text-forest-300/55 max-w-sm mx-auto mt-4 text-sm font-sans" data-i18n="gallery.tagline">Caballos, personas y conexión real.</p>
       </div>
 
-      <!-- Masonry grid — ALL images -->
-      <div class="columns-2 md:columns-3 lg:columns-4 gap-3">
-        <img src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Álvaro y Luisana en el rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Álvaro con caballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Luisana con caballo blanco" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/28C3B0E0-5813-41CB-A493-0A152B8D0D65_1_105_c.jpeg" alt="Álvaro y Luisana con caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/4f94d8d3-380c-4935-b573-ec649bb092e0.jpg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Luisana en el rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/1af3aa8e-4a86-4633-ad0a-6363a94b1784.jpg" alt="Sesión ecuestre AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3ab9be17-12d1-41b0-befe-dc554e31093a.jpg" alt="Niños en el rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/1ed448ae-5075-4390-93ff-aa7c45dd918b.jpg" alt="Luisana con caballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/21426fd0-2ea2-4d6c-8aae-cce5bba5dcf0.jpg" alt="Álvaro y Luisana con caballos palominos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/38d3bb41-92c6-4796-96d9-3f3ead467b60.jpg" alt="Caballos en el rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/041D032E-5016-462C-B235-F157E2232C8A_1_105_c.jpeg" alt="Momento en el rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/082d50f3-57a7-42af-a672-6a455ebda949.jpg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/086EA8B3-9097-4A40-9AAE-64BA2B2AD3D3_1_105_c.jpeg" alt="Sesión ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/099B2579-2177-43E8-938F-4B584B89AE2A_1_105_c.jpeg" alt="Caballo en AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/0A4171E7-E9C2-4CC3-BD28-E61D7019902A_1_105_c.jpeg" alt="Vida en el rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/11479e75-4f03-4ec1-8a3f-f7cb67108daf.jpg" alt="Sesión con caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/12d76e72-43e0-4132-9f3a-20956fbd66ec.jpg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/155E26E3-153D-4E4E-8DA1-6B82653F7E35_1_105_c.jpeg" alt="Clase ecuestre AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/1619f6d7-de37-49bc-9604-09da07c2ed45.jpg" alt="Conexión con caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/18F2656E-3EC0-4BD2-B833-646EEC7F874D_1_105_c.jpeg" alt="Horsemanship AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/19241E02-F7F4-4DBE-A626-D37E17731C35_1_105_c.jpeg" alt="Familia en el rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/1B1BA9F2-6CED-467F-97EE-E7927E8EA18B_1_105_c.jpeg" alt="Sesión en AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/1f082a9c-7865-4e7c-8414-bdf69d51fd9c.jpg" alt="Caballos Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/211D0228-4BBC-4E49-AB41-35C50020F853_1_105_c.jpeg" alt="Rancho ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/21fac2af-aed0-4f03-bd7d-aab6bf7849f0.jpg" alt="Clase de equitación" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/24885208-6831-4CCE-854C-FAD8F2FC516A_1_105_c.jpeg" alt="Doma racional AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/2542BF62-1628-46B5-A5EA-F53314BF06BA_1_105_c.jpeg" alt="Niños con caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/28246290-DC8D-474F-B9B0-FDFF839888EC_1_105_c.jpeg" alt="Interacción con caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/29454cd0-1dfd-4dde-a22f-c58b9993f454.jpg" alt="Vida en el rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/29ce2aff-0d87-46aa-8e5e-dc18d03f6004.JPG" alt="Experiencia ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/2f500529-a16b-4b66-b7b7-495ca7d495cf.jpg" alt="Familia ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/320D26A2-C005-4157-A064-0F6CF150C437_1_105_c.jpeg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/33a73353-5776-4580-8876-914983cb4cc9.jpg" alt="Sesión ecuestre Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/360705C5-BEC3-40E1-9F73-028B63EEA65A_1_105_c.jpeg" alt="Cabalgata AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3AC233FC-0E2D-481A-92F0-DCA2C1F20CE3_1_105_c.jpeg" alt="Horsemanship" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3D91A5D0-1A78-4AC7-AADB-EBA028FB3E4F_1_105_c.jpeg" alt="Conexión ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3F9E6A34-4A13-4B3B-A6CE-EBB89961E64D_1_105_c.jpeg" alt="AC.aballo rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3a2140cf-6a4e-48da-b1ab-e5c86b3194dc.jpg" alt="Clase equitación" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3c087bed-d306-436e-9af9-d62d8e757094.jpg" alt="Rancho Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/3e7db644-96db-448d-a5dd-b87f130804c4.jpg" alt="Sesión AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/411deb79-2068-4906-a16b-256b11932693.jpg" alt="Caballos AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/44002B89-E1BA-4864-8736-864CBE38703B_1_105_c.jpeg" alt="Interacción caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/44D5E222-F673-43A5-AE67-95DD7BEBF465_1_105_c.jpeg" alt="Familia en rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/44FBC3E0-F3FF-460F-8681-2927B508E5C4_1_105_c.jpeg" alt="Equitación AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/46E2B0B6-EFC3-4D40-84D0-0C5C0BADF953_1_105_c.jpeg" alt="Caballos Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/46a371ec-138a-483d-9ae7-4bae0f0e729f.jpg" alt="Sesión ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/50cd41d3-dcdc-410d-93ee-8956b16073bf.jpg" alt="Rancho AC.aballo Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/55B7AB89-5691-4287-9EAB-0BCF82895860_1_105_c.jpeg" alt="Doma racional" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/571c9dca-65f5-4f0f-bcd9-f117c2912a32.jpg" alt="Niños y caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/5c10d262-be51-4963-a3ec-18ca7ed2a232.jpg" alt="AC.aballo sesión" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/5f05e4e9-c036-4c10-87a9-4b0df9d82632.jpg" alt="Conexión caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/5f5c2929-d87b-4e38-a8c9-e9307ef2b9db.jpg" alt="Rancho ecuestre Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/5f9eabd2-5e29-4e71-9aa0-c1cfbdf20244.jpg" alt="Clase caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/63a7e653-33f3-4b03-a16d-21d116633d72.jpg" alt="AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/692F5A53-71A8-48C3-A5D6-FF779C2A9D93.jpeg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/6CABAB26-29BD-4EAF-92C4-B58094E9F6CE_1_105_c.jpeg" alt="Horsemanship FL" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/6E41C963-23D4-4AA0-83A1-5992AB6F9E56_1_105_c.jpeg" alt="Sesión fotográfica caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/71F0F111-62C5-473E-8DD7-DEA644C2145B_1_105_c.jpeg" alt="Equitación St Cloud FL" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/765f19e6-c202-4776-a6c4-6143b487e9f6.jpg" alt="AC.aballo Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/7A2A469C-489B-40C5-92B6-17FB9E1AA77C_1_105_c.jpeg" alt="Caballo rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/7CDC74F2-AEE5-4452-BB4A-99BA02AA2763_1_105_c.jpeg" alt="Sesión AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/7df2a71b-e674-46d6-88af-b963d62e0c46.jpg" alt="Rancho ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/8099c1af-90b7-4cdb-9fb8-872336e6d17d.jpg" alt="Caballos AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/816AC1A4-4DF8-45E2-8481-68DFE4097A4D_1_105_c.jpeg" alt="Clase equitación Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/8393BD8B-A707-438A-AEBE-C150FBD9A5F4_1_105_c.jpeg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/8696AF4F-4D06-4C99-8EAC-8AD45543749C_1_105_c.jpeg" alt="Doma racional Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/8B46F4F3-9D03-4B2E-8BC1-6B0E6FE42129_1_105_c.jpeg" alt="Caballo St Cloud" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/916f6777-8428-49d2-b0db-cdb7d057fc13.jpg" alt="Sesión caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/970F6220-A100-431A-ABC4-A848E340903A_1_105_c.jpeg" alt="AC.aballo rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/971945FC-3954-4EAE-BD57-F409FF3DC6EF_1_105_c.jpeg" alt="Conexión humano caballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/9D5C15D3-EB59-434C-86C7-6D095B3F05D6_1_105_c.jpeg" alt="Familia ecuestre Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/9a0925ed-f550-4e7d-bfcf-95e5fb36edd0.jpg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/9d9f7a75-f16a-421c-93ac-b95cfc51c4af.jpg" alt="Caballos Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/A2D8317A-7797-4E82-9BE3-C2FEA947D0A0.jpeg" alt="Rancho ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/A5AD8439-6F6C-4B54-AD0B-D9E20EF9A5CC_1_105_c.jpeg" alt="AC.aballo sesión" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/A75A4D6E-449A-4FFC-9E09-4E2CDAB910F4_1_105_c.jpeg" alt="Clase caballos Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/A81E527C-B1D9-4095-878B-939D37C0417B.jpeg" alt="Experiencia ecuestre" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/B0EE1CB7-6CC0-42CE-B2EF-B7E45895D79A_1_105_c.jpeg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/B1A83536-9BC3-4D84-A7CF-EB63B1D81DFF_1_105_c.jpeg" alt="Caballo y persona" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/B7A33193-4706-462B-916D-DF4051F7BEDA_1_105_c.jpeg" alt="Sesión rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/BDF79112-A579-48F4-B71B-FD395F1ECF6C_1_105_c.jpeg" alt="AC.aballo caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/C6D0BF74-A7D8-445C-AE74-67D4F144DD65_1_105_c.jpeg" alt="Rancho Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/C7C84CBF-3DCB-4425-B2E8-8331A00C156D_1_105_c.jpeg" alt="Caballos St Cloud" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/D30A0DA7-EE7C-47E1-8743-3240036F9E4F_1_105_c.jpeg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/D99505B8-BB0B-410D-8A10-2975963D97D9_1_105_c.jpeg" alt="Doma caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/DBAA03F8-BBB3-443E-A05F-B8E648A13B29_1_105_c.jpeg" alt="Horsemanship Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/DCB8766F-8386-4694-8697-0B900E7971D7_1_105_c.jpeg" alt="Clase equitación" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/DFE2A33D-3495-41C6-A4B9-3B588BDD384E_1_105_c.jpeg" alt="AC.aballo Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/E66DF668-857D-48F9-AC21-618840089927_1_105_c.jpeg" alt="Rancho ecuestre Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/E8B5C4A9-7D69-4772-9AD7-6E44550FD16C_1_105_c.jpeg" alt="Sesión con caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/F284AF37-F06F-4E0D-99E9-3076FC2DE379_1_105_c.jpeg" alt="AC.aballo caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/F3551F8E-2544-486E-990A-B70E1DAD772D_1_105_c.jpeg" alt="Vida rancho Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/F38D440B-988B-4B46-92B2-CB0740AA83FA_1_105_c.jpeg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/F4019F0E-056E-465E-96B3-0C0F0FB98F63_1_105_c.jpeg" alt="Caballo AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/FBC8DAC8-A241-4986-ACB3-3BCC6E68F005_1_105_c.jpeg" alt="Rancho FL" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/a8553b1a-b766-4d72-a02e-e5abfaed0ac3.jpg" alt="Sesión AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/a876e0f4-ba07-4899-b573-6452780f61ae.jpg" alt="Caballos rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/a95cb9a5-2689-4f15-848d-f76ea45c2cd9.jpg" alt="AC.aballo experiencia" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/b3ea4461-4fe1-4adc-aacc-4cccfb29eb27.jpg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/c43adc62-25d4-4680-bea8-ce3a1082428d.jpg" alt="Caballos St Cloud FL" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/cdbdc287-4cc1-40e2-8e64-9e2c949394a0.jpg" alt="Sesión rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/cf711a0f-a14c-417f-9135-5e41005776d5.jpg" alt="Doma racional" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/d3a77e2e-7dac-4b46-a453-07dea4840ecb.jpg" alt="AC.aballo rancho" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/d8b61071-00f7-45f0-963a-b5d690f59dde.jpg" alt="Caballo Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/e2e9d6fe-ada3-4bf5-a085-1ca35ecaee51.jpg" alt="Rancho caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/ed31d3e1-b75d-4bf3-a714-719c3beec0f8.jpg" alt="Clase caballos" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/eebaa927-d2ce-4578-9bfe-2092dde58958.jpg" alt="AC.aballo sesión" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/f4213a28-6f8c-4f73-96f2-e666eaf44768.jpg" alt="Rancho AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/f7cb768e-29ac-4861-abbb-67fe6e459ee9.jpg" alt="Caballos Florida" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
-        <img src="images/school/f7f35cad-f35e-422f-9f5d-f90b50b1e0f9.jpg" alt="Sesión ecuestre AC.aballo" class="w-full mb-3 rounded-xl border border-forest-700/20 block" loading="lazy" decoding="async" />
+      <!-- ── Infinite photo strips ── -->
+      <div class="space-y-3">
+
+        <div class="marquee-strip mb-3">
+          <div class="marquee-track fwd">
+            <img class="marquee-img" src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/28C3B0E0-5813-41CB-A493-0A152B8D0D65_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/4f94d8d3-380c-4935-b573-ec649bb092e0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1af3aa8e-4a86-4633-ad0a-6363a94b1784.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3ab9be17-12d1-41b0-befe-dc554e31093a.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1ed448ae-5075-4390-93ff-aa7c45dd918b.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/21426fd0-2ea2-4d6c-8aae-cce5bba5dcf0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/38d3bb41-92c6-4796-96d9-3f3ead467b60.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/041D032E-5016-462C-B235-F157E2232C8A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/082d50f3-57a7-42af-a672-6a455ebda949.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/086EA8B3-9097-4A40-9AAE-64BA2B2AD3D3_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/099B2579-2177-43E8-938F-4B584B89AE2A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/0A4171E7-E9C2-4CC3-BD28-E61D7019902A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/11479e75-4f03-4ec1-8a3f-f7cb67108daf.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/12d76e72-43e0-4132-9f3a-20956fbd66ec.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/155E26E3-153D-4E4E-8DA1-6B82653F7E35_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1619f6d7-de37-49bc-9604-09da07c2ed45.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/18F2656E-3EC0-4BD2-B833-646EEC7F874D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/19241E02-F7F4-4DBE-A626-D37E17731C35_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1B1BA9F2-6CED-467F-97EE-E7927E8EA18B_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1f082a9c-7865-4e7c-8414-bdf69d51fd9c.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/211D0228-4BBC-4E49-AB41-35C50020F853_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/21fac2af-aed0-4f03-bd7d-aab6bf7849f0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/24885208-6831-4CCE-854C-FAD8F2FC516A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/2542BF62-1628-46B5-A5EA-F53314BF06BA_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/28246290-DC8D-474F-B9B0-FDFF839888EC_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/29454cd0-1dfd-4dde-a22f-c58b9993f454.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/29ce2aff-0d87-46aa-8e5e-dc18d03f6004.JPG" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/2f500529-a16b-4b66-b7b7-495ca7d495cf.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/320D26A2-C005-4157-A064-0F6CF150C437_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/33a73353-5776-4580-8876-914983cb4cc9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/360705C5-BEC3-40E1-9F73-028B63EEA65A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3AC233FC-0E2D-481A-92F0-DCA2C1F20CE3_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3D91A5D0-1A78-4AC7-AADB-EBA028FB3E4F_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/28C3B0E0-5813-41CB-A493-0A152B8D0D65_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/4f94d8d3-380c-4935-b573-ec649bb092e0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1af3aa8e-4a86-4633-ad0a-6363a94b1784.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3ab9be17-12d1-41b0-befe-dc554e31093a.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1ed448ae-5075-4390-93ff-aa7c45dd918b.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/21426fd0-2ea2-4d6c-8aae-cce5bba5dcf0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/38d3bb41-92c6-4796-96d9-3f3ead467b60.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/041D032E-5016-462C-B235-F157E2232C8A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/082d50f3-57a7-42af-a672-6a455ebda949.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/086EA8B3-9097-4A40-9AAE-64BA2B2AD3D3_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/099B2579-2177-43E8-938F-4B584B89AE2A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/0A4171E7-E9C2-4CC3-BD28-E61D7019902A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/11479e75-4f03-4ec1-8a3f-f7cb67108daf.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/12d76e72-43e0-4132-9f3a-20956fbd66ec.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/155E26E3-153D-4E4E-8DA1-6B82653F7E35_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1619f6d7-de37-49bc-9604-09da07c2ed45.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/18F2656E-3EC0-4BD2-B833-646EEC7F874D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/19241E02-F7F4-4DBE-A626-D37E17731C35_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1B1BA9F2-6CED-467F-97EE-E7927E8EA18B_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/1f082a9c-7865-4e7c-8414-bdf69d51fd9c.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/211D0228-4BBC-4E49-AB41-35C50020F853_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/21fac2af-aed0-4f03-bd7d-aab6bf7849f0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/24885208-6831-4CCE-854C-FAD8F2FC516A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/2542BF62-1628-46B5-A5EA-F53314BF06BA_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/28246290-DC8D-474F-B9B0-FDFF839888EC_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/29454cd0-1dfd-4dde-a22f-c58b9993f454.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/29ce2aff-0d87-46aa-8e5e-dc18d03f6004.JPG" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/2f500529-a16b-4b66-b7b7-495ca7d495cf.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/320D26A2-C005-4157-A064-0F6CF150C437_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/33a73353-5776-4580-8876-914983cb4cc9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/360705C5-BEC3-40E1-9F73-028B63EEA65A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3AC233FC-0E2D-481A-92F0-DCA2C1F20CE3_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3D91A5D0-1A78-4AC7-AADB-EBA028FB3E4F_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <div class="marquee-strip mb-3">
+          <div class="marquee-track rev">
+            <img class="marquee-img" src="images/school/3F9E6A34-4A13-4B3B-A6CE-EBB89961E64D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3a2140cf-6a4e-48da-b1ab-e5c86b3194dc.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3c087bed-d306-436e-9af9-d62d8e757094.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3e7db644-96db-448d-a5dd-b87f130804c4.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/411deb79-2068-4906-a16b-256b11932693.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/44002B89-E1BA-4864-8736-864CBE38703B_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/44D5E222-F673-43A5-AE67-95DD7BEBF465_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/44FBC3E0-F3FF-460F-8681-2927B508E5C4_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/46E2B0B6-EFC3-4D40-84D0-0C5C0BADF953_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/46a371ec-138a-483d-9ae7-4bae0f0e729f.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/50cd41d3-dcdc-410d-93ee-8956b16073bf.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/55B7AB89-5691-4287-9EAB-0BCF82895860_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/571c9dca-65f5-4f0f-bcd9-f117c2912a32.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5c10d262-be51-4963-a3ec-18ca7ed2a232.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5f05e4e9-c036-4c10-87a9-4b0df9d82632.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5f5c2929-d87b-4e38-a8c9-e9307ef2b9db.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5f9eabd2-5e29-4e71-9aa0-c1cfbdf20244.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/63a7e653-33f3-4b03-a16d-21d116633d72.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/692F5A53-71A8-48C3-A5D6-FF779C2A9D93.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/6CABAB26-29BD-4EAF-92C4-B58094E9F6CE_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/6E41C963-23D4-4AA0-83A1-5992AB6F9E56_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/71F0F111-62C5-473E-8DD7-DEA644C2145B_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/765f19e6-c202-4776-a6c4-6143b487e9f6.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/7A2A469C-489B-40C5-92B6-17FB9E1AA77C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/7CDC74F2-AEE5-4452-BB4A-99BA02AA2763_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/7df2a71b-e674-46d6-88af-b963d62e0c46.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8099c1af-90b7-4cdb-9fb8-872336e6d17d.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/816AC1A4-4DF8-45E2-8481-68DFE4097A4D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8393BD8B-A707-438A-AEBE-C150FBD9A5F4_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8696AF4F-4D06-4C99-8EAC-8AD45543749C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8B46F4F3-9D03-4B2E-8BC1-6B0E6FE42129_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/916f6777-8428-49d2-b0db-cdb7d057fc13.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/970F6220-A100-431A-ABC4-A848E340903A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/971945FC-3954-4EAE-BD57-F409FF3DC6EF_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/9D5C15D3-EB59-434C-86C7-6D095B3F05D6_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/9a0925ed-f550-4e7d-bfcf-95e5fb36edd0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/9d9f7a75-f16a-421c-93ac-b95cfc51c4af.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3F9E6A34-4A13-4B3B-A6CE-EBB89961E64D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3a2140cf-6a4e-48da-b1ab-e5c86b3194dc.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3c087bed-d306-436e-9af9-d62d8e757094.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/3e7db644-96db-448d-a5dd-b87f130804c4.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/411deb79-2068-4906-a16b-256b11932693.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/44002B89-E1BA-4864-8736-864CBE38703B_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/44D5E222-F673-43A5-AE67-95DD7BEBF465_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/44FBC3E0-F3FF-460F-8681-2927B508E5C4_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/46E2B0B6-EFC3-4D40-84D0-0C5C0BADF953_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/46a371ec-138a-483d-9ae7-4bae0f0e729f.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/50cd41d3-dcdc-410d-93ee-8956b16073bf.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/55B7AB89-5691-4287-9EAB-0BCF82895860_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/571c9dca-65f5-4f0f-bcd9-f117c2912a32.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5c10d262-be51-4963-a3ec-18ca7ed2a232.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5f05e4e9-c036-4c10-87a9-4b0df9d82632.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5f5c2929-d87b-4e38-a8c9-e9307ef2b9db.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/5f9eabd2-5e29-4e71-9aa0-c1cfbdf20244.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/63a7e653-33f3-4b03-a16d-21d116633d72.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/692F5A53-71A8-48C3-A5D6-FF779C2A9D93.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/6CABAB26-29BD-4EAF-92C4-B58094E9F6CE_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/6E41C963-23D4-4AA0-83A1-5992AB6F9E56_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/71F0F111-62C5-473E-8DD7-DEA644C2145B_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/765f19e6-c202-4776-a6c4-6143b487e9f6.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/7A2A469C-489B-40C5-92B6-17FB9E1AA77C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/7CDC74F2-AEE5-4452-BB4A-99BA02AA2763_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/7df2a71b-e674-46d6-88af-b963d62e0c46.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8099c1af-90b7-4cdb-9fb8-872336e6d17d.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/816AC1A4-4DF8-45E2-8481-68DFE4097A4D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8393BD8B-A707-438A-AEBE-C150FBD9A5F4_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8696AF4F-4D06-4C99-8EAC-8AD45543749C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/8B46F4F3-9D03-4B2E-8BC1-6B0E6FE42129_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/916f6777-8428-49d2-b0db-cdb7d057fc13.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/970F6220-A100-431A-ABC4-A848E340903A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/971945FC-3954-4EAE-BD57-F409FF3DC6EF_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/9D5C15D3-EB59-434C-86C7-6D095B3F05D6_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/9a0925ed-f550-4e7d-bfcf-95e5fb36edd0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/9d9f7a75-f16a-421c-93ac-b95cfc51c4af.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <div class="marquee-strip mb-3">
+          <div class="marquee-track fwd2">
+            <img class="marquee-img" src="images/school/A2D8317A-7797-4E82-9BE3-C2FEA947D0A0.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A5AD8439-6F6C-4B54-AD0B-D9E20EF9A5CC_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A75A4D6E-449A-4FFC-9E09-4E2CDAB910F4_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A81E527C-B1D9-4095-878B-939D37C0417B.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/B0EE1CB7-6CC0-42CE-B2EF-B7E45895D79A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/B1A83536-9BC3-4D84-A7CF-EB63B1D81DFF_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/B7A33193-4706-462B-916D-DF4051F7BEDA_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/BDF79112-A579-48F4-B71B-FD395F1ECF6C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/C6D0BF74-A7D8-445C-AE74-67D4F144DD65_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/C7C84CBF-3DCB-4425-B2E8-8331A00C156D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/D30A0DA7-EE7C-47E1-8743-3240036F9E4F_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/D99505B8-BB0B-410D-8A10-2975963D97D9_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/DBAA03F8-BBB3-443E-A05F-B8E648A13B29_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/DCB8766F-8386-4694-8697-0B900E7971D7_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/DFE2A33D-3495-41C6-A4B9-3B588BDD384E_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/E66DF668-857D-48F9-AC21-618840089927_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/E8B5C4A9-7D69-4772-9AD7-6E44550FD16C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F284AF37-F06F-4E0D-99E9-3076FC2DE379_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F3551F8E-2544-486E-990A-B70E1DAD772D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F38D440B-988B-4B46-92B2-CB0740AA83FA_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F4019F0E-056E-465E-96B3-0C0F0FB98F63_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/FBC8DAC8-A241-4986-ACB3-3BCC6E68F005_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/a8553b1a-b766-4d72-a02e-e5abfaed0ac3.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/a876e0f4-ba07-4899-b573-6452780f61ae.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/a95cb9a5-2689-4f15-848d-f76ea45c2cd9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/b3ea4461-4fe1-4adc-aacc-4cccfb29eb27.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/c43adc62-25d4-4680-bea8-ce3a1082428d.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/cdbdc287-4cc1-40e2-8e64-9e2c949394a0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/cf711a0f-a14c-417f-9135-5e41005776d5.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/d3a77e2e-7dac-4b46-a453-07dea4840ecb.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/d8b61071-00f7-45f0-963a-b5d690f59dde.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/e2e9d6fe-ada3-4bf5-a085-1ca35ecaee51.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/ed31d3e1-b75d-4bf3-a714-719c3beec0f8.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/eebaa927-d2ce-4578-9bfe-2092dde58958.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/f4213a28-6f8c-4f73-96f2-e666eaf44768.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/f7cb768e-29ac-4861-abbb-67fe6e459ee9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/f7f35cad-f35e-422f-9f5d-f90b50b1e0f9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A2D8317A-7797-4E82-9BE3-C2FEA947D0A0.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A5AD8439-6F6C-4B54-AD0B-D9E20EF9A5CC_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A75A4D6E-449A-4FFC-9E09-4E2CDAB910F4_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/A81E527C-B1D9-4095-878B-939D37C0417B.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/B0EE1CB7-6CC0-42CE-B2EF-B7E45895D79A_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/B1A83536-9BC3-4D84-A7CF-EB63B1D81DFF_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/B7A33193-4706-462B-916D-DF4051F7BEDA_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/BDF79112-A579-48F4-B71B-FD395F1ECF6C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/C6D0BF74-A7D8-445C-AE74-67D4F144DD65_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/C7C84CBF-3DCB-4425-B2E8-8331A00C156D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/D30A0DA7-EE7C-47E1-8743-3240036F9E4F_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/D99505B8-BB0B-410D-8A10-2975963D97D9_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/DBAA03F8-BBB3-443E-A05F-B8E648A13B29_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/DCB8766F-8386-4694-8697-0B900E7971D7_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/DFE2A33D-3495-41C6-A4B9-3B588BDD384E_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/E66DF668-857D-48F9-AC21-618840089927_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/E8B5C4A9-7D69-4772-9AD7-6E44550FD16C_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F284AF37-F06F-4E0D-99E9-3076FC2DE379_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F3551F8E-2544-486E-990A-B70E1DAD772D_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F38D440B-988B-4B46-92B2-CB0740AA83FA_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/F4019F0E-056E-465E-96B3-0C0F0FB98F63_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/FBC8DAC8-A241-4986-ACB3-3BCC6E68F005_1_105_c.jpeg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/a8553b1a-b766-4d72-a02e-e5abfaed0ac3.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/a876e0f4-ba07-4899-b573-6452780f61ae.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/a95cb9a5-2689-4f15-848d-f76ea45c2cd9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/b3ea4461-4fe1-4adc-aacc-4cccfb29eb27.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/c43adc62-25d4-4680-bea8-ce3a1082428d.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/cdbdc287-4cc1-40e2-8e64-9e2c949394a0.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/cf711a0f-a14c-417f-9135-5e41005776d5.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/d3a77e2e-7dac-4b46-a453-07dea4840ecb.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/d8b61071-00f7-45f0-963a-b5d690f59dde.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/e2e9d6fe-ada3-4bf5-a085-1ca35ecaee51.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/ed31d3e1-b75d-4bf3-a714-719c3beec0f8.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/eebaa927-d2ce-4578-9bfe-2092dde58958.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/f4213a28-6f8c-4f73-96f2-e666eaf44768.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/f7cb768e-29ac-4861-abbb-67fe6e459ee9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+            <img class="marquee-img" src="images/school/f7f35cad-f35e-422f-9f5d-f90b50b1e0f9.jpg" alt="Rancho AC.aballo" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
       </div>
 
       <!-- Instagram CTA -->

@@ -29,6 +29,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
   <link rel="stylesheet" href="css/styles.css" />
+  <style type="text/tailwindcss">
+@theme {
+  --color-forest-950:#0F1E10;--color-forest-900:#1A2D1C;--color-forest-800:#243B26;--color-forest-700:#2E4D30;--color-forest-600:#3D6140;--color-forest-500:#527A55;--color-forest-400:#6E9B71;--color-forest-300:#95BA97;--color-forest-200:#BDD8BF;--color-forest-100:#DDEEDE;--color-forest-50:#EEF7EE;
+  --color-sage-600:#5C7A5C;--color-sage-400:#8AAD8A;--color-sage-200:#C5DCC5;--color-sage-50:#F0F7F0;
+  --color-beige-900:#4A3820;--color-beige-700:#7A5F38;--color-beige-500:#B08D5E;--color-beige-300:#D9C09A;--color-beige-200:#EDD9BD;--color-beige-100:#F7EDE0;--color-beige-50:#FDF8F2;
+  --color-gold-700:#8C6820;--color-gold-600:#A8832A;--color-gold-500:#C9A84C;--color-gold-300:#E0C87A;--color-gold-200:#EDD9A3;--color-gold-100:#F7EDCA;
+  --font-display:"Cormorant Garamond",Georgia,serif;--font-serif:"Playfair Display",Georgia,serif;--font-sans:"DM Sans",system-ui,sans-serif;
+}
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -156,14 +165,6 @@
     <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.88) 0%, rgba(15,30,16,0.60) 55%, rgba(15,30,16,0.25) 100%);"></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,30,16,0.75) 0%, transparent 50%);"></div>
 
-    <div class="absolute right-0 bottom-0 top-0 flex items-center pr-8 pointer-events-none select-none opacity-[0.06]" aria-hidden="true">
-      <svg viewBox="0 0 480 520" width="420" height="460" fill="rgba(201,168,76,1)" xmlns="http://www.w3.org/2000/svg">
-        <path d="M390 95 C375 58, 345 42, 322 62 C308 44, 282 36, 264 56 C250 40, 224 40, 212 60 C194 46, 172 54, 168 76 C148 70, 130 86, 132 110 C112 112, 100 132, 108 152 C94 166, 94 194, 114 208 L118 420 L152 420 L158 280 C178 300, 200 316, 202 350 L202 420 L236 420 L238 346 C232 318, 218 292, 218 262 L262 262 C262 294, 248 320, 250 350 L250 420 L284 420 L284 348 C286 316, 300 294, 308 268 L330 268 L332 420 L368 420 L368 262 C390 248, 412 226, 418 198 C442 190, 448 162, 418 148 L390 95Z"/>
-        <ellipse cx="330" cy="72" rx="22" ry="30" transform="rotate(-15 330 72)"/>
-        <rect x="316" y="44" width="10" height="36" rx="5" transform="rotate(-20 316 44)"/>
-        <rect x="338" y="38" width="10" height="42" rx="5" transform="rotate(10 338 38)"/>
-      </svg>
-    </div>
 
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-20 md:py-28">
       <div class="max-w-2xl md:max-w-3xl">
@@ -412,20 +413,51 @@
         <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;" data-i18n="gallery.heading">Momentos en el Rancho</h2>
         <span class="gold-rule"></span>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8">
-        <div class="rounded-xl border border-forest-700/25 overflow-hidden" style="aspect-ratio:4/3;">
-          <img decoding="async" loading="lazy" src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Álvaro y Luisana en el rancho AC.aballo" class="w-full h-full object-cover" />
+      <!-- Auto-sliding carousel -->
+      <div class="relative gallery-carousel mb-8" id="gallery-teaser" style="border:1px solid rgba(149,186,151,0.15);">
+        <div class="gallery-carousel-track" id="gallery-teaser-track">
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Álvaro y Luisana en el rancho" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/21426fd0-2ea2-4d6c-8aae-cce5bba5dcf0.jpg" alt="Palominos en el rancho AC.aballo" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/28C3B0E0-5813-41CB-A493-0A152B8D0D65_1_105_c.jpeg" alt="Álvaro y Luisana con caballos" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/4f94d8d3-380c-4935-b573-ec649bb092e0.jpg" alt="Rancho AC.aballo" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/1af3aa8e-4a86-4633-ad0a-6363a94b1784.jpg" alt="Sesión ecuestre AC.aballo" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/3ab9be17-12d1-41b0-befe-dc554e31093a.jpg" alt="Niños y caballos en el rancho" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Luisana con caballo blanco" /></div>
+          <div class="gallery-carousel-slide"><img loading="lazy" decoding="async" src="images/school/55B7AB89-5691-4287-9EAB-0BCF82895860_1_105_c.jpeg" alt="Doma racional AC.aballo" /></div>
         </div>
-        <div class="rounded-xl border border-forest-700/25 overflow-hidden" style="aspect-ratio:4/3;">
-          <img decoding="async" loading="lazy" src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Álvaro con caballo" class="w-full h-full object-cover" />
-        </div>
-        <div class="rounded-xl border border-forest-700/25 overflow-hidden" style="aspect-ratio:4/3;">
-          <img decoding="async" loading="lazy" src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Luisana alimentando caballo blanco" class="w-full h-full object-cover" style="object-position: center top;" />
-        </div>
+        <!-- Arrows -->
+        <button id="gal-prev" aria-label="Anterior foto" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);z-index:10;background:rgba(15,30,16,0.60);border:1px solid rgba(201,168,76,0.25);color:#E0C87A;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button id="gal-next" aria-label="Siguiente foto" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);z-index:10;background:rgba(15,30,16,0.60);border:1px solid rgba(201,168,76,0.25);color:#E0C87A;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <!-- Dots -->
+        <div id="gal-dots" style="position:absolute;bottom:14px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:10;"></div>
       </div>
       <div class="text-center">
-        <a href="gallery.html" class="inline-flex items-center gap-2 border text-forest-300/65 hover:text-gold-400 font-semibold py-3 px-7 rounded-full transition-all duration-200 font-sans text-sm" style="border-color:rgba(149,186,151,0.25);" data-i18n="gallery.label">Galería</a>
+        <a href="gallery.html" class="inline-flex items-center gap-2 border text-forest-300/65 hover:text-gold-400 font-semibold py-3 px-7 rounded-full transition-all duration-200 font-sans text-sm" style="border-color:rgba(149,186,151,0.25);" data-i18n="gallery.cta">Ver galería completa →</a>
       </div>
+      <script>
+      (function(){
+        var track=document.getElementById('gallery-teaser-track');
+        var dotsEl=document.getElementById('gal-dots');
+        var n=track.children.length, cur=0, timer;
+        for(var i=0;i<n;i++){
+          var d=document.createElement('button');
+          d.setAttribute('aria-label','Foto '+(i+1));
+          d.style.cssText='width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;transition:all 0.22s;background:rgba(201,168,76,0.3);';
+          (function(idx){d.addEventListener('click',function(){clearInterval(timer);go(idx);autoplay();});})(i);
+          dotsEl.appendChild(d);
+        }
+        function updDots(){Array.from(dotsEl.children).forEach(function(d,i){d.style.background=i===cur?'#C9A84C':'rgba(201,168,76,0.3)';d.style.transform=i===cur?'scale(1.4)':'scale(1)';})}
+        function go(idx){cur=(idx+n)%n;track.style.transform='translateX(-'+(cur*100)+'%)';updDots();}
+        document.getElementById('gal-prev').addEventListener('click',function(){clearInterval(timer);go(cur-1);autoplay();});
+        document.getElementById('gal-next').addEventListener('click',function(){clearInterval(timer);go(cur+1);autoplay();});
+        function autoplay(){timer=setInterval(function(){go(cur+1);},4200);}
+        updDots();autoplay();
+      })();
+      </script>
     </div>
   </section>
 

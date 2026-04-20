@@ -29,6 +29,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
   <link rel="stylesheet" href="css/styles.css" />
+  <style type="text/tailwindcss">
+@theme {
+  --color-forest-950:#0F1E10;--color-forest-900:#1A2D1C;--color-forest-800:#243B26;--color-forest-700:#2E4D30;--color-forest-600:#3D6140;--color-forest-500:#527A55;--color-forest-400:#6E9B71;--color-forest-300:#95BA97;--color-forest-200:#BDD8BF;--color-forest-100:#DDEEDE;--color-forest-50:#EEF7EE;
+  --color-sage-600:#5C7A5C;--color-sage-400:#8AAD8A;--color-sage-200:#C5DCC5;--color-sage-50:#F0F7F0;
+  --color-beige-900:#4A3820;--color-beige-700:#7A5F38;--color-beige-500:#B08D5E;--color-beige-300:#D9C09A;--color-beige-200:#EDD9BD;--color-beige-100:#F7EDE0;--color-beige-50:#FDF8F2;
+  --color-gold-700:#8C6820;--color-gold-600:#A8832A;--color-gold-500:#C9A84C;--color-gold-300:#E0C87A;--color-gold-200:#EDD9A3;--color-gold-100:#F7EDCA;
+  --font-display:"Cormorant Garamond",Georgia,serif;--font-serif:"Playfair Display",Georgia,serif;--font-sans:"DM Sans",system-ui,sans-serif;
+}
+  </style>
 </head>
 
 <body class="font-sans antialiased" style="background:#FDF8F2; color:#2E4D30;">
@@ -123,15 +132,7 @@
     />
     <div class="absolute inset-0" style="background: linear-gradient(108deg, rgba(15,30,16,0.88) 0%, rgba(36,59,38,0.70) 100%);"></div>
 
-    <!-- Decorative horse SVG watermark -->
-    <div class="absolute right-0 bottom-0 top-0 flex items-center pr-8 pointer-events-none select-none opacity-[0.04]" aria-hidden="true">
-      <svg viewBox="0 0 480 520" width="360" height="400" fill="rgba(201,168,76,1)" xmlns="http://www.w3.org/2000/svg">
-        <path d="M390 95 C375 58, 345 42, 322 62 C308 44, 282 36, 264 56 C250 40, 224 40, 212 60 C194 46, 172 54, 168 76 C148 70, 130 86, 132 110 C112 112, 100 132, 108 152 C94 166, 94 194, 114 208 L118 420 L152 420 L158 280 C178 300, 200 316, 202 350 L202 420 L236 420 L238 346 C232 318, 218 292, 218 262 L262 262 C262 294, 248 320, 250 350 L250 420 L284 420 L284 348 C286 316, 300 294, 308 268 L330 268 L332 420 L368 420 L368 262 C390 248, 412 226, 418 198 C442 190, 448 162, 418 148 L390 95Z"/>
-        <ellipse cx="330" cy="72" rx="22" ry="30" transform="rotate(-15 330 72)"/>
-        <rect x="316" y="44" width="10" height="36" rx="5" transform="rotate(-20 316 44)"/>
-        <rect x="338" y="38" width="10" height="42" rx="5" transform="rotate(10 338 38)"/>
-      </svg>
-    </div>
+
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20 md:py-28 text-center relative z-10 w-full">
       <span class="section-label text-gold-300/55" data-i18n="contact.label">Contacto</span>
