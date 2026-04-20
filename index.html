@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="AC.aballo — Escuela ecuestre en Florida. Doma Racional, Horsemanship, clases de equitación, cabalgatas y experiencias con caballos para todas las edades." />
-  <title>AC.aballo — Escuela de Caballos · Florida</title>
+    <link rel="icon" href="images/logo/B96D004D-B28A-4A8D-B88E-5077FE04EF08_1_105_c.jpeg" />
+  <link rel="apple-touch-icon" href="images/logo/B96D004D-B28A-4A8D-B88E-5077FE04EF08_1_105_c.jpeg" />
+  <link rel="canonical" href="https://acaballousa.com/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_US" />
+  <meta property="og:site_name" content="AC.aballo" />
+  <meta property="og:title" content="AC.aballo — Escuela de Caballos · St Cloud, Florida" />
+  <meta property="og:description" content="Escuela ecuestre en Florida. Doma Racional, Horsemanship, clases de equitación y experiencias con caballos para todas las edades en St Cloud, FL." />
+  <meta property="og:url" content="https://acaballousa.com/index.html" />
+  <meta property="og:image" content="https://acaballousa.com/images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AC.aballo — Escuela de Caballos · St Cloud, Florida" />
+  <meta name="twitter:description" content="Escuela ecuestre en Florida. Doma Racional, Horsemanship, clases de equitación y experiencias con caballos para todas las edades en St Cloud, FL." />
+  <meta name="twitter:image" content="https://acaballousa.com/images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" />
+<title>AC.aballo — Escuela de Caballos · Florida</title>
 
   <!-- Google Fonts: Cormorant Garamond (display) + Playfair Display (serif) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,191 +28,29 @@
   <!-- Tailwind v4 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <style type="text/tailwindcss">
-    html { scroll-behavior: smooth; }
-
-    @theme {
-      /* Forest Greens */
-      --color-forest-950: #0F1E10;
-      --color-forest-900: #1A2D1C;
-      --color-forest-800: #243B26;
-      --color-forest-700: #2E4D30;
-      --color-forest-600: #3D6140;
-      --color-forest-500: #527A55;
-      --color-forest-400: #6E9B71;
-      --color-forest-300: #95BA97;
-      --color-forest-200: #BDD8BF;
-      --color-forest-100: #DDEEDE;
-      --color-forest-50:  #EEF7EE;
-
-      /* Sage */
-      --color-sage-600:   #5C7A5C;
-      --color-sage-400:   #8AAD8A;
-      --color-sage-200:   #C5DCC5;
-      --color-sage-50:    #F0F7F0;
-
-      /* Beige */
-      --color-beige-900:  #4A3820;
-      --color-beige-700:  #7A5F38;
-      --color-beige-500:  #B08D5E;
-      --color-beige-300:  #D9C09A;
-      --color-beige-200:  #EDD9BD;
-      --color-beige-100:  #F7EDE0;
-      --color-beige-50:   #FDF8F2;
-
-      /* Gold */
-      --color-gold-700:   #8C6820;
-      --color-gold-600:   #A8832A;
-      --color-gold-500:   #C9A84C;
-      --color-gold-300:   #E0C87A;
-      --color-gold-200:   #EDD9A3;
-      --color-gold-100:   #F7EDCA;
-
-      /* Fonts */
-      --font-display: "Cormorant Garamond", Georgia, serif;
-      --font-serif:   "Playfair Display", Georgia, serif;
-      --font-sans:    "DM Sans", system-ui, sans-serif;
-    }
-
-    /* ── Typography utilities ── */
-    .font-display { font-family: var(--font-display); }
-    .font-serif   { font-family: var(--font-serif); }
-    .font-sans    { font-family: var(--font-sans); }
-
-    /* ── Section eyebrow label ── */
-    .section-label {
-      font-family: var(--font-sans);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 1rem;
-    }
-
-    /* ── Gold divider rule ── */
-    .gold-rule {
-      display: block;
-      width: 52px;
-      height: 1.5px;
-      background: linear-gradient(to right, var(--color-gold-500), var(--color-gold-300));
-      margin: 1.25rem auto;
-    }
-    .gold-rule-left { margin-left: 0; }
-
-    /* ── Card hover lift ── */
-    .card-lift {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .card-lift:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 56px rgba(15,30,16,0.14);
-    }
-
-    /* ── Image placeholder ── */
-    .img-ph {
-      background: linear-gradient(145deg, #243B26 0%, #2E4D30 55%, #3D6140 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .img-ph::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    /* ── Form inputs (dark bg context) ── */
-    .form-input {
-      width: 100%;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 0.75rem;
-      padding: 0.9rem 1.1rem;
-      color: #EEF7EE;
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    .form-input::placeholder { color: rgba(149,186,151,0.35); }
-    .form-input:focus {
-      outline: none;
-      border-color: var(--color-gold-500);
-      box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
-    }
-    .form-input option { background: #243B26; color: #DDEEDE; }
-
-    /* ── Scroll reveal ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── Staggered children ── */
-    .reveal-stagger > * {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
-    .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:0.15s; }
-    .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:0.25s; }
-    .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.35s; }
-    .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.45s; }
-    .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:0.55s; }
-    .reveal-stagger.visible > *:nth-child(7) { opacity:1; transform:none; transition-delay:0.65s; }
-    .reveal-stagger.visible > *:nth-child(n+7) { opacity:1; transform:none; transition-delay:0.65s; }
-
-    /* ── Hero ── */
-.hero-section {
-  min-height: 100svh;
-  overflow: hidden;
-}
-
-.hero-image {
-  object-fit: cover;
-  object-position: center 12%;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    min-height: 100svh;
-  }
-
-  .hero-image {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    object-position: center 12%;
-  }
-}
-
-    /* ── Program accordion ── */
-    .program-details {
-      animation: fadeSlideDown 0.25s ease;
-    }
-    @keyframes fadeSlideDown {
-      from { opacity:0; transform:translateY(-6px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-    .program-card { transition: box-shadow 0.2s ease; }
-    .program-card:hover { box-shadow: 0 8px 28px rgba(15,30,16,0.11) !important; }
-  </style>
-
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AC.aballo",
+    "url": "https://acaballousa.com",
+    "telephone": "+16893396132",
+    "image": "https://acaballousa.com/images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg",
+    "description": "Escuela ecuestre en Florida. Doma Racional, Horsemanship, clases de equitación y experiencias con caballos para todas las edades.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "955 N Narcoosee Rd",
+      "addressLocality": "St Cloud",
+      "addressRegion": "FL",
+      "postalCode": "34771",
+      "addressCountry": "US"
+    },
+    "sameAs": ["https://instagram.com/ac.aballo"],
+    "openingHours": ["Mo-Sa 09:00-18:00"],
+    "priceRange": "$45–$180"
+  }
+  </script>
 </head>
 
 <body class="font-sans antialiased" style="background:#FDF8F2; color:#2E4D30;">
@@ -399,7 +251,7 @@
     <div class="max-w-5xl mx-auto px-6 lg:px-10">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="rounded-3xl overflow-hidden border border-forest-700/20" style="aspect-ratio:4/3; max-width:480px; margin:0 auto;">
-          <img src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Luisana Gallardo Flores en el rancho AC.aballo" class="w-full h-full object-cover" style="object-position: center top;" />
+          <img decoding="async" loading="lazy" src="images/school/404124f4-ee9f-426f-8a3b-f5596dea0c4d.jpg" alt="Luisana Gallardo Flores en el rancho AC.aballo" class="w-full h-full object-cover" style="object-position: center top;" />
         </div>
         <div>
           <span class="section-label text-forest-500" data-i18n="about.label">Quiénes Somos</span>
@@ -560,15 +412,15 @@
         <h2 class="font-display text-forest-50 mb-4" style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight:700;" data-i18n="gallery.heading">Momentos en el Rancho</h2>
         <span class="gold-rule"></span>
       </div>
-      <div class="grid grid-cols-3 gap-3 md:gap-4 mb-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8">
         <div class="rounded-xl border border-forest-700/25 overflow-hidden" style="aspect-ratio:4/3;">
-          <img src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Álvaro y Luisana en el rancho AC.aballo" class="w-full h-full object-cover" />
+          <img decoding="async" loading="lazy" src="images/school/388D7C79-C898-4F9C-91B4-F3CD665F730F_1_105_c.jpeg" alt="Álvaro y Luisana en el rancho AC.aballo" class="w-full h-full object-cover" />
         </div>
         <div class="rounded-xl border border-forest-700/25 overflow-hidden" style="aspect-ratio:4/3;">
-          <img src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Álvaro con caballo" class="w-full h-full object-cover" />
+          <img decoding="async" loading="lazy" src="images/school/19955C72-4993-4509-98A0-C3938582DCFE_1_105_c.jpeg" alt="Álvaro con caballo" class="w-full h-full object-cover" />
         </div>
         <div class="rounded-xl border border-forest-700/25 overflow-hidden" style="aspect-ratio:4/3;">
-          <img src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Luisana alimentando caballo blanco" class="w-full h-full object-cover" style="object-position: center top;" />
+          <img decoding="async" loading="lazy" src="images/school/89A72CBD-C170-492B-A4CA-C2AB79BEEE30_4_5005_c.jpeg" alt="Luisana alimentando caballo blanco" class="w-full h-full object-cover" style="object-position: center top;" />
         </div>
       </div>
       <div class="text-center">
